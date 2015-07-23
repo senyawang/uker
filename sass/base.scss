@@ -111,6 +111,10 @@ input {
 .fc-orange{
     color: #fc7c01;
 }
+.gap{
+    margin-bottom: $gap;
+    background: $boxbg;
+}
 
 .ui-btn {
     width: 100%;
@@ -181,10 +185,7 @@ input {
     }
 }
 
-.gap{
-    margin-bottom: $gap;
-    background: $boxbg;
-}
+
 
 .ui-box{
     @extend .gap;
@@ -237,6 +238,31 @@ input {
         max-width: 100%;
     }
 }
+.ui-navigator{
+    background: #fff;
+    border-top: 0 none;
+    border-bottom: 1px solid $line;
+}
+.ui-navigator-list li.ui-state-hover, 
+.ui-navigator-list li.ui-state-active{
+    background: #fff;
+    
+    a{
+        color: $orange;
+    }
+}
+.ui-navigator-list li a{
+    color: $fontcolor;
+    font-size: (28rem / 40);
+    line-height: (70rem / 40);
+}
+.ui-scroller{
+    vertical-align: top;
+}
+.ui-refresh-down{
+    text-align: center;
+    padding: 1rem;
+}
 .header{
     position: relative;
     height: 2rem;
@@ -266,7 +292,7 @@ input {
     .btn-menu{
         right: 10px;
     }
-    .i-arrow-l,
+    .i-back,
     .i-menu{
         position: static;
         margin: 0 5px;
@@ -285,6 +311,7 @@ input {
     color: $gray;
 }
 @include icon-mix(logo);
+@include icon-mix(i-back);
 @include icon-mix(i-arrow-l);
 @include icon-mix(i-arrow-r);
 @include icon-mix(i-arrow-t);
@@ -300,4 +327,9 @@ input {
 @include icon-mix(i-menu-required);
 @include icon-mix(i-menu-case);
 @include icon-mix(i-menu-test);
+@include icon-mix(i-weibo);
+@include icon-mix(i-qzone);
+@include icon-mix(i-weixin);
+@include icon-mix(i-close);
+@include icon-mix(i-copy);
 

@@ -116,3 +116,63 @@ body {
   font-size: .7rem;
   color: #fc7c01;
 }
+
+/* line 104, ../sass/main.scss */
+.info-detail {
+  padding: 0.25rem;
+}
+/* line 106, ../sass/main.scss */
+.info-detail h1 {
+  color: #000;
+  font: 300 .8rem/1.5 simhei;
+}
+/* line 110, ../sass/main.scss */
+.info-detail .options {
+  color: #888888;
+}
+/* line 112, ../sass/main.scss */
+.info-detail .options span {
+  padding: 0 10px 0 0;
+}
+/* line 116, ../sass/main.scss */
+.info-detail .info-text {
+  padding: 0.5rem 0.25rem;
+}
+/* line 118, ../sass/main.scss */
+.info-detail .info-text p {
+  margin: 0.5rem 0;
+  text-indent: 2em;
+  font: 300 .7rem/1.5 simhei;
+}
+/* line 122, ../sass/main.scss */
+.info-detail .info-text p img {
+  margin-left: -2em;
+}
+
+/* line 128, ../sass/main.scss */
+.ui-share {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: .8rem 0;
+  background: #fff;
+  text-align: center;
+}
+/* line 138, ../sass/main.scss */
+.ui-share h2 {
+  margin-bottom: .8rem;
+  font: 300 .8rem/2 simhei;
+}
+/* line 142, ../sass/main.scss */
+.ui-share a[class^="i-"] {
+  position: static;
+  overflow: hidden;
+  line-height: 100em;
+}
+/* line 147, ../sass/main.scss */
+.ui-share p {
+  padding-top: .8rem;
+}
