@@ -158,6 +158,28 @@ input {
 .ui-slider-item{
     height: auto!important;
 }
+.ui-panel{
+    width: 80%!important;
+    padding: 0;
+    background: #e6e6e6;
+}
+.panel-menu{
+    padding-left: 2rem;
+    li{
+        position: relative;
+        padding: 1rem 0 1rem 2rem;
+        border-bottom: 1px solid $line;
+        font: (32rem / 40)/(35rem / 40) simhei;
+        a{
+            display: block;
+        }
+    }
+    [class^="i-menu"]{
+        left: 0;
+        top: 50%;
+        margin-top: (-35px / 2);
+    }
+}
 
 .gap{
     margin-bottom: $gap;
@@ -215,7 +237,53 @@ input {
         max-width: 100%;
     }
 }
+.header{
+    position: relative;
+    height: 2rem;
+    background: $boxbg;
+    text-align: center;
+    .title{
+        font: 300 .65rem/2rem simhei;
+    }
+    a{
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+    .btn-back{
+        left: 10px;
+        .logo{
+            position: static;
+            display: block;
+            width: (192rem / 40);
+            height: (31rem / 40);
+            background: url(../images/icons-2x/logo.png);
+            background-size: 100% 100%;
+        }
+    }
+    .btn-menu{
+        right: 10px;
+    }
+    .i-arrow-l,
+    .i-menu{
+        position: static;
+        margin: 0 5px;
 
+    }
+}
+
+.mainpage{
+    max-width: 640px;
+    margin: 0 auto;
+
+}
+.footer{
+    padding: 1rem;
+    text-align: center;
+    color: $gray;
+}
 @include icon-mix(logo);
 @include icon-mix(i-arrow-l);
 @include icon-mix(i-arrow-r);
@@ -226,4 +294,10 @@ input {
 @include icon-mix(i-menu2);
 @include icon-mix(i-menu3);
 @include icon-mix(i-menu4);
+@include icon-mix(i-menu-home);
+@include icon-mix(i-menu-info);
+@include icon-mix(i-menu-center);
+@include icon-mix(i-menu-required);
+@include icon-mix(i-menu-case);
+@include icon-mix(i-menu-test);
 

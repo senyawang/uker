@@ -8,48 +8,6 @@ body{
 }
 
 
-.header{
-    position: relative;
-    height: 2rem;
-    background: $boxbg;
-    text-align: center;
-    .title{
-        font: 300 .65rem/2rem simhei;
-    }
-    a{
-        position: absolute;
-        display: inline-block;
-        top: 50%;
-        -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-    }
-    .btn-back{
-        left: 10px;
-        .logo{
-            position: static;
-            display: block;
-            width: (192rem / 40);
-            height: (31rem / 40);
-            background: url(../images/icons-2x/logo.png);
-            background-size: 100% 100%;
-        }
-    }
-    .btn-menu{
-        right: 10px;
-    }
-    .i-arrow-l,
-    .i-menu{
-        position: static;
-        margin: 0 5px;
-
-    }
-}
-
-.mainpage{
-    max-width: 640px;
-    margin: 0 auto;
-
-}
 .uker-nav{
     padding: 5px 0;
     [class^='i-menu']{
@@ -112,5 +70,34 @@ body{
     .date{
         position: static;
         line-height: 1.5;
+    }
+}
+.pm-list{
+    text-align: center;
+    padding-bottom: (10rem/40);
+    h3{
+        font: 300 .6rem/2 simhei;
+    }
+    .pic{
+        width: 80%;
+    }
+}
+.lxbd{
+    li{
+        padding: (10rem/40);
+        border-right: 1px dotted $line;
+    }
+    .pic{
+        float: left;
+        width: 40%;
+        margin-right: .5rem;
+    }
+    h3{
+        padding-top: 10px;
+        font: 300 .7rem/1.5 simhei;
+    }
+    p{
+        font-size: .7rem;
+        color: $orange;
     }
 }
