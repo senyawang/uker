@@ -1,0 +1,46 @@
+$gray: #ababab;
+$darkgray: #2d2d2d;
+$red: #d42c2c;
+$orange: #fc7c01;
+
+$line: #d9d9d9;
+$more: #888888;
+$boxbg: #f8f8f8;
+$gap: (10rem/40);
+$sip: "icons/";
+
+
+//compass var
+// $browser-minimum-versions : (ie: '6');
+
+//compass sprites
+// $icons: sprite-map("icons/*.png", $layout: diagonal);
+// $icons-clean-up: true; //config for wether clear up old sprite
+// $icons-spacing: 10px;
+
+$icons-2x: sprite-map("icons-2x/*.png", $layout: diagonal);
+// $icons-2x-clean-up: true; //config for wether clear up old sprite
+$icons-2x-spacing: 10px;
+// $icons-layout: horizontal; //vertical/horizontal/diagonal/smart
+// $icons-sprite-dimensions: true;
+// $icons-sprite-base-class: "";
+// $icons-prefix: ;
+
+// $icons: sprite-map("icons/*.png", $layout: smart);
+// $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
+
+//Sprite mixin, works perfectly with standard defines
+@mixin use-sprite($sprite) {
+    // background-image: sprite-url($icons);
+    // background-position: sprite-position($icons, $sprite);
+    // height: image-height(sprite-file($icons, $sprite));
+    // width: image-width(sprite-file($icons, $sprite));
+
+    // @media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 1dppx) {
+        // background-image: sprite-url($icons-2x);
+
+        background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+        height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+        width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+    // }
+}

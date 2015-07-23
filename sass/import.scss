@@ -1,0 +1,61 @@
+
+@import "var.scss";
+
+@import "compass/support";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/general/float";
+
+
+// @include all-icons-sprites($icons-sprite-dimensions);
+
+
+@import "compass/utilities/sprites/base";
+// @import "icons/*.png";
+@import "icons-2x/*.png";
+
+
+
+.clearfix,
+%clearfix{
+    @include legacy-pie-clearfix;
+}
+
+%fl{
+    @include float-left;
+}
+%fr{
+    @include float-right;
+}
+%dib{
+    @include inline-block;
+}
+.css-arrow,
+%css-arrow{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent $red transparent;
+}
+%icon{
+    position: absolute;
+    display: inline-block;
+    vertical-align: 0;
+    // background-image: $icons;
+    background-repeat: no-repeat;
+
+    // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        background-image: $icons-2x;
+        background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+    // }
+}
+
+@mixin icon-mix($name){
+    .#{$name}{
+        @extend %icon;
+        @include use-sprite($name);
+    }
+}

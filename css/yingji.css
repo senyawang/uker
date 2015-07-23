@@ -1,0 +1,620 @@
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 9, ../sass/reset.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 17, ../sass/reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+/* line 26, ../sass/reset.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 34, ../sass/reset.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+/* line 46, ../sass/reset.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+/* line 60, ../sass/reset.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 76, ../sass/reset.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 91, ../sass/reset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 104, ../sass/reset.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 116, ../sass/reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 130, ../sass/reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 142, ../sass/reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+/* line 151, ../sass/reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 162, ../sass/reset.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* line 167, ../sass/reset.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* line 169, ../sass/reset.scss */
+input:-ms-clear {
+  display: none;
+}
+
+/* line 3, ../sass/yingji.scss */
+html {
+  background: #fff;
+}
+
+/* line 6, ../sass/yingji.scss */
+body {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+/* line 11, ../sass/yingji.scss */
+body > div:last-child {
+  max-width: 640px;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 320px) {
+  /* line 19, ../sass/yingji.scss */
+  html {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 360px) {
+  /* line 27, ../sass/yingji.scss */
+  html {
+    font-size: 22.5px;
+  }
+}
+@media only screen and (min-width: 375px) {
+  /* line 35, ../sass/yingji.scss */
+  html {
+    font-size: 23.4375px;
+  }
+}
+@media only screen and (min-width: 400px) {
+  /* line 43, ../sass/yingji.scss */
+  html {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 414px) {
+  /* line 51, ../sass/yingji.scss */
+  html {
+    font-size: 25.875px;
+  }
+}
+@media only screen and (min-width: 640px) {
+  /* line 59, ../sass/yingji.scss */
+  html {
+    font-size: 40px;
+  }
+}
+/* line 70, ../sass/yingji.scss */
+body {
+  background: #363636;
+  -webkit-touch-callout: none !important;
+  min-height: 1vh;
+  min-height: 100%;
+}
+
+/* line 78, ../sass/yingji.scss */
+.app-model {
+  display: none;
+}
+
+/* line 81, ../sass/yingji.scss */
+.header {
+  position: relative;
+  height: 4.6rem;
+  background: #fc7c01;
+  text-align: center;
+}
+/* line 86, ../sass/yingji.scss */
+.header .apptitle {
+  position: static;
+  margin-top: 1.2rem;
+  overflow: hidden;
+  line-height: 100rem;
+}
+/* line 92, ../sass/yingji.scss */
+.header .i-back {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  margin-top: -12px;
+  text-indent: -9999px;
+}
+
+/* line 101, ../sass/yingji.scss */
+.mainpage {
+  max-width: 640px;
+  margin: 10px auto;
+}
+
+/* line 108, ../sass/yingji.scss */
+.sm-slider {
+  position: relative;
+  background: #000;
+}
+
+/* line 110, ../sass/yingji.scss */
+.ui-slider-item {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  overflow: hidden;
+  transition: all 1s;
+}
+/* line 119, ../sass/yingji.scss */
+.ui-slider-item img {
+  width: 100%;
+  opacity: 1;
+  -webkit-transform: scale(1) translateY(-11.11%);
+  transform: scale(1) translateY(-11.11%);
+  -webkit-transition: all 12s;
+  transition: all 12s;
+}
+
+/* line 129, ../sass/yingji.scss */
+.sm-slider .current {
+  opacity: 1;
+  z-index: 3;
+  transition: all .01s;
+}
+/* line 133, ../sass/yingji.scss */
+.sm-slider .current img {
+  -webkit-transform: scale(1.15) translateY(-11.11%);
+  transform: scale(1.15) translateY(-11.11%);
+}
+
+/* line 140, ../sass/yingji.scss */
+.video-options {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  color: #9c9c9a;
+  width: 11.4rem;
+  height: 2.5rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 155, ../sass/yingji.scss */
+.video-options:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+  visibility: hidden;
+}
+/* line 164, ../sass/yingji.scss */
+.video-options span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .6rem;
+}
+/* line 168, ../sass/yingji.scss */
+.video-options span:hover {
+  -webkit-filter: saturate(200%);
+  filter: saturate(200%);
+}
+/* line 175, ../sass/yingji.scss */
+.video-options .btn-prev,
+.video-options .btn-next {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.25rem;
+  margin: 0 5px;
+  vertical-align: middle;
+  background: url(../images/btn-prev.png) no-repeat;
+  background-size: 100% 100%;
+}
+/* line 185, ../sass/yingji.scss */
+.video-options .btn-next {
+  background: url(../images/btn-next.png) no-repeat;
+  background-size: 100% 100%;
+}
+/* line 190, ../sass/yingji.scss */
+.video-options .play {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 10px;
+  overflow: hidden;
+  line-height: 100rem;
+  background: url(../images/btn-play.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+/* line 200, ../sass/yingji.scss */
+.tanmu {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+/* line 209, ../sass/yingji.scss */
+.tanmu .tm-wrap {
+  position: absolute;
+  width: 2000px;
+  height: 100%;
+  left: 100%;
+}
+/* line 215, ../sass/yingji.scss */
+.tanmu .tm-inner {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  transition: all 15s ease-out;
+  font: 300 12px/2 arial;
+}
+/* line 221, ../sass/yingji.scss */
+.tanmu .tm-inner span {
+  padding: 0 20px;
+  color: #fff;
+}
+/* line 227, ../sass/yingji.scss */
+.tanmu .tm-1,
+.tanmu .tm-2,
+.tanmu .tm-3 {
+  float: left;
+  clear: left;
+}
+/* line 233, ../sass/yingji.scss */
+.tanmu .tm-2 {
+  padding-left: 20px;
+}
+
+/* line 241, ../sass/yingji.scss */
+.movie-info {
+  height: 1.75rem;
+  background: #484848;
+  font: 300 0.5rem/1.75rem arial;
+  text-align: center;
+  color: #9b9b9b;
+}
+/* line 247, ../sass/yingji.scss */
+.movie-info span {
+  padding: 0 10px;
+}
+
+/* line 251, ../sass/yingji.scss */
+.at-hd {
+  overflow: hidden;
+  padding: .6rem 10px;
+  border-bottom: 1px solid #000;
+}
+/* line 255, ../sass/yingji.scss */
+.at-hd .info {
+  overflow: hidden;
+  font: 300 .5rem/1.5 arial;
+  color: #a8a8a8;
+}
+/* line 260, ../sass/yingji.scss */
+.at-hd h1 {
+  font: 300 .6rem/1.8 arial;
+  color: #ffe001;
+}
+/* line 264, ../sass/yingji.scss */
+.at-hd .pic {
+  float: left;
+  margin-right: 10px;
+}
+/* line 267, ../sass/yingji.scss */
+.at-hd .pic img {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+/* line 274, ../sass/yingji.scss */
+.at-hd .icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* line 283, ../sass/yingji.scss */
+.rec-movie h1 {
+  padding: 5px 2.5%;
+  font: 300 .6rem/2 arial;
+  color: #9b9b9b;
+}
+/* line 289, ../sass/yingji.scss */
+.rec-movie .rm-list {
+  font-size: 0;
+  text-align: left;
+}
+/* line 292, ../sass/yingji.scss */
+.rec-movie .rm-list li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+/* line 297, ../sass/yingji.scss */
+.rec-movie .rm-list li .pic {
+  width: 90%;
+}
+/* line 301, ../sass/yingji.scss */
+.rec-movie .rm-list h3, .rec-movie .rm-list p {
+  padding: 0 5%;
+  text-align: left;
+  margin-top: 5px;
+}
+/* line 306, ../sass/yingji.scss */
+.rec-movie .rm-list h3 {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: 300 .6rem/1.4 arial;
+  color: #fff;
+}
+/* line 314, ../sass/yingji.scss */
+.rec-movie .rm-list p {
+  font: 300 .5rem/1 arial;
+  color: #9b9b9b;
+}
+
+/* line 321, ../sass/yingji.scss */
+.down-tip {
+  position: fixed;
+  z-index: 99;
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 332, ../sass/yingji.scss */
+.down-tip img {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 337, ../sass/yingji.scss */
+.down-placeholder {
+  display: block;
+}
+/* line 339, ../sass/yingji.scss */
+.down-placeholder img {
+  max-width: 100%;
+  display: block;
+}

@@ -1,0 +1,116 @@
+@import "base.scss";
+
+body{
+    background: #edeef0;
+    -webkit-touch-callout: none !important;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0)
+}
+
+
+.header{
+    position: relative;
+    height: 2rem;
+    background: $boxbg;
+    text-align: center;
+    .title{
+        font: 300 .65rem/2rem simhei;
+    }
+    a{
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+    .btn-back{
+        left: 10px;
+        .logo{
+            position: static;
+            display: block;
+            width: (192rem / 40);
+            height: (31rem / 40);
+            background: url(../images/icons-2x/logo.png);
+            background-size: 100% 100%;
+        }
+    }
+    .btn-menu{
+        right: 10px;
+    }
+    .i-arrow-l,
+    .i-menu{
+        position: static;
+        margin: 0 5px;
+
+    }
+}
+
+.mainpage{
+    max-width: 640px;
+    margin: 0 auto;
+
+}
+.uker-nav{
+    padding: 5px 0;
+    [class^='i-menu']{
+        position: static;
+    }
+    strong{
+        display: block;
+    }
+    .nav-list{
+        text-align: center;
+    }
+    li{
+        padding: (14rem/40) 0;
+        border-right: 1px solid #f6f6f6;
+    }
+}
+.info-list{
+    li{
+        position: relative;
+        overflow: hidden;
+        padding: (20rem/40) 0;
+        border-bottom: 1px dotted $line;
+        a{
+            display: block;
+        }
+        h3{
+            min-height: 3rem;
+            font: 300 (30rem/40) simhei;
+        }
+        &:last-child{
+            border: 0 none;
+        }
+    }
+    .pic{
+        float: right;
+        width: 33.33%;
+        margin-left: 1rem;
+    }
+    .date{
+        position: absolute;
+        left: 0;
+        bottom: (20rem/40);
+        color: $more;
+    }
+}
+.school-list{
+    li{
+        h3{
+            min-height: 0;
+        }
+    }
+    .pic{
+        float: left;
+        width: (130rem/40);
+        height: (130rem/40);
+        border: 1px solid $line;
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+    .date{
+        position: static;
+        line-height: 1.5;
+    }
+}
