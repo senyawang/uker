@@ -1,10 +1,10 @@
 $(function () {
 
-	$('.panel').panel({
+	$('#panel').panel({
         contentWrap: $('.mainpage')
     });
 	$('#push-right').on('touchend', function () {
-        $('.panel').panel('toggle', 'push', 'right');
+        $('#panel').panel('toggle', 'push', 'right');
     });
 
     $("#slider").show();

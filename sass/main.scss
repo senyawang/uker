@@ -1,4 +1,4 @@
-@import "base.scss";
+@import "var.scss";
 
 body{
     background: #edeef0;
@@ -21,7 +21,7 @@ body{
     }
     li{
         padding: (14rem/40) 0;
-        border-right: 1px solid #f6f6f6;
+        border-right: 1px dotted $line;
     }
 }
 .info-list{
