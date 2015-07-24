@@ -176,3 +176,130 @@ body {
 .ui-share p {
   padding-top: .8rem;
 }
+
+/* line 149, ../sass/main.scss */
+.lxgj {
+  padding-bottom: .4rem;
+}
+/* line 151, ../sass/main.scss */
+.lxgj .pic {
+  float: none;
+  width: 2.4rem;
+  margin-right: .2rem;
+  vertical-align: middle;
+}
+/* line 157, ../sass/main.scss */
+.lxgj li p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 163, ../sass/main.scss */
+.quick-search {
+  text-align: center;
+}
+/* line 166, ../sass/main.scss */
+.quick-search li a {
+  display: block;
+  margin: 5px 0.25rem;
+  padding: 5px 0;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+/* line 175, ../sass/main.scss */
+.quick-search ul:first-child li:first-child {
+  flex: 2;
+}
+/* line 178, ../sass/main.scss */
+.quick-search ul:first-child li:not(:first-child) {
+  flex: 4;
+}
+
+/* line 183, ../sass/main.scss */
+.search-form {
+  padding: 0.5rem;
+}
+/* line 185, ../sass/main.scss */
+.search-form .s-btn {
+  float: right;
+  width: 3em;
+  border: 0 none;
+  font: .8rem/2 simhei;
+  background: none;
+}
+/* line 192, ../sass/main.scss */
+.search-form .sf-wrap {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: .3rem;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: #fff;
+  text-align: center;
+}
+/* line 201, ../sass/main.scss */
+.search-form .sf-wrap .i-zoom {
+  position: static;
+}
+/* line 205, ../sass/main.scss */
+.search-form .s-text {
+  width: 70%;
+  vertical-align: middle;
+  font: .6rem/1 simhei;
+  border: 0 none;
+  background: transparent;
+}
+
+/* line 214, ../sass/main.scss */
+.search-list .s-result {
+  padding: 0.25rem 0.5rem;
+  background: #dddddd;
+}
+/* line 219, ../sass/main.scss */
+.search-list .school-list .pic {
+  margin-right: .5rem;
+}
+/* line 223, ../sass/main.scss */
+.search-list .sl-info {
+  display: block;
+  overflow: hidden;
+}
+/* line 226, ../sass/main.scss */
+.search-list .sl-info .sp-num {
+  padding: 0 4px;
+  background: #d42c2c;
+  border-radius: 3px;
+  color: #fff;
+}
+
+/* line 235, ../sass/main.scss */
+.tabs-menu {
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+/* line 239, ../sass/main.scss */
+.tabs-menu ul {
+  background: #dddddd;
+  border: 1px solid #dddddd;
+  border-radius: .7rem;
+}
+/* line 243, ../sass/main.scss */
+.tabs-menu ul li {
+  border-radius: .7rem;
+}
+/* line 245, ../sass/main.scss */
+.tabs-menu ul li a {
+  display: block;
+  font: .7rem/2 simhei;
+  color: #888888;
+}
+/* line 252, ../sass/main.scss */
+.tabs-menu .current {
+  background: #fff;
+}
+/* line 254, ../sass/main.scss */
+.tabs-menu .current a {
+  color: #333;
+}

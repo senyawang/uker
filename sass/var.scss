@@ -19,7 +19,7 @@ $sip: "icons/";
 // $icons-clean-up: true; //config for wether clear up old sprite
 // $icons-spacing: 10px;
 
-$icons-2x: sprite-map("icons-2x/*.png", $layout: diagonal);
+$icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
 // $icons-2x-clean-up: true; //config for wether clear up old sprite
 $icons-2x-spacing: 10px;
 // $icons-layout: horizontal; //vertical/horizontal/diagonal/smart

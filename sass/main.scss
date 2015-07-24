@@ -146,8 +146,113 @@ body{
     }
     p{padding-top: .8rem;}
 }
+.lxgj{
+    padding-bottom: .4rem;
+    .pic{
+        float: none;
+        width: (96rem / 40);
+        margin-right: .2rem;
+        vertical-align: middle;
+    }
+    li p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
 
+.quick-search{
+    text-align: center;
+    li{
+        a{
+            display: block;
+            margin: 5px (10rem/40);
+            padding: 5px 0;
+            border: 1px solid $line;
+            border-radius: 3px;
+        }
+    }
+    ul:first-child{
+        li:first-child{
+            flex: 2;
+        }
+        li:not(:first-child){
+            flex: 4;
+        }
+    }
+}
+.search-form{
+    padding: $gap*2;
+    .s-btn{
+        float: right;
+        width: 3em;
+        border: 0 none;
+        font: .8rem/2 simhei;
+        background: none;
+    }
+    .sf-wrap{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: .3rem;
+        border: 1px solid $line;
+        border-radius: 3px;
+        background: #fff;
+        text-align: center;
+        .i-zoom{
+            position: static;
+        }
+    }
+    .s-text{
+        width: 70%;
+        vertical-align: middle;
+        font: .6rem/1 simhei;
+        border: 0 none;
+        background: transparent;
+    }
+}
+.search-list{
+    .s-result{
+        padding: $gap $gap*2;
+        background: $line;
+    }
+    .school-list{
+        .pic{
+            margin-right: .5rem;
+        }
+    }
+    .sl-info{
+        display: block;
+        overflow: hidden;
+        .sp-num{
+            padding: 0 4px;
+            background: $red;
+            border-radius: 3px;
+            color: #fff;
+        }
+    }
+}
 
-
-
-
+.tabs-menu{
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: $gap*2;
+    ul{
+        background: $line;
+        border:1px solid $line;
+        border-radius: .7rem;
+        li{
+            border-radius: .7rem;
+            a{
+                display: block;
+                font: .7rem/2 simhei;
+                color: $more;
+            }
+        }
+    }
+    .current{
+        background: #fff;
+        a{
+            color: $fontcolor;
+        }
+    }
+}

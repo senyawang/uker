@@ -98,7 +98,7 @@ input {
     padding: 0;
     @include input-placeholder {
         font-style: normal;
-        font-size: 1.4rem;
+        font-size: .6rem;
         color: $gray;
     }
 }
@@ -110,6 +110,9 @@ input {
 }
 .fc-orange{
     color: #fc7c01;
+}
+.fc-red{
+    color: $red;
 }
 .gap{
     margin-bottom: $gap;
@@ -332,4 +335,5 @@ input {
 @include icon-mix(i-weixin);
 @include icon-mix(i-close);
 @include icon-mix(i-copy);
+@include icon-mix(i-zoom);
 
