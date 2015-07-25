@@ -3,8 +3,8 @@
 body{
     background: #edeef0;
     -webkit-touch-callout: none !important;
-    -webkit-transform:translate3d(0,0,0);
-    transform:translate3d(0,0,0)
+    // -webkit-transform:translate3d(0,0,0);
+    // transform:translate3d(0,0,0)
 }
 
 
@@ -101,6 +101,11 @@ body{
         color: $orange;
     }
 }
+// index 结束
+
+
+
+// 资讯详情
 .info-detail{
     padding: $gap;
     h1{
@@ -160,6 +165,8 @@ body{
     }
 }
 
+
+// 学校搜索
 .quick-search{
     text-align: center;
     li{
@@ -173,10 +180,14 @@ body{
     }
     ul:first-child{
         li:first-child{
-            flex: 2;
+            -webkit-flex: 2;
+                -ms-flex: 2;
+                    flex: 2;
         }
         li:not(:first-child){
-            flex: 4;
+            -webkit-flex: 4;
+                -ms-flex: 4;
+                    flex: 4;
         }
     }
 }
@@ -190,7 +201,6 @@ body{
         background: none;
     }
     .sf-wrap{
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         overflow: hidden;
         padding: .3rem;
@@ -203,7 +213,7 @@ body{
         }
     }
     .s-text{
-        width: 70%;
+        width: 80%;
         vertical-align: middle;
         font: .6rem/1 simhei;
         border: 0 none;
@@ -256,3 +266,174 @@ body{
         }
     }
 }
+
+.filter-menu{
+    padding: .5rem;
+    text-align: center;
+    li{
+        a{
+            display: block;
+            position: relative;
+            border-right: 1px solid $line;
+        }
+        [class^="i-arrow"]:first-child,
+        [class^="i-arrow"]:last-child
+        {
+            position: static;
+            display: block;
+        }
+        [class^="i-filter"]
+        {
+            right: .5rem;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+
+        }
+        &:last-child{
+            a{
+                border: 0 none;
+            }
+        }
+    }
+
+    .i-box{
+        display: block;
+        position: absolute;
+        width: 20%;
+        height: 1em;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+    }
+
+}
+.slide-panel{
+    width: 100%;
+    height: #{calc(100vh - 2rem)};
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-x: hidden;
+    background: $boxbg;
+    .sp-wrap{
+        width: 200%;
+    }
+    .sp-box{
+        float: left;
+        width: 50%;
+        vertical-align: top;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .current{
+
+    }
+    .sp-list{
+        li{
+            padding: 5% 8%;
+            border-bottom: 1px dotted $line;
+            &:first-child{
+                border-top: 1px solid $line;
+            }
+            a{
+                display: block;
+                font-size: 0;
+            }
+        }
+        .sl-item{
+            display: inline-block;
+            width: 50%;
+            font-size: .6rem;
+            vertical-align: top;
+            &:first-child{
+                text-align: left;
+            }
+            &:last-child{
+                text-align: right;
+            }
+        }
+        .i-arrow-r,
+        .i-right{
+            position: static;
+        }
+    }
+}
+
+
+// 排名中心
+.ranking-title{
+    font: 300 .7rem/3 simhei;
+    background: $red;
+    color: #fff;
+    text-align: center;
+}
+.rank-table{
+    .rt-list{
+        text-align: center;
+        background: $boxbg;
+    }
+    li{
+        padding: $gap * 2;
+        border-bottom: 1px dotted $line;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3){
+            .num:first-child{
+                color: $red;
+            }
+        }
+    }
+    .num,
+    .school{
+        display: inline-block;
+        vertical-align: middle;
+        h3{
+            display: inline-block;
+        }
+    }
+    .num{
+        width: 11%;
+        font-size: .8rem;
+        &:nth-child(2){
+            padding-right: 5%;
+            color: $gray;
+        }
+
+    }
+    .school{
+        width: 70%;
+        text-align: left;
+    }
+}
+
+
+.fixed-btn{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font: .7rem/3 simhei;
+    li{
+        a{
+            display: block;
+            color: #fff;
+        }
+        &:first-child{
+            background: #ff9409;
+        }
+        &:last-child{
+            background: #ff6009;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

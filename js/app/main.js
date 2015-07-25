@@ -40,6 +40,26 @@ $(function () {
     }
 
     refreshInit("url")
+
+    $(".slide-panel").on('touchend', '.current', function (e) {
+
+    	e.preventDefault();
+
+    	var $this = $(this);
+
+    	$this.css('marginLeft', '-50%');
+    })
+
+
+
+
+
+
+
+
+
+
+
     
     
 

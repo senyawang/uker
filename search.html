@@ -25,15 +25,15 @@
     <div class="ui-box tabs-menu">
 
         <section class="search-form">
-            <form action="/" name="search" id="searchForm">
+            <form action="/search.html" name="search" id="searchForm">
                 <input type="submit" class="s-btn" value="搜索">
                 <div class="sf-wrap"> 
                     <i class="i-zoom"></i>               
-                    <input type="text" name="s-text" class="s-text" placeholder="请输入您要搜索的学校或专业中英文" value="">
+                    <input type="search" name="s-text" class="s-text" placeholder="请输入您要搜索的学校或专业中英文" value="">
                 </div>
             </form>
         </section>
-        
+
         <div class="ub-bd">
             <ul class="ui-flex-box">
                 <li class="current"><a href="#">学校</a></li>
@@ -42,6 +42,19 @@
         </div>
     </div>
 
+    <div class="filter-menu">
+        <ul class="ui-flex-box">
+            <li class="sort-up"><a href="#">排名 
+                <span class="i-box"><i class="i-arrow-t"></i><i class="i-arrow-b"></i></span>
+            </a></li>
+            <li class="sort-down"><a href="#">生活费
+                <span class="i-box"><i class="i-arrow-t"></i><i class="i-arrow-b"></i></span>
+            </a></li>
+            <li class="active" id="push-right"><a href="#">筛选
+                <span class="i-box"><i class="i-filter"></i></span>
+            </a></li>
+        </ul>
+    </div>
 
     <!-- 搜索列表 -->
     <section class="ui-box search-list">
@@ -88,31 +101,112 @@
 
 <div id="panel">
     <header class="header">
-        <a class="btn-back" href="#"><i class="logo"></i></a>
+        <h1 class="title">筛选</h1>
+        <a class="btn-back" href="#"><i class="i-back"></i>返回</a>
+        <a class="btn-menu" href="#">搜索</a>
     </header>
-    <nav class="panel-menu">
-        <ul>
-            <li>
-                <a href="#"><i class="i-menu-home"></i>首页</a>
-            </li>
-            <li>
-                <a href="#"><i class="i-menu-info"></i>留学资讯</a>
-            </li>
-            <li>
-                <a href="#"><i class="i-menu-center"></i>学校中心</a>
-            </li>
-            <li>
-                <a href="#"><i class="i-menu-test"></i>测测成功率</a>
-            </li>
-            <li>
-                <a href="#"><i class="i-menu-case"></i>获取留学方案</a>
-            </li>
-            <li>
-                <a href="#"><i class="i-menu-required"></i>留学必备</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="slide-panel">
 
+        <div class="sp-wrap">
+            <div class="sp-box current">
+                <ul class="sp-list">
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item">全部 <i class="i-arrow-r"></i></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item">全部 <i class="i-arrow-r"></i></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item">全部 <i class="i-arrow-r"></i></span>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- sp-box -->
+            <div class="sp-box">
+                <ul class="sp-list">
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item"><i class="i-right"></i></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#area">
+                        <span class="sl-item">地区</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#city">
+                        <span class="sl-item">城市</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                    <li><a href="#ranking">
+                        <span class="sl-item">排名</span>
+                        <span class="sl-item"></span>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- sp-box -->
+        </div>
+        <!-- sp-wrap -->
+        
+    </div>
+    <!-- slide-panel -->
 </div>
 
 

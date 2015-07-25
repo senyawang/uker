@@ -3,6 +3,7 @@
 
 html{
     // min-width: 980px;
+    width: 100%;
     font-size: 62.5%;
     line-height: 1.5;
     font-family: arial, microsoft yahei, Helvetica, simhei;
@@ -58,6 +59,7 @@ html{
 
 }
 body{
+    width: 100%;
     max-width: 640px;
     overflow-x: hidden;
     color: $darkgray;
@@ -169,6 +171,12 @@ input {
     width: 65%!important;
     padding: 0;
     background: #e6e6e6;
+    color: $fontcolor;
+}
+.ui-panel-dismiss{
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    background: rgba(0,0,0,.5);
 }
 .panel-menu{
     padding-left: 2rem;
@@ -318,7 +326,9 @@ input {
 @include icon-mix(i-arrow-l);
 @include icon-mix(i-arrow-r);
 @include icon-mix(i-arrow-t);
+@include icon-mix(i-arrow-t-red);
 @include icon-mix(i-arrow-b);
+@include icon-mix(i-arrow-b-red);
 @include icon-mix(i-menu);
 @include icon-mix(i-menu1);
 @include icon-mix(i-menu2);
@@ -336,4 +346,24 @@ input {
 @include icon-mix(i-close);
 @include icon-mix(i-copy);
 @include icon-mix(i-zoom);
+@include icon-mix(i-filter);
+@include icon-mix(i-filter-red);
+@include icon-mix(i-right);
+
+
+.sort-up{
+    [class^="i-arrow"]:first-child{
+        @extend .i-arrow-t-red;
+    }
+}
+.sort-down{
+    [class^="i-arrow"]:last-child{
+        @extend .i-arrow-b-red;
+    }
+}
+.active{
+    .i-filter{
+        @extend .i-filter-red;
+    }
+} 
 
