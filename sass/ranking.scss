@@ -1,0 +1,79 @@
+@import "var.scss";
+
+
+// 排名中心
+.ranking-title{
+    font: 300 .7rem/3 simhei;
+    background: $red;
+    color: #fff;
+    text-align: center;
+}
+.rank-table{
+    .rt-list{
+        text-align: center;
+        background: $boxbg;
+    }
+    li{
+        padding: $gap * 2;
+        border-bottom: 1px dotted $line;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3){
+            .num:first-child{
+                color: $red;
+            }
+        }
+    }
+    .num,
+    .school{
+        display: inline-block;
+        vertical-align: middle;
+        h3{
+            display: inline-block;
+        }
+    }
+    .num{
+        width: 11%;
+        font-size: .8rem;
+        &:nth-child(2){
+            padding-right: 5%;
+            color: $gray;
+        }
+
+    }
+    .school{
+        width: 70%;
+        text-align: left;
+    }
+}
+
+
+.fixed-btn{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font: .7rem/3 simhei;
+    li{
+        a{
+            display: block;
+            color: #fff;
+        }
+        &:first-child{
+            background: #ff9409;
+        }
+        &:last-child{
+            background: #ff6009;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

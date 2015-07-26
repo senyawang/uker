@@ -1,0 +1,139 @@
+@import "var.scss";
+
+
+
+.school-nav{
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-width: 1px 0;
+    li{
+        text-align: center;
+        a{
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font: .7rem/3 simhei;
+            border-bottom: 2px solid #fff;
+
+            // &:hover,
+            &.current{
+                color: $red;
+                border-bottom: 2px solid $red;
+            }
+        }
+    }
+}
+.school-title{
+    background: #fff;
+    padding: $gap*2 $gap*2 0;
+    .pic{
+        margin-bottom: .5rem;
+    }
+    .date{
+        clear: left;
+    }
+}
+
+.school-notice{
+    position: relative;
+    padding: $gap*2;
+    a{
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $orange;
+    }
+    background: #fff2de;
+    [class^="i-arrow"]{
+        right: $gap*2;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+.school-ranking{
+    background: #fff;
+    text-align: center;
+    .fc-orange{
+        display: block;
+        font-size: .75rem;
+    }
+    li{
+        padding: $gap*2 0;
+    }
+}
+.school-pic{
+    li{
+        &:first-child{
+            padding-right: 3%;
+        }
+        &:last-child{
+            padding-left: 3%;
+        }
+    }
+    .pic{
+        max-width: 100%;
+    }
+    .opts{
+        span{
+            display: inline-block;
+            width: 48%;
+            line-height: 3;
+            &:first-child{
+                text-align: left;
+            }
+
+            &:last-child{
+                text-align: right;
+                color: $more;
+            }
+        }
+    }
+}
+.ui-btn-more{
+    display: block;
+    margin: $gap 0;
+    background: #edeef0;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 3;
+}
+.school-intro{
+    p{
+        text-indent: 2em;
+        font-size: .7rem;
+        line-height: 2;
+    }
+}
+.hot-sp{
+    .date{
+        span{
+            display: inline-block;
+            padding-right: 15px;
+        }
+    }
+}
+.fixed-btn{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font: .7rem/3 simhei;
+    li{
+        a{
+            display: block;
+            color: #fff;
+        }
+        &:first-child{
+            background: #ff9409;
+        }
+        &:last-child{
+            background: #ff6009;
+        }
+    }
+}
+

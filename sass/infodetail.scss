@@ -1,0 +1,70 @@
+@import "var.scss";
+
+// 资讯详情
+.info-detail{
+    padding: $gap;
+    h1{
+        color: #000;
+        font: 300 .8rem/1.5 simhei;
+    }
+    .options{
+        color: $more;
+        span{
+            padding: 0 10px 0 0;
+        }
+    }
+    .info-text{
+        padding: ($gap * 2) $gap;
+        p{
+            margin: ($gap * 2) 0;
+            text-indent: 2em;
+            font: 300 .7rem/1.5 simhei;
+            img{
+                margin-left: -2em;
+            }
+        }
+    }
+}
+.ui-share{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: .8rem 0;
+    background: #fff;
+    text-align: center;
+    h2{
+        margin-bottom: .8rem;
+        font: 300 .8rem/2 simhei;
+    }
+    a[class^="i-"]{
+        position: static;
+        overflow: hidden;
+        line-height: 100em;
+    }
+    p{padding-top: .8rem;}
+}
+.lxgj{
+    padding-bottom: .4rem;
+    .pic{
+        float: none;
+        width: (96rem / 40);
+        margin-right: .2rem;
+        vertical-align: middle;
+    }
+    li p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+
+
+

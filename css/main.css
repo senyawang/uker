@@ -1,58 +1,52 @@
-/* line 3, ../sass/main.scss */
-body {
-  background: #edeef0;
-  -webkit-touch-callout: none !important;
-}
-
-/* line 11, ../sass/main.scss */
+/* line 4, ../sass/main.scss */
 .uker-nav {
   padding: 5px 0;
 }
-/* line 13, ../sass/main.scss */
+/* line 6, ../sass/main.scss */
 .uker-nav [class^='i-menu'] {
   position: static;
 }
-/* line 16, ../sass/main.scss */
+/* line 9, ../sass/main.scss */
 .uker-nav strong {
   display: block;
 }
-/* line 19, ../sass/main.scss */
+/* line 12, ../sass/main.scss */
 .uker-nav .nav-list {
   text-align: center;
 }
-/* line 22, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 .uker-nav li {
   padding: 0.35rem 0;
   border-right: 1px dotted #dddddd;
 }
 
-/* line 28, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 .info-list li {
   position: relative;
   overflow: hidden;
   padding: 0.5rem 0;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 33, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .info-list li a {
   display: block;
 }
-/* line 36, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 .info-list li h3 {
   min-height: 3rem;
-  font: 300 0.75rem simhei;
+  font: 300 .75rem/1.3 simhei;
 }
-/* line 40, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 .info-list li:last-child {
   border: 0 none;
 }
-/* line 44, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 .info-list .pic {
   float: right;
   width: 33.33%;
   margin-left: 1rem;
 }
-/* line 49, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 .info-list .date {
   position: absolute;
   left: 0;
@@ -60,11 +54,11 @@ body {
   color: #888888;
 }
 
-/* line 58, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 .school-list li h3 {
   min-height: 0;
 }
-/* line 62, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .school-list .pic {
   float: left;
   width: 3.25rem;
@@ -73,402 +67,44 @@ body {
   margin-left: 0;
   margin-right: 1rem;
 }
-/* line 70, ../sass/main.scss */
+/* line 63, ../sass/main.scss */
 .school-list .date {
   position: static;
   line-height: 1.5;
 }
 
-/* line 75, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 .pm-list {
   text-align: center;
   padding-bottom: 0.25rem;
 }
-/* line 78, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .pm-list h3 {
   font: 300 .6rem/2 simhei;
 }
-/* line 81, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 .pm-list .pic {
   width: 80%;
 }
 
-/* line 86, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 .lxbd li {
   padding: 0.25rem;
   border-right: 1px dotted #dddddd;
 }
-/* line 90, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .lxbd .pic {
   float: left;
   width: 40%;
   margin-right: .5rem;
 }
-/* line 95, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 .lxbd h3 {
   padding-top: 10px;
   font: 300 .7rem/1.5 simhei;
 }
-/* line 99, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .lxbd p {
   font-size: .7rem;
   color: #fc7c01;
-}
-
-/* line 109, ../sass/main.scss */
-.info-detail {
-  padding: 0.25rem;
-}
-/* line 111, ../sass/main.scss */
-.info-detail h1 {
-  color: #000;
-  font: 300 .8rem/1.5 simhei;
-}
-/* line 115, ../sass/main.scss */
-.info-detail .options {
-  color: #888888;
-}
-/* line 117, ../sass/main.scss */
-.info-detail .options span {
-  padding: 0 10px 0 0;
-}
-/* line 121, ../sass/main.scss */
-.info-detail .info-text {
-  padding: 0.5rem 0.25rem;
-}
-/* line 123, ../sass/main.scss */
-.info-detail .info-text p {
-  margin: 0.5rem 0;
-  text-indent: 2em;
-  font: 300 .7rem/1.5 simhei;
-}
-/* line 127, ../sass/main.scss */
-.info-detail .info-text p img {
-  margin-left: -2em;
-}
-
-/* line 133, ../sass/main.scss */
-.ui-share {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  padding: .8rem 0;
-  background: #fff;
-  text-align: center;
-}
-/* line 143, ../sass/main.scss */
-.ui-share h2 {
-  margin-bottom: .8rem;
-  font: 300 .8rem/2 simhei;
-}
-/* line 147, ../sass/main.scss */
-.ui-share a[class^="i-"] {
-  position: static;
-  overflow: hidden;
-  line-height: 100em;
-}
-/* line 152, ../sass/main.scss */
-.ui-share p {
-  padding-top: .8rem;
-}
-
-/* line 154, ../sass/main.scss */
-.lxgj {
-  padding-bottom: .4rem;
-}
-/* line 156, ../sass/main.scss */
-.lxgj .pic {
-  float: none;
-  width: 2.4rem;
-  margin-right: .2rem;
-  vertical-align: middle;
-}
-/* line 162, ../sass/main.scss */
-.lxgj li p {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* line 170, ../sass/main.scss */
-.quick-search {
-  text-align: center;
-}
-/* line 173, ../sass/main.scss */
-.quick-search li a {
-  display: block;
-  margin: 5px 0.25rem;
-  padding: 5px 0;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-}
-/* line 182, ../sass/main.scss */
-.quick-search ul:first-child li:first-child {
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
-}
-/* line 187, ../sass/main.scss */
-.quick-search ul:first-child li:not(:first-child) {
-  -webkit-flex: 4;
-  -ms-flex: 4;
-  flex: 4;
-}
-
-/* line 194, ../sass/main.scss */
-.search-form {
-  padding: 0.5rem;
-}
-/* line 196, ../sass/main.scss */
-.search-form .s-btn {
-  float: right;
-  width: 3em;
-  border: 0 none;
-  font: .8rem/2 simhei;
-  background: none;
-}
-/* line 203, ../sass/main.scss */
-.search-form .sf-wrap {
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: .3rem;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  background: #fff;
-  text-align: center;
-}
-/* line 211, ../sass/main.scss */
-.search-form .sf-wrap .i-zoom {
-  position: static;
-}
-/* line 215, ../sass/main.scss */
-.search-form .s-text {
-  width: 80%;
-  vertical-align: middle;
-  font: .6rem/1 simhei;
-  border: 0 none;
-  background: transparent;
-}
-
-/* line 224, ../sass/main.scss */
-.search-list .s-result {
-  padding: 0.25rem 0.5rem;
-  background: #dddddd;
-}
-/* line 229, ../sass/main.scss */
-.search-list .school-list .pic {
-  margin-right: .5rem;
-}
-/* line 233, ../sass/main.scss */
-.search-list .sl-info {
-  display: block;
-  overflow: hidden;
-}
-/* line 236, ../sass/main.scss */
-.search-list .sl-info .sp-num {
-  padding: 0 4px;
-  background: #d42c2c;
-  border-radius: 3px;
-  color: #fff;
-}
-
-/* line 245, ../sass/main.scss */
-.tabs-menu {
-  margin-bottom: 0;
-  text-align: center;
-  padding-bottom: 0.5rem;
-}
-/* line 249, ../sass/main.scss */
-.tabs-menu ul {
-  background: #dddddd;
-  border: 1px solid #dddddd;
-  border-radius: .7rem;
-}
-/* line 253, ../sass/main.scss */
-.tabs-menu ul li {
-  border-radius: .7rem;
-}
-/* line 255, ../sass/main.scss */
-.tabs-menu ul li a {
-  display: block;
-  font: .7rem/2 simhei;
-  color: #888888;
-}
-/* line 262, ../sass/main.scss */
-.tabs-menu .current {
-  background: #fff;
-}
-/* line 264, ../sass/main.scss */
-.tabs-menu .current a {
-  color: #333;
-}
-
-/* line 270, ../sass/main.scss */
-.filter-menu {
-  padding: .5rem;
-  text-align: center;
-}
-/* line 274, ../sass/main.scss */
-.filter-menu li a {
-  display: block;
-  position: relative;
-  border-right: 1px solid #dddddd;
-}
-/* line 279, ../sass/main.scss */
-.filter-menu li [class^="i-arrow"]:first-child,
-.filter-menu li [class^="i-arrow"]:last-child {
-  position: static;
-  display: block;
-}
-/* line 285, ../sass/main.scss */
-.filter-menu li [class^="i-filter"] {
-  right: .5rem;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-}
-/* line 294, ../sass/main.scss */
-.filter-menu li:last-child a {
-  border: 0 none;
-}
-/* line 300, ../sass/main.scss */
-.filter-menu .i-box {
-  display: block;
-  position: absolute;
-  width: 20%;
-  height: 1em;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-}
-
-/* line 312, ../sass/main.scss */
-.slide-panel {
-  width: 100%;
-  height: calc(100vh - 2rem);
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-  overflow-x: hidden;
-  background: #f8f8f8;
-}
-/* line 319, ../sass/main.scss */
-.slide-panel .sp-wrap {
-  width: 200%;
-}
-/* line 322, ../sass/main.scss */
-.slide-panel .sp-box {
-  float: left;
-  width: 50%;
-  vertical-align: top;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-/* line 333, ../sass/main.scss */
-.slide-panel .sp-list li {
-  padding: 5% 8%;
-  border-bottom: 1px dotted #dddddd;
-}
-/* line 336, ../sass/main.scss */
-.slide-panel .sp-list li:first-child {
-  border-top: 1px solid #dddddd;
-}
-/* line 339, ../sass/main.scss */
-.slide-panel .sp-list li a {
-  display: block;
-  font-size: 0;
-}
-/* line 344, ../sass/main.scss */
-.slide-panel .sp-list .sl-item {
-  display: inline-block;
-  width: 50%;
-  font-size: .6rem;
-  vertical-align: top;
-}
-/* line 349, ../sass/main.scss */
-.slide-panel .sp-list .sl-item:first-child {
-  text-align: left;
-}
-/* line 352, ../sass/main.scss */
-.slide-panel .sp-list .sl-item:last-child {
-  text-align: right;
-}
-/* line 356, ../sass/main.scss */
-.slide-panel .sp-list .i-arrow-r,
-.slide-panel .sp-list .i-right {
-  position: static;
-}
-
-/* line 365, ../sass/main.scss */
-.ranking-title {
-  font: 300 .7rem/3 simhei;
-  background: #d42c2c;
-  color: #fff;
-  text-align: center;
-}
-
-/* line 372, ../sass/main.scss */
-.rank-table .rt-list {
-  text-align: center;
-  background: #f8f8f8;
-}
-/* line 376, ../sass/main.scss */
-.rank-table li {
-  padding: 0.5rem;
-  border-bottom: 1px dotted #dddddd;
-}
-/* line 382, ../sass/main.scss */
-.rank-table li:nth-child(1) .num:first-child, .rank-table li:nth-child(2) .num:first-child, .rank-table li:nth-child(3) .num:first-child {
-  color: #d42c2c;
-}
-/* line 387, ../sass/main.scss */
-.rank-table .num,
-.rank-table .school {
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 391, ../sass/main.scss */
-.rank-table .num h3,
-.rank-table .school h3 {
-  display: inline-block;
-}
-/* line 395, ../sass/main.scss */
-.rank-table .num {
-  width: 11%;
-  font-size: .8rem;
-}
-/* line 398, ../sass/main.scss */
-.rank-table .num:nth-child(2) {
-  padding-right: 5%;
-  color: #ababab;
-}
-/* line 404, ../sass/main.scss */
-.rank-table .school {
-  width: 70%;
-  text-align: left;
-}
-
-/* line 411, ../sass/main.scss */
-.fixed-btn {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  font: .7rem/3 simhei;
-}
-/* line 419, ../sass/main.scss */
-.fixed-btn li a {
-  display: block;
-  color: #fff;
-}
-/* line 423, ../sass/main.scss */
-.fixed-btn li:first-child {
-  background: #ff9409;
-}
-/* line 426, ../sass/main.scss */
-.fixed-btn li:last-child {
-  background: #ff6009;
 }

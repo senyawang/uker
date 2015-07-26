@@ -1,0 +1,208 @@
+/* line 5, ../sass/search.scss */
+.quick-search {
+  text-align: center;
+}
+/* line 8, ../sass/search.scss */
+.quick-search li a {
+  display: block;
+  margin: 5px 0.25rem;
+  padding: 5px 0;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+/* line 17, ../sass/search.scss */
+.quick-search ul:first-child li:first-child {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+/* line 22, ../sass/search.scss */
+.quick-search ul:first-child li:not(:first-child) {
+  -webkit-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+
+/* line 29, ../sass/search.scss */
+.search-form {
+  padding: 0.5rem;
+}
+/* line 31, ../sass/search.scss */
+.search-form .s-btn {
+  float: right;
+  width: 3em;
+  border: 0 none;
+  font: .8rem/2 simhei;
+  background: none;
+}
+/* line 38, ../sass/search.scss */
+.search-form .sf-wrap {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: .3rem;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: #fff;
+  text-align: center;
+}
+/* line 46, ../sass/search.scss */
+.search-form .sf-wrap .i-zoom {
+  position: static;
+}
+/* line 50, ../sass/search.scss */
+.search-form .s-text {
+  width: 80%;
+  vertical-align: middle;
+  font: .6rem/1 simhei;
+  border: 0 none;
+  background: transparent;
+}
+
+/* line 59, ../sass/search.scss */
+.search-list .s-result {
+  padding: 0.25rem 0.5rem;
+  background: #dddddd;
+}
+/* line 64, ../sass/search.scss */
+.search-list .school-list .pic {
+  margin-right: .5rem;
+}
+/* line 68, ../sass/search.scss */
+.search-list .sl-info {
+  display: block;
+  overflow: hidden;
+}
+/* line 71, ../sass/search.scss */
+.search-list .sl-info .sp-num {
+  padding: 0 4px;
+  background: #d42c2c;
+  border-radius: 3px;
+  color: #fff;
+}
+
+/* line 80, ../sass/search.scss */
+.tabs-menu {
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+/* line 84, ../sass/search.scss */
+.tabs-menu ul {
+  background: #dddddd;
+  border: 1px solid #dddddd;
+  border-radius: .7rem;
+}
+/* line 88, ../sass/search.scss */
+.tabs-menu ul li {
+  border-radius: .7rem;
+}
+/* line 90, ../sass/search.scss */
+.tabs-menu ul li a {
+  display: block;
+  font: .7rem/2 simhei;
+  color: #888888;
+}
+/* line 97, ../sass/search.scss */
+.tabs-menu .current {
+  background: #fff;
+}
+/* line 99, ../sass/search.scss */
+.tabs-menu .current a {
+  color: #333;
+}
+
+/* line 105, ../sass/search.scss */
+.filter-menu {
+  padding: .5rem;
+  text-align: center;
+}
+/* line 109, ../sass/search.scss */
+.filter-menu li a {
+  display: block;
+  position: relative;
+  border-right: 1px solid #dddddd;
+}
+/* line 114, ../sass/search.scss */
+.filter-menu li [class^="i-arrow"]:first-child,
+.filter-menu li [class^="i-arrow"]:last-child {
+  position: static;
+  display: block;
+}
+/* line 120, ../sass/search.scss */
+.filter-menu li [class^="i-filter"] {
+  right: .5rem;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+/* line 129, ../sass/search.scss */
+.filter-menu li:last-child a {
+  border: 0 none;
+}
+/* line 135, ../sass/search.scss */
+.filter-menu .i-box {
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 1em;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* line 147, ../sass/search.scss */
+.slide-panel {
+  width: 100%;
+  height: calc(100vh - 2rem);
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
+  background: #fff;
+}
+/* line 154, ../sass/search.scss */
+.slide-panel .sp-wrap {
+  width: 200%;
+}
+/* line 157, ../sass/search.scss */
+.slide-panel .sp-box {
+  float: left;
+  width: 50%;
+  vertical-align: top;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+/* line 168, ../sass/search.scss */
+.slide-panel .sp-list li {
+  padding: 5% 8%;
+  border-bottom: 1px dotted #dddddd;
+}
+/* line 171, ../sass/search.scss */
+.slide-panel .sp-list li:first-child {
+  border-top: 1px solid #dddddd;
+}
+/* line 174, ../sass/search.scss */
+.slide-panel .sp-list li a {
+  display: block;
+  font-size: 0;
+}
+/* line 179, ../sass/search.scss */
+.slide-panel .sp-list .sl-item {
+  display: inline-block;
+  width: 50%;
+  font-size: .6rem;
+  vertical-align: top;
+}
+/* line 184, ../sass/search.scss */
+.slide-panel .sp-list .sl-item:first-child {
+  text-align: left;
+}
+/* line 187, ../sass/search.scss */
+.slide-panel .sp-list .sl-item:last-child {
+  text-align: right;
+}
+/* line 191, ../sass/search.scss */
+.slide-panel .sp-list .i-arrow-r,
+.slide-panel .sp-list .i-right {
+  position: static;
+}

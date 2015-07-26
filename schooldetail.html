@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>cctvmall</title>
+    <meta name="author" content="www.uker.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="dist/gmu.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/schooldetail.css">
+</head>
+<body>
+<div class="mainpage">
+
+    <header class="header">
+        <h1 class="title">牛津大学</h1>
+        <a class="btn-back" href="#"><i class="i-back"></i>返回</a>
+        <a class="btn-menu" id="push-right" href="#"><i class="i-menu"></i></a>
+    </header>
+
+    <nav class="school-nav">
+        <ul class="ui-flex-box">
+            <li><a class="current" href="#">
+                <strong>概况</strong>
+            </a></li>
+            <li><a href="#">
+                <strong>专业</strong>
+            </a></li>
+            <li><a href="#">
+                <strong>资讯</strong>
+            </a></li>
+            <li><a href="#">
+                <strong>图片</strong>
+            </a></li>
+        </ul>
+    </nav>
+
+    <ul class="info-list school-list school-title">
+        <li><a href="#">
+            <img class="pic" src="images/schoollogo.png">
+            <h3>London School of Economics and Political Science </h3>
+            <h3>牛津大学 </h3>
+            <p class="date">
+                <span>所在地区：纽约</span>
+                <span>所在城市：Brisbane</span>
+            </p>
+            <p class="date">
+                <span>平均学费：28700-35000 英镑/年</span>
+                <span>雅思成绩：4.5-7.5分</span>
+            </p>
+        </a></li>
+    </ul>
+    <div class="school-notice">
+        <a href="#">· 牛津大学发布2015年9月前语言课程安排通知     
+        <i class="i-arrow-r-o"></i>
+        </a>
+    </div>
+    <div class="school-ranking gap">
+        <ul class="ui-flex-box">
+            <li>
+                TIMES排名
+                <span class="fc-orange">1</span>
+            </li>
+            <li>
+                世界排名
+                <span class="fc-orange">12</span>
+            </li>
+            <li>
+                关注人次
+                <span class="fc-orange">2336</span>
+            </li>
+        </ul>
+        <ul class="ui-flex-box">
+            <li>
+                师生比例
+                <span class="fc-orange">1:8</span>
+            </li>
+            <li>
+                学校就业率
+                <span class="fc-orange">12%</span>
+            </li>
+            <li>
+                海外学生比例
+                <span class="fc-orange">23:36</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 历年TIMES排名 -->
+    <section class="ui-box">
+        <header class="ub-hd">
+            <h2>历年TIMES排名</h2>
+        </header>
+        <div class="ub-bd">
+            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+            <div id="main" style="height:200px"></div>
+        </div>
+    </section>    
+
+    <!-- 图片 -->
+    <section class="ui-box">
+        <header class="ub-hd">
+            <h2>图片</h2>
+        </header>
+        <div class="ub-bd">
+            <ul class="ui-flex-box school-pic">
+                <li><a href="#">
+                    <img class="pic" src="images/school-pic.jpg">
+                    <p class="opts">
+                        <span>教学楼</span>
+                        <span>共3张</span>
+                    </p>
+                </a></li>
+                <li><a href="#">
+                    <img class="pic" src="images/school-pic.jpg">
+                    <p class="opts">
+                        <span>教学楼</span>
+                        <span>共3张</span>
+                    </p>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 学校简介 -->
+    <section class="ui-box">
+        <header class="ub-hd">
+            <h2>学校简介</h2>
+        </header>
+        <div class="ub-bd school-intro">
+            <p>位于英国的牛津大学具有世界声誉，它在英国社会和高等教育系统中具有极其重要的地位，有着世界性的影。英国和世界很多的青年学子们都以进牛津大学深造作为理想。牛津大学是英国研究型大学罗素盟校，欧洲顶尖是英国研究型大学是英国研究型大学是英国研以来...</p>
+            <a class="ui-btn-more" href="#">查看更多</a>
+        </div>
+    </section>  
+
+    <!-- 热门专业 -->
+    <section class="ui-box">
+        <header class="ub-hd">
+            <h2>热门专业</h2>
+            <a class="more" href="#">更多 <i class="i-arrow-r"></i></a>
+
+        </header>
+        <div class="ub-bd">
+            <ul class="info-list school-list hot-sp">
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型： DPhil    Master Degree     BSc     MSc</span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型：Master Degree </span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型： DPhil    Master Degree     BSc     MSc</span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型：Master Degree </span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+            </ul>
+        </div>
+    </section>  
+
+    <!-- 最新资讯 -->
+    <section class="ui-box">
+        <header class="ub-hd">
+            <h2>最新资讯</h2>
+            <a class="more" href="#">更多 <i class="i-arrow-r"></i></a>
+        </header>
+        <div class="ub-bd">
+            <ul class="info-list">
+                <li><a href="#">
+                    <img class="pic" src="images/images1.jpg">
+                    <h3>高中生为啥能被牛津大学录取？</h3>
+                    <p class="date">2015/07/03</p>
+                </a></li>
+                <li><a href="#">
+                    <h3>我在诺城——记录UEA留学生活的点滴记录UEA留学生活的点滴</h3>
+                    <p class="date">2015/07/03</p>
+                </a></li>
+                <li><a href="#">
+                    <img class="pic" src="images/images1.jpg">
+                    <h3>高中生为啥能被牛津大学录取？</h3>
+                    <p class="date">2015/07/03</p>
+                </a></li>
+                <li><a href="#">
+                    <img class="pic" src="images/images1.jpg">
+                    <h3>高中生为啥能被牛津大学录取？</h3>
+                    <p class="date">2015/07/03</p>
+                </a></li>
+                <li><a href="#">
+                    <img class="pic" src="images/images1.jpg">
+                    <h3>高中生为啥能被牛津大学录取？</h3>
+                    <p class="date">2015/07/03</p>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 排名相近的学校 -->
+    <section class="ui-box">
+        <header class="ub-hd">
+            <h2>排名相近的学校</h2>
+            <a class="more" href="#">更多 <i class="i-arrow-r"></i></a>
+        </header>
+        <div class="ub-bd">
+            <ul class="info-list school-list">
+                <li><a href="#">
+                    <img class="pic" src="images/schoollogo.png">
+                    <h3>London School of Economics and Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a></li>
+                <li><a href="#">
+                    <img class="pic" src="images/schoollogo.png">
+                    <h3>London School of Economics and Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a></li>
+                <li><a href="#">
+                    <img class="pic" src="images/schoollogo.png">
+                    <h3>London School of Economics and Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>中英网UKER.net  沪ICP备11021479号</p>
+    </footer>
+    
+</div>
+
+<div class="fixed-btn">
+    <ul class="ui-flex-box">
+        <li><a href="#">测测成功率</a></li>
+        <li><a href="#">获取留学方案</a></li>
+    </ul>
+</div>
+
+
+<div id="panel">
+    <header class="header">
+        <a class="btn-back" href="#"><i class="logo"></i></a>
+    </header>
+    <nav class="panel-menu">
+        <ul>
+            <li>
+                <a href="#"><i class="i-menu-home"></i>首页</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-info"></i>留学资讯</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-center"></i>学校中心</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-test"></i>测测成功率</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-case"></i>获取留学方案</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-required"></i>留学必备</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+
+<script src="dist/uker.min.0.0.1.js"></script>
+<script src="js/app/main.js"></script>
+<!-- ECharts单文件引入 -->
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+    
+    // 使用
+    require(
+        [
+            'echarts',
+            'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+        ],
+        function (ec) {
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = ec.init(document.getElementById('main')); 
+            
+            option = {
+                calculable : false,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['2009','2010','2011','2012','2013','2014','2015']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value',
+                        axisLabel : {
+                            formatter: '{value}'
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        name:'最低气温',
+                        type:'line',
+                        data:[1, 0, 2, 5, 3, 2, 0],
+                        markPoint : {
+                            data : [
+                                {name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+                            ]
+                        },
+                        markLine : {
+                            data : [
+                                {type : 'average', name : '平均值'}
+                            ]
+                        }
+                    }
+                ]
+            };
+                                
+    
+            // 为echarts对象加载数据 
+            myChart.setOption(option); 
+        }
+    );
+</script>
+
+
+</body>
+</html>

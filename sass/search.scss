@@ -1,0 +1,198 @@
+@import "var.scss";
+
+
+// 学校搜索
+.quick-search{
+    text-align: center;
+    li{
+        a{
+            display: block;
+            margin: 5px (10rem/40);
+            padding: 5px 0;
+            border: 1px solid $line;
+            border-radius: 3px;
+        }
+    }
+    ul:first-child{
+        li:first-child{
+            -webkit-flex: 2;
+                -ms-flex: 2;
+                    flex: 2;
+        }
+        li:not(:first-child){
+            -webkit-flex: 4;
+                -ms-flex: 4;
+                    flex: 4;
+        }
+    }
+}
+.search-form{
+    padding: $gap*2;
+    .s-btn{
+        float: right;
+        width: 3em;
+        border: 0 none;
+        font: .8rem/2 simhei;
+        background: none;
+    }
+    .sf-wrap{
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: .3rem;
+        border: 1px solid $line;
+        border-radius: 3px;
+        background: #fff;
+        text-align: center;
+        .i-zoom{
+            position: static;
+        }
+    }
+    .s-text{
+        width: 80%;
+        vertical-align: middle;
+        font: .6rem/1 simhei;
+        border: 0 none;
+        background: transparent;
+    }
+}
+.search-list{
+    .s-result{
+        padding: $gap $gap*2;
+        background: $line;
+    }
+    .school-list{
+        .pic{
+            margin-right: .5rem;
+        }
+    }
+    .sl-info{
+        display: block;
+        overflow: hidden;
+        .sp-num{
+            padding: 0 4px;
+            background: $red;
+            border-radius: 3px;
+            color: #fff;
+        }
+    }
+}
+
+.tabs-menu{
+    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: $gap*2;
+    ul{
+        background: $line;
+        border:1px solid $line;
+        border-radius: .7rem;
+        li{
+            border-radius: .7rem;
+            a{
+                display: block;
+                font: .7rem/2 simhei;
+                color: $more;
+            }
+        }
+    }
+    .current{
+        background: #fff;
+        a{
+            color: $fontcolor;
+        }
+    }
+}
+
+.filter-menu{
+    padding: .5rem;
+    text-align: center;
+    li{
+        a{
+            display: block;
+            position: relative;
+            border-right: 1px solid $line;
+        }
+        [class^="i-arrow"]:first-child,
+        [class^="i-arrow"]:last-child
+        {
+            position: static;
+            display: block;
+        }
+        [class^="i-filter"]
+        {
+            right: .5rem;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+
+        }
+        &:last-child{
+            a{
+                border: 0 none;
+            }
+        }
+    }
+
+    .i-box{
+        display: block;
+        position: absolute;
+        width: 20%;
+        height: 1em;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+    }
+
+}
+.slide-panel{
+    width: 100%;
+    height: #{calc(100vh - 2rem)};
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-x: hidden;
+    background: $boxbg;
+    .sp-wrap{
+        width: 200%;
+    }
+    .sp-box{
+        float: left;
+        width: 50%;
+        vertical-align: top;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .current{
+
+    }
+    .sp-list{
+        li{
+            padding: 5% 8%;
+            border-bottom: 1px dotted $line;
+            &:first-child{
+                border-top: 1px solid $line;
+            }
+            a{
+                display: block;
+                font-size: 0;
+            }
+        }
+        .sl-item{
+            display: inline-block;
+            width: 50%;
+            font-size: .6rem;
+            vertical-align: top;
+            &:first-child{
+                text-align: left;
+            }
+            &:last-child{
+                text-align: right;
+            }
+        }
+        .i-arrow-r,
+        .i-right{
+            position: static;
+        }
+    }
+}
+
+

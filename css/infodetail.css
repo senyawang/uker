@@ -1,0 +1,76 @@
+/* line 4, ../sass/infodetail.scss */
+.info-detail {
+  padding: 0.25rem;
+}
+/* line 6, ../sass/infodetail.scss */
+.info-detail h1 {
+  color: #000;
+  font: 300 .8rem/1.5 simhei;
+}
+/* line 10, ../sass/infodetail.scss */
+.info-detail .options {
+  color: #888888;
+}
+/* line 12, ../sass/infodetail.scss */
+.info-detail .options span {
+  padding: 0 10px 0 0;
+}
+/* line 16, ../sass/infodetail.scss */
+.info-detail .info-text {
+  padding: 0.5rem 0.25rem;
+}
+/* line 18, ../sass/infodetail.scss */
+.info-detail .info-text p {
+  margin: 0.5rem 0;
+  text-indent: 2em;
+  font: 300 .7rem/1.5 simhei;
+}
+/* line 22, ../sass/infodetail.scss */
+.info-detail .info-text p img {
+  margin-left: -2em;
+}
+
+/* line 28, ../sass/infodetail.scss */
+.ui-share {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: .8rem 0;
+  background: #fff;
+  text-align: center;
+}
+/* line 38, ../sass/infodetail.scss */
+.ui-share h2 {
+  margin-bottom: .8rem;
+  font: 300 .8rem/2 simhei;
+}
+/* line 42, ../sass/infodetail.scss */
+.ui-share a[class^="i-"] {
+  position: static;
+  overflow: hidden;
+  line-height: 100em;
+}
+/* line 47, ../sass/infodetail.scss */
+.ui-share p {
+  padding-top: .8rem;
+}
+
+/* line 49, ../sass/infodetail.scss */
+.lxgj {
+  padding-bottom: .4rem;
+}
+/* line 51, ../sass/infodetail.scss */
+.lxgj .pic {
+  float: none;
+  width: 2.4rem;
+  margin-right: .2rem;
+  vertical-align: middle;
+}
+/* line 57, ../sass/infodetail.scss */
+.lxgj li p {
+  display: inline-block;
+  vertical-align: middle;
+}

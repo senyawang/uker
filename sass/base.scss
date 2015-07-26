@@ -64,7 +64,12 @@ body{
     overflow-x: hidden;
     color: $darkgray;
     font-size: .6rem;
+    background: #edeef0;
+    -webkit-touch-callout: none !important;
+    // -webkit-transform:translate3d(0,0,0);
+    // transform:translate3d(0,0,0)
 }
+
 h2{
     font-size: (32rem/40);
 }
@@ -80,11 +85,11 @@ a {
     text-decoration: none;
     &:link,
     &:visited{
-        color: #333333;
+        color: $fontcolor;
     }
     &:hover{
         outline: none;
-        color: #fc7c00;
+        color: $red;
     }
 }
 button, input, select, textarea, label {
@@ -277,7 +282,7 @@ input {
 .header{
     position: relative;
     height: 2rem;
-    background: $boxbg;
+    background: #f8f8f8;
     text-align: center;
     .title{
         font: 300 .65rem/2rem simhei;
@@ -325,6 +330,7 @@ input {
 @include icon-mix(i-back);
 @include icon-mix(i-arrow-l);
 @include icon-mix(i-arrow-r);
+@include icon-mix(i-arrow-r-o);
 @include icon-mix(i-arrow-t);
 @include icon-mix(i-arrow-t-red);
 @include icon-mix(i-arrow-b);
