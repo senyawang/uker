@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>cctvmall</title>
+    <meta name="author" content="www.uker.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="dist/gmu.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/schooldetail.css">
+</head>
+<body>
+
+<div id="page">
+<div class="mainpage">
+
+    <header class="header">
+        <h1 class="title">牛津大学</h1>
+        <a class="btn-back" href="#"><i class="i-back"></i>返回</a>
+        <a class="btn-menu" id="push-right" href="#"><i class="i-menu"></i></a>
+    </header>
+
+    <nav class="school-nav">
+        <ul class="ui-flex-box">
+            <li><a href="#">
+                <strong>概况</strong>
+            </a></li>
+            <li><a class="current" href="#">
+                <strong>专业</strong>
+            </a></li>
+            <li><a href="#">
+                <strong>资讯</strong>
+            </a></li>
+            <li><a href="#">
+                <strong>图片</strong>
+            </a></li>
+        </ul>
+    </nav>
+
+    <section class="search-form">
+        <form action="/search.html" name="search" id="searchForm">
+            <input type="submit" class="s-btn" value="搜索">
+            <div class="sf-wrap"> 
+                <i class="i-zoom"></i>               
+                <input type="search" name="s-text" class="s-text" placeholder="请输入您要搜索的学校或专业中英文" value="金融">
+            </div>
+        </form>
+    </section>
+
+    <div class="filter-menu gap">
+        <ul class="ui-flex-box">
+            <li data-type="profession" class="J_dropMenu"><a href="#">全部专业方向 
+                <span class="i-box"><i class="i-arrow-b"></i></span>
+            </a></li>
+            <li data-type="degree" class="J_dropMenu" ><a href="#">全部学位方向
+                <span class="i-box"><i class="i-arrow-b"></i></span>
+            </a></li>
+        </ul>
+        <ul class="drop-menu J_dropCont">
+            <li><a href="#">全部</a></li>
+            <li><a href="#">本科预科</a></li>
+            <li><a href="#">莫斯科</a></li>
+            <li><a href="#">工科</a></li>
+        </ul>
+    </div>
+
+
+    <!-- 搜索列表 -->
+    <section class="ui-box search-list">
+        <div class="s-result">共有 <span class="fc-red">金融</span> 相关 <span class="fc-red">342</span> 个专业</div>
+        <div class="ub-bd">
+            <div class="ui-no-result">
+                <img src="images/no-result.png">
+                <p>啊哦~无更多内容...</p>
+            </div>
+            <ul class="info-list school-list hot-sp">
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型： DPhil    Master Degree     BSc     MSc</span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型：Master Degree </span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型： DPhil    Master Degree     BSc     MSc</span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+                <li><a href="#">
+                    <h3>Management Science and Operations</h3>
+                    <h3>管理科学与运作 </h3>
+                    <p class="date">
+                        <span>学位类型：Master Degree </span>
+                        <span>专业方向：商科</span>
+                     </p>
+                </a></li>
+            </ul>
+        </div>
+        <div class="s-mask"></div>
+    </section>  
+
+    <footer class="footer">
+        <p>中英网UKER.net  沪ICP备11021479号</p>
+    </footer>
+    
+</div>
+
+
+<div id="panel">
+    <header class="header">
+        <a class="btn-back" href="#"><i class="logo"></i></a>
+    </header>
+    <nav class="panel-menu">
+        <ul>
+            <li>
+                <a href="#"><i class="i-menu-home"></i>首页</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-info"></i>留学资讯</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-center"></i>学校中心</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-test"></i>测测成功率</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-case"></i>获取留学方案</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-required"></i>留学必备</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+</div>
+
+<script id="test" type="text/html">
+<ul>
+    {{each list as value i}}
+        <li>索引 {{i + 1}} ：{{value}}</li>
+    {{/each}}
+</ul>
+</script>
+
+<script src="dist/uker.min.0.0.1.js"></script>
+<script src="js/app/main.js"></script>
+
+</body>
+</html>
