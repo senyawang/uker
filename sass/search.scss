@@ -6,12 +6,7 @@
     text-align: center;
     .ui-flex-box{
         li{
-            -webkit-box-flex: auto;
-            box-flex: auto;
-            -webkit-flex: auto;
-                -ms-flex: auto;
-                    flex: auto;
-            width: 50%;
+            padding: 2px 0;
             a{
                 display: block;
                 margin: 5px (10rem/40);
@@ -20,15 +15,23 @@
                 border-radius: 3px;
             }
         }
+        &:first-child{
+            
 
-        li:first-child{
-            width: 20%;
-        }
-        li:nth-child(2),
-        li:nth-child(3){
-            width: 40%;
+            li:first-child{
+                -webkit-flex: 2;
+                    -ms-flex: 2;
+                        flex: 2;
+            }
+            li:nth-child(2),
+            li:nth-child(3){
+                -webkit-flex: 4;
+                    -ms-flex: 4;
+                        flex: 4;
+            }
         }
     }
+        
 }
 .search-form{
     padding: $gap*2;

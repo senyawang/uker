@@ -56,14 +56,22 @@
 .school-ranking{
     background: #fff;
     text-align: center;
+    ul{
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        }
     .fc-orange{
         display: block;
         font-size: .75rem;
     }
     li{
-        -webkit-flex: auto;
-            -ms-flex: auto;
-                flex: auto;
         width: 33%;
         padding: $gap*2 0;
     }
@@ -253,4 +261,64 @@
         z-index: 8;
         background: rgba(0,0,0,.5);
     }
+}
+.img-tag{
+    background: #fff;
+    margin-bottom: $gap;
+    padding: $gap*2;
+    a{
+        display: inline-block;
+        padding: 3px 10px;
+        border: 1px solid $line;
+        border-radius: 3px;
+        margin: 3px;
+    }
+    .current{
+        background: #ccc;
+        color: #fff;
+    }
+}
+.school-photo{
+    background: transparent;
+
+    .pic{
+        max-width: 100%;
+    }
+    .pbox{
+        display: inline-block;
+        width: 49%;
+        padding-bottom: 2%;
+        vertical-align: top;
+        font-size: .6rem;
+        a{
+            display: block;
+            background: #fff;
+
+        }
+        strong{
+            display: block;
+            padding: $gap*2;
+        }
+        &:nth-child(odd){
+            padding-right: 1%;
+        }
+        &:nth-child(even){
+            padding-left: 1%;
+        }
+    }
+}
+#pubu .pbox{
+    position: absolute; 
+    width: 49%; 
+    box-sizing: border-box;
+    background-color: #f8f8f8; 
+    border: 1px solid #f8f8f8;
+    transition: all 0.3s;}
+
+#pubu {
+    margin:0 auto;
+    position:relative;
+}
+#pubu .pbox {
+    float:left;
 }

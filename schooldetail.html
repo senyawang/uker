@@ -61,7 +61,7 @@
         </a>
     </div>
     <div class="school-ranking gap">
-        <ul class="ui-flex-box">
+        <ul>
             <li>
                 TIMES排名
                 <span class="fc-orange">1</span>
@@ -74,7 +74,8 @@
                 关注人次
                 <span class="fc-orange">2336</span>
             </li>
-
+        </ul>
+        <ul>
             <li>
                 师生比例
                 <span class="fc-orange">1:8</span>
@@ -97,7 +98,7 @@
         </header>
         <div class="ub-bd">
             <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-            <div id="main" style="height:200px"></div>
+            <div id="canvasDiv"></div>
         </div>
     </section>    
 
@@ -290,69 +291,109 @@
 
 
 <script src="dist/uker.min.0.0.1.js"></script>
+<script src="dist/ichart.1.2.min.js"></script>
+
 <script src="js/app/main.js"></script>
-<!-- ECharts单文件引入 -->
-<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-<script type="text/javascript">
-    // 路径配置
-    require.config({
-        paths: {
-            echarts: 'http://echarts.baidu.com/build/dist'
+
+<script>
+ $(function () {
+        var data = [
+            {
+                name: '世界排名',
+                value: [-2, -2, -2, -1, -1],
+                color: '#ffc061',
+                line_width: 2
+            }
+        ];
+        var labels = [2011, 2012, 2013, 2014, 2015];
+        var list = data[0].value;
+        var maxN = 0,minN = Math.abs(list[0]);
+        for (var n in list){
+            var temp = Math.abs(list[n]);
+            if (temp > maxN)    maxN = temp;
+            if (temp < minN)    minN = temp;
         }
-    });
-    
-    // 使用
-    require(
-        [
-            'echarts',
-            'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-        ],
-        function (ec) {
-            // 基于准备好的dom，初始化echarts图表
-            var myChart = ec.init(document.getElementById('main')); 
-            
-            option = {
-                calculable : false,
-                xAxis : [
-                    {
-                        type : 'category',
-                        boundaryGap : false,
-                        data : ['2009','2010','2011','2012','2013','2014','2015']
+        var $scale = Math.ceil((maxN-minN)/4);
+        var $ss = parseInt(-maxN-1),$se = parseInt(-minN+1);
+        var chart = new iChart.LineBasic2D({
+            render: 'canvasDiv',
+            data: data,
+            width: $('#canvasDiv').width(),
+            height: 200,
+            turn_off_touchmove:true,
+            border:0,
+            sub_option: {
+                smooth : true,
+                hollow_inside: true,//设置一个点的亮色在外环的效果
+                point_size: 10 ,
+                listeners:{
+                    parseText:function(tip,name,value,text,i){
+                        //console.log(tip+name+value+text+i);
+                        return Math.abs(name);
                     }
-                ],
-                yAxis : [
-                    {
-                        type : 'value',
-                        axisLabel : {
-                            formatter: '{value}'
-                        }
+                }
+            },/*
+            tip: {
+                enable:true,
+                listeners:{
+                     //tip:提示框对象、name:数据名称、value:数据值、text:当前文本、i:数据点的索引
+                    parseText:function(tip,name,value,text,i){
+                        return name+Math.abs(value);
                     }
-                ],
-                series : [
-                    {
-                        name:'最低气温',
-                        type:'line',
-                        data:[1, 0, 2, 5, 3, 2, 0],
-                        markPoint : {
-                            data : [
-                                {name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
-                            ]
-                        },
-                        markLine : {
-                            data : [
-                                {type : 'average', name : '平均值'}
-                            ]
+                }
+            },*/
+            coordinate: {//配置自定义坐标轴
+                width:"78%",
+                height:"70%",
+                axis:{
+                    color:'#eaeaea'
+                },
+                scale: [
+                    {//配置自定义值轴
+                        label : {color:'#979ba2',font:'Simsum',fontsize:14},
+                        position: 'left',//配置左值轴
+                        scale_color:'#eaeaea',
+                        start_scale:$ss,
+                        end_scale:$se,
+                        scale_space:$scale,
+                        listeners: {//配置事件
+                            parseText: function (tip,name,value,text,i) {//设置解析值轴文本
+                                return {text: Math.abs(tip)}
+                            }
                         }
+                    },
+                    {//配置自定义值轴
+                        label : {color:'#979ba2',font:'Simsum',fontsize:14},
+                        position: 'bottom',//配置左值轴
+                        scale_color:'#eaeaea',
+                        labels: labels
                     }
                 ]
-            };
-                                
-    
-            // 为echarts对象加载数据 
-            myChart.setOption(option); 
-        }
-    );
+            }
+        });
+        // 利用自定义组件构造左侧说明文本
+        chart.plugin(new iChart.Custom({
+            drawFn:function(){
+                //计算位置
+                var coo = chart.getCoordinate(),
+                    x = coo.get('originx'),
+                    y = coo.get('originy'),
+                    w = coo.width,
+                    h = coo.height;
+                //在左上侧的位置，渲染一个单位的文字
+                chart.target.textAlign('start')
+                .textBaseline('bottom')
+                .textFont('600 14px Simsun')
+                .fillText('排名',x-30,y-12,false,'#979ba2')
+                .textBaseline('top')
+                .fillText('年份',x+w+12,y+h-15,false,'#979ba2');
+            }
+        }));
+        chart.draw();
+    });
+
 </script>
+
 
 
 </body>
