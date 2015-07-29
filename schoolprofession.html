@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/schooldetail.css">
+    <style>
+        .search-list .s-mask{
+            opacity: 0;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+    </style>
 </head>
 <body>
 
@@ -61,7 +68,13 @@
                 <span class="i-box"><i class="i-arrow-b"></i></span>
             </a></li>
         </ul>
-        <ul class="drop-menu J_dropCont">
+        <ul data-type="profession" class="drop-menu J_dropCont">
+            <li><a href="#">全部</a></li>
+            <li><a href="#">医学研究</a></li>
+            <li><a href="#">莫斯科</a></li>
+            <li><a href="#">工科</a></li>
+        </ul>
+        <ul data-type="degree" class="drop-menu J_dropCont">
             <li><a href="#">全部</a></li>
             <li><a href="#">本科预科</a></li>
             <li><a href="#">莫斯科</a></li>
@@ -153,16 +166,49 @@
 </div>
 </div>
 
-<script id="test" type="text/html">
-<ul>
-    {{each list as value i}}
-        <li>索引 {{i + 1}} ：{{value}}</li>
-    {{/each}}
-</ul>
-</script>
-
 <script src="dist/uker.min.0.0.1.js"></script>
 <script src="js/app/main.js"></script>
+<script>
+    $(function () {
+        $('.J_dropMenu').on('tap', function (e) {
+
+            e.preventDefault();
+
+            var dataType = $(this).attr('data-type');
+
+            var $cont = $('[data-type='+dataType+']');
+
+            // $('.s-mask').show();
+
+            $(this)
+                .toggleClass('current')
+                .siblings()
+                .removeClass('current');
+
+            // setTimeout(function () {
+            //     $('.s-mask').css('opacity',1);
+            // },0)
+
+            setMask.open('.search-list');
+            $('.J_dropCont').hide();
+            $cont.show();
+
+            setMask.init(function () {
+                $('.J_dropCont').hide();
+                $('.J_dropMenu').removeClass('current');
+            });
+
+        })
+
+        // $(document).on('tap', '.s-mask', function (e) {
+        //     $(this).css('opacity',0);
+        //     $('.J_dropCont').hide();
+        //     $('.J_dropMenu').removeClass('current');
+
+        // })
+    })
+</script>
+
 
 </body>
 </html>

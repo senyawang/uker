@@ -1,39 +1,72 @@
+
+function refreshInit (url) {
+	$('.ui-refresh').refresh({
+        load: function (dir, type) {
+            var me = this;
+            $.getJSON(url, function (data) {
+                var $list = $('.data-list'),
+                    html = (function (data) {      //数据渲染
+                        var liArr = [];
+                        $.each(data, function () {
+                            liArr.push(this.html);
+                        });
+                        return liArr.join('');
+                    })(data);
+
+                $list[dir == 'up' ? 'prepend' : 'append'](html);
+                me.afterDataLoading();    //数据加载完成后改变状态
+            });
+        }
+    });
+}
+
+var setMask = {
+    tpl: '<div class="ui-masks" style="position:absolute;-webkit-transition: all 0.5s; transition: all 0.5s;"></div>',
+    init:function (closeCallback) {
+        var self = this;
+        $(document).on('touchend', '.ui-masks', function (e) {
+            self.close(closeCallback);
+        })
+    },
+    open: function (maskContainer,fn) {
+        var self = this;
+        var wrap = maskContainer || 'body';
+        var flag = $('.ui-masks').length;
+
+        if(!flag) $(wrap).append(self.tpl);
+
+        $(wrap).css('overflow','hidden');
+
+        $('.ui-masks').show().css({'opacity':0.5});
+
+        if(typeof(fn) === 'function') fn();
+        
+    },
+    close: function (fn) {
+        $('.ui-masks').css({'opacity':0});
+        setTimeout(function () {
+            $('.ui-masks').hide();
+            if(typeof(fn) === 'function') fn();
+        },500)
+    }
+}
 $(function () {
 
-	function refreshInit (url) {
-    	$('.ui-refresh').refresh({
-	        load: function (dir, type) {
-	            var me = this;
-	            $.getJSON(url, function (data) {
-	                var $list = $('.data-list'),
-                        html = (function (data) {      //数据渲染
-                            var liArr = [];
-                            $.each(data, function () {
-                                liArr.push(this.html);
-                            });
-                            return liArr.join('');
-                        })(data);
-
-	                $list[dir == 'up' ? 'prepend' : 'append'](html);
-	                me.afterDataLoading();    //数据加载完成后改变状态
-	            });
-	        }
-	    });
-    }
-
     refreshInit("url");
-
-	var uiMask = $('<div class="ui-masks"></div>');
 
 	$('#panel').panel({
         contentWrap: $('.mainpage')
     });
 	$('#push-right').on('touchend', function () {
+
         $('#panel').panel('toggle', 'overlay', 'right');
-        // uiMask
-        // 	.appendTo("#page")
-        // 	.css('opacity',0.5);
+        
+        setMask.open();
     });
+    $('#panel').on('beforeclose', function (e) {
+        setMask.close();
+            
+    })
 
     $("#slider").show();
     $("#slider").slider({
@@ -65,26 +98,7 @@ $(function () {
 
     })
 
-    $('.J_dropMenu').on('tap', function (e) {
-
-    	e.preventDefault();
-
-    	$(this)
-    		.toggleClass('current')
-    		.siblings()
-    		.removeClass('current');
-
-    	$('.s-mask').show();
-    	$('.J_dropCont').show();	
-    })
-
-    $(document).on('tap', '.s-mask', function (e) {
-    	
-    	$(this).hide();
-    	$('.J_dropCont').hide();
-    	$('.J_dropMenu').removeClass('current');
-
-    })
+    
 
 
 
