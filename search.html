@@ -103,103 +103,48 @@
 <div id="panel">
     <header class="header">
         <h1 class="title">筛选</h1>
-        <a class="btn-back" href="#"><i class="i-back"></i>返回</a>
-        <a class="btn-menu" href="#">搜索</a>
+        <a class="btn-back" id="panelBack" href="#"><i class="i-back"></i>返回</a>
+        <a class="btn-menu" id="panelSearch" href="#">搜索</a>
     </header>
     <div class="slide-panel">
 
         <div class="sp-wrap">
-            <div class="sp-box current">
+            <div class="sp-box" id="mainPanelBox">
                 <ul class="sp-list">
-                    <li><a href="#area">
+                    <li data-type="J_areaValue"><a href="#area">
                         <span class="sl-item">地区</span>
-                        <span class="sl-item">全部 <i class="i-arrow-r"></i></span>
+                        <span class="sl-item"><span class="J_areaValue">全部</span> <i class="i-arrow-r"></i></span>
                     </a></li>
-                    <li><a href="#city">
+                    <li data-type="J_cityValue"><a href="#city">
                         <span class="sl-item">城市</span>
-                        <span class="sl-item">全部 <i class="i-arrow-r"></i></span>
+                        <span class="sl-item "><span class="J_cityValue">全部</span> <i class="i-arrow-r"></i></span>
                     </a></li>
-                    <li><a href="#ranking">
+                    <li data-type="J_rankValue"><a href="#ranking">
                         <span class="sl-item">排名</span>
-                        <span class="sl-item">全部 <i class="i-arrow-r"></i></span>
+                        <span class="sl-item "><span class="J_rankValue">全部</span> <i class="i-arrow-r"></i></span>
                     </a></li>
                 </ul>
             </div>
             <!-- sp-box -->
-            <div class="sp-box">
+            <div class="sp-box" id="subPanelBox">
                 <ul class="sp-list">
-                    <li><a href="#area">
-                        <span class="sl-item">地区</span>
-                        <span class="sl-item"><i class="i-right"></i></span>
-                    </a></li>
-                    <li><a href="#city">
-                        <span class="sl-item">城市</span>
+                    <li data-value='美国'><a href="#">
+                        <span class="sl-item">美国</span>
                         <span class="sl-item"></span>
                     </a></li>
-                    <li><a href="#ranking">
-                        <span class="sl-item">排名</span>
+                    <li data-value="洛杉矶"><a href="#">
+                        <span class="sl-item">洛杉矶</span>
                         <span class="sl-item"></span>
                     </a></li>
-                    <li><a href="#area">
-                        <span class="sl-item">地区</span>
+                    <li data-value="第一名"><a href="#">
+                        <span class="sl-item">第一名</span>
                         <span class="sl-item"></span>
                     </a></li>
-                    <li><a href="#city">
-                        <span class="sl-item">城市</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#ranking">
-                        <span class="sl-item">排名</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#area">
+                    <li data-value="地区"><a href="#">
                         <span class="sl-item">地区</span>
                         <span class="sl-item"></span>
                     </a></li>
-                    <li><a href="#city">
-                        <span class="sl-item">城市</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#ranking">
-                        <span class="sl-item">排名</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#area">
-                        <span class="sl-item">地区</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#city">
-                        <span class="sl-item">城市</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#ranking">
-                        <span class="sl-item">排名</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#area">
-                        <span class="sl-item">地区</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#city">
-                        <span class="sl-item">城市</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#ranking">
-                        <span class="sl-item">排名</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#area">
-                        <span class="sl-item">地区</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#city">
-                        <span class="sl-item">城市</span>
-                        <span class="sl-item"></span>
-                    </a></li>
-                    <li><a href="#ranking">
-                        <span class="sl-item">排名</span>
-                        <span class="sl-item"></span>
-                    </a></li>
+                    
                 </ul>
             </div>
             <!-- sp-box -->

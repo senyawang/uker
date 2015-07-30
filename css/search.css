@@ -177,37 +177,61 @@
   vertical-align: top;
   transition: all .5s ease-in-out;
 }
-/* line 175, ../sass/search.scss */
+/* line 172, ../sass/search.scss */
 .slide-panel .sp-list li {
   padding: 5% 8%;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 178, ../sass/search.scss */
+/* line 175, ../sass/search.scss */
 .slide-panel .sp-list li:first-child {
   border-top: 1px solid #dddddd;
 }
-/* line 181, ../sass/search.scss */
+/* line 178, ../sass/search.scss */
 .slide-panel .sp-list li a {
   display: block;
   font-size: 0;
 }
 /* line 186, ../sass/search.scss */
-.slide-panel .sp-list .sl-item {
+.slide-panel .sl-item {
   display: inline-block;
-  width: 50%;
   font-size: .6rem;
   vertical-align: top;
 }
-/* line 191, ../sass/search.scss */
-.slide-panel .sp-list .sl-item:first-child {
+/* line 190, ../sass/search.scss */
+.slide-panel .sl-item:first-child {
+  width: 75%;
   text-align: left;
 }
 /* line 194, ../sass/search.scss */
-.slide-panel .sp-list .sl-item:last-child {
+.slide-panel .sl-item:last-child {
+  width: 25%;
   text-align: right;
 }
-/* line 198, ../sass/search.scss */
-.slide-panel .sp-list .i-arrow-r,
-.slide-panel .sp-list .i-right {
+/* line 203, ../sass/search.scss */
+.slide-panel .i-arrow-r,
+.slide-panel .i-right {
   position: static;
+}
+
+/* line 211, ../sass/search.scss */
+#subPanelBox .hover .sl-item:last-child:after {
+  position: static;
+  content: '';
+}
+/* line 217, ../sass/search.scss */
+#subPanelBox .sl-item:first-child {
+  width: 75%;
+}
+/* line 220, ../sass/search.scss */
+#subPanelBox .sl-item:last-child {
+  width: 25%;
+}
+
+/* line 225, ../sass/search.scss */
+#mainPanelBox .sl-item:first-child {
+  width: 30%;
+}
+/* line 228, ../sass/search.scss */
+#mainPanelBox .sl-item:last-child {
+  width: 70%;
 }

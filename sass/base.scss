@@ -383,6 +383,16 @@ input {
     }
 } 
 
+#subPanelBox {
+    .hover .sl-item{
+        &:last-child{
+            &:after{
+                @extend .i-right;
+            }
+        }
+    }
+}
+
 .ui-no-result{
     min-height: 400px;
     padding: 2rem;

@@ -63,7 +63,7 @@ $(function () {
 
     refreshInit("url");
 
-	$('#panel').panel({
+	var PANEL = new gmu.Panel($('#panel'),{
         contentWrap: $('.mainpage')
     });
 	$('#push-right').on('touchend', function () {
@@ -88,15 +88,42 @@ $(function () {
 
     $('#nav').navigator();
 
-    $(".slide-panel").on('touchend', '.current', function (e) {
+
+    // 筛选面板
+
+    var $firstBox = $("#mainPanelBox"),
+        
+        subPanelParent;
+
+    $firstBox.on('touchend', 'li', function (e) {
 
     	e.preventDefault();
 
-    	var $this = $(this);
+    	$firstBox.css('marginLeft', '-50%');
 
-    	$this.css('marginLeft', '-50%');
+        subPanelParent = $(this).attr('data-type');
+        console.log(subPanelParent)
     });
 
+    $('#panelBack').on('touchend', function (e) {
+        
+        e.preventDefault();
+
+        var marginLeft = $firstBox.css('marginLeft');
+
+        if(marginLeft == '0px' || marginLeft == null) PANEL.close();
+
+        $firstBox.css('marginLeft', '0')
+    });
+
+    $('#subPanelBox').on('touchend', 'li', function (e) {console.log(subPanelParent)
+        e.preventDefault();
+        $(this).toggleClass('hover').siblings().removeClass('hover');
+        $('.'+subPanelParent).html($(this).attr('data-value'));
+    })
+
+
+    // 搜索框
     $('#searchForm').on('input', '[type="search"]', function (e) {
     	
     	var $parent = $(this).parents('#searchForm');
