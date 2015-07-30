@@ -22,8 +22,9 @@ function refreshInit (url) {
 
 var setMask = {
     tpl: '<div class="ui-masks" style="position:absolute;-webkit-transition: all 0.5s; transition: all 0.5s;"></div>',
-    init:function (closeCallback) {
+    init:function (maskContainer,closeCallback) {
         var self = this;
+        var maskContainer = maskContainer || 'body';
         $(document).on('touchend', '.ui-masks', function (e) {
             self.close(closeCallback);
         })
@@ -31,23 +32,31 @@ var setMask = {
     open: function (maskContainer,fn) {
         var self = this;
         var wrap = maskContainer || 'body';
-        var flag = $('.ui-masks').length;
+        
+        var flag = $(wrap).find('.ui-masks').length;
 
         if(!flag) $(wrap).append(self.tpl);
 
+        var $mask = self.mask = $(wrap).find('.ui-masks');
+
         $(wrap).css('overflow','hidden');
 
-        $('.ui-masks').show().css({'opacity':0.5});
+        $mask.show();
+        $mask.css({'opacity':0.5});
 
         if(typeof(fn) === 'function') fn();
         
     },
     close: function (fn) {
-        $('.ui-masks').css({'opacity':0});
+        var self = this;
+        // var maskContainer = maskContainer || 'body';
+        // var $mask = $(maskContainer).find('.ui-masks');
+        self.mask.css({'opacity':0});
         setTimeout(function () {
-            $('.ui-masks').hide();
-            if(typeof(fn) === 'function') fn();
+            self.mask.hide();
+            
         },500)
+        if(typeof(fn) === 'function') fn();
     }
 }
 $(function () {

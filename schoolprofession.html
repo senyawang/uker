@@ -68,13 +68,13 @@
                 <span class="i-box"><i class="i-arrow-b"></i></span>
             </a></li>
         </ul>
-        <ul data-type="profession" class="drop-menu J_dropCont">
+        <ul data-type="profession" class="drop-menu J_dropCont" style="display: none;">
             <li><a href="#">全部</a></li>
             <li><a href="#">医学研究</a></li>
             <li><a href="#">莫斯科</a></li>
             <li><a href="#">工科</a></li>
         </ul>
-        <ul data-type="degree" class="drop-menu J_dropCont">
+        <ul data-type="degree" class="drop-menu J_dropCont" style="display: none;">
             <li><a href="#">全部</a></li>
             <li><a href="#">本科预科</a></li>
             <li><a href="#">莫斯科</a></li>
@@ -174,38 +174,35 @@
 
             e.preventDefault();
 
+            var self = this;
+
             var dataType = $(this).attr('data-type');
 
-            var $cont = $('[data-type='+dataType+']');
-
-            // $('.s-mask').show();
+            var $cont = $('.J_dropCont[data-type='+dataType+']');
 
             $(this)
                 .toggleClass('current')
                 .siblings()
                 .removeClass('current');
 
-            // setTimeout(function () {
-            //     $('.s-mask').css('opacity',1);
-            // },0)
-
             setMask.open('.search-list');
-            $('.J_dropCont').hide();
-            $cont.show();
 
-            setMask.init(function () {
+            $('.J_dropCont').hide();
+
+            if(!$('.J_dropMenu.current').length) {
+                $cont.hide();
+                setMask.close();
+            }else{
+                $cont.show();
+            }
+
+            setMask.init('.search-list',function () {
                 $('.J_dropCont').hide();
                 $('.J_dropMenu').removeClass('current');
             });
 
         })
 
-        // $(document).on('tap', '.s-mask', function (e) {
-        //     $(this).css('opacity',0);
-        //     $('.J_dropCont').hide();
-        //     $('.J_dropMenu').removeClass('current');
-
-        // })
     })
 </script>
 
