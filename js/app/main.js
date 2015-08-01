@@ -85,8 +85,11 @@ $(function () {
 
     $(document).on('touchend', '#goBack', function (e) {
         e.preventDefault();
-        location.href = document.referrer;
+        window.history.go(-1);
     })
+
+    if($('#panel').length){
+
 
 	var PANEL = new gmu.Panel($('#panel'),{
         contentWrap: $('.mainpage')
@@ -101,7 +104,7 @@ $(function () {
         setMask.close();
             
     })
-
+    }
     $("#slider").show();
     $("#slider").slider({
         loop: true,
@@ -241,6 +244,10 @@ $(function () {
         };
 
         var urlstr = urlAry.join('&');
+
+        if(urlstr.indexOf('area') == -1){
+            urlstr += '&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue ;
+        }
 
         console.log(urlstr)
 

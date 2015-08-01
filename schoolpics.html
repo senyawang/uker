@@ -113,9 +113,14 @@
 
 
 <script src="dist/uker.min.0.0.1.js"></script>
-<!-- <script src="js/app/main.js"></script> -->
+<script src="js/app/main.js"></script>
 <script type="text/javascript">
     $(function(){
+
+        $(document).on('touchend', '#goBack', function (e) {
+            e.preventDefault();
+            location.href = document.referrer;
+        })
 
         var picSlider = new gmu.Slider($("#pitcures"),{
             loop: true,
