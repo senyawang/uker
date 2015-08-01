@@ -166,6 +166,7 @@
         float: left;
         width: 50%;
         vertical-align: top;
+        -webkit-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
     }
     .sp-list{
@@ -207,6 +208,7 @@
 }
 #subPanelBox {
     .hover .sl-item{
+        color: $red;
         &:last-child{
             &:after{
                 position: static;

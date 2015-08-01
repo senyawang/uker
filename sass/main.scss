@@ -44,6 +44,9 @@
         left: 0;
         bottom: (20rem/40);
         color: $more;
+        span:last-child{
+            padding-left: 10px;
+        }
     }
 }
 .school-list{

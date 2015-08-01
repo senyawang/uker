@@ -16,7 +16,6 @@ function refreshInit (url) {
                     if(data.status){
                         var $list = $('.data-list'),
                             html = template('loadMore', data);
-                            console.log(html);
 
                         $list[dir == 'up' ? 'prepend' : 'append'](html);
                         me.afterDataLoading();    //数据加载完成后改变状态
@@ -74,14 +73,20 @@ var setMask = {
         if(typeof(fn) === 'function') fn();
     }
 }
+function GetQueryString(name){
+
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return "";
+
+}
+
 $(function () {
 
-    $(document).on('touchend', '.btn-back', function (e) {
+    $(document).on('touchend', '#goBack', function (e) {
         e.preventDefault();
         location.href = document.referrer;
     })
-
-    
 
 	var PANEL = new gmu.Panel($('#panel'),{
         contentWrap: $('.mainpage')
@@ -112,7 +117,9 @@ $(function () {
     // 筛选面板
 
     var $firstBox = $("#mainPanelBox"),
-        
+        areaValue = '全部',
+        cityValue = '全部',
+        rankValue = '全部',
         subPanelParent;
 
     $firstBox.on('touchend', 'li', function (e) {
@@ -122,7 +129,73 @@ $(function () {
     	$firstBox.css('marginLeft', '-50%');
 
         subPanelParent = $(this).attr('data-type');
-        console.log(subPanelParent)
+
+        var html = '';
+
+        switch (subPanelParent){
+            case 'J_areaValue':
+                for (var i = 0; i < area.length; i++) {
+                    html += '<li data-value='+ area[i] +'><a href="#">' +
+                            '<span class="sl-item">'+ area[i] +'</span>' +
+                            '<span class="sl-item"></span>' +
+                        '</a></li>';
+                };
+                break;
+            case 'J_cityValue':
+
+                if(areaValue === '全部') {
+                    $('#subPanelBox .sp-list').empty().html('<li>请先选择地区！</li>');
+                    return;
+                };
+                for (var i = 0; i < city[areaValue].length; i++) {
+                    html += '<li data-value='+ city[areaValue][i] +'><a href="#">' +
+                            '<span class="sl-item">'+ city[areaValue][i] +'</span>' +
+                            '<span class="sl-item"></span>' +
+                        '</a></li>';
+                };
+                break;
+            case 'J_rankValue':
+                for (var i = 0; i < rank.length; i++) {
+                    html += '<li data-value='+ rank[i] +'><a href="#">' +
+                            '<span class="sl-item">'+ rank[i] +'</span>' +
+                            '<span class="sl-item"></span>' +
+                        '</a></li>';
+                };
+                break;  
+        }
+
+        $('#subPanelBox .sp-list').html(html);
+        $('[data-value="'+ areaValue +'"]').addClass('hover');
+        $('[data-value="'+ cityValue +'"]').addClass('hover');
+        $('[data-value="'+ rankValue +'"]').addClass('hover');
+
+    });
+
+    $('#subPanelBox').on('touchend', 'li', function (e) {
+        e.preventDefault();
+
+        
+        switch (subPanelParent){
+            case 'J_areaValue':
+                if(areaValue != $(this).attr('data-value')){
+                    $('.J_cityValue').html('全部');
+                }
+                areaValue = $(this).attr('data-value');
+                $('.'+subPanelParent).html(areaValue);
+                break;
+            case 'J_cityValue':
+                cityValue = $(this).attr('data-value');
+                $('.'+subPanelParent).html(cityValue);
+                break;
+            case 'J_rankValue':
+                rankValue = $(this).attr('data-value');
+                $('.'+subPanelParent).html(rankValue);
+                break;
+        }
+        
+        $(this).addClass('hover').siblings().removeClass('hover');
+        
+        
     });
 
     $('#panelBack').on('touchend', function (e) {
@@ -136,11 +209,12 @@ $(function () {
         $firstBox.css('marginLeft', '0')
     });
 
-    $('#subPanelBox').on('touchend', 'li', function (e) {
+    $('#panelSearch').on('touchend', function (e) {
+        // var key = $('.s-text[type=search]').val();
         e.preventDefault();
-        $(this).addClass('hover').siblings().removeClass('hover');
-        $('.'+subPanelParent).html($(this).attr('data-value'));
+        window.location.href = location.protocol+'//'+location.hostname+location.pathname+'?order='+GetQueryString("order")+'&keyword='+GetQueryString("keyword")+'&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue+'&sort='+GetQueryString("sort");
     })
+
 
 
     // 搜索框

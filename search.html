@@ -30,7 +30,7 @@
                 <input type="submit" class="s-btn" value="搜索">
                 <div class="sf-wrap"> 
                     <i class="i-zoom"></i>               
-                    <input type="search" name="s-text" class="s-text" placeholder="请输入您要搜索的学校或专业中英文" value="">
+                    <input type="search" name="keyword" class="s-text" placeholder="请输入您要搜索的学校或专业中英文" value="">
                 </div>
             </form>
         </section>
@@ -60,8 +60,8 @@
     <!-- 搜索列表 -->
     <section class="ui-box search-list">
         <div class="s-result">共有 <span class="fc-red">342</span> 个学校</div>
-        <div class="ub-bd">
-            <ul class="info-list school-list">
+        <div class="ub-bd ui-refresh">
+            <ul class="info-list school-list data-list">
                 <li><a href="#">
                     <img class="pic" src="images/schoollogo.png">
                     <span class="sl-info">
@@ -90,6 +90,7 @@
                     </span>
                 </a></li>
             </ul>
+            <div class="ui-refresh-down"></div>
         </div>
     </section>
 
@@ -124,11 +125,12 @@
                         <span class="sl-item "><span class="J_rankValue">全部</span> <i class="i-arrow-r"></i></span>
                     </a></li>
                 </ul>
+                
             </div>
             <!-- sp-box -->
             <div class="sp-box" id="subPanelBox">
                 <ul class="sp-list">
-                    <li data-value='美国'><a href="#">
+                    <!-- <li data-value='美国'><a href="#">
                         <span class="sl-item">美国</span>
                         <span class="sl-item"></span>
                     </a></li>
@@ -143,9 +145,10 @@
                     <li data-value="地区"><a href="#">
                         <span class="sl-item">地区</span>
                         <span class="sl-item"></span>
-                    </a></li>
+                    </a></li> -->
                     
                 </ul>
+
             </div>
             <!-- sp-box -->
         </div>
@@ -154,12 +157,53 @@
     </div>
     <!-- slide-panel -->
 </div>
+<script>
+var ajaxUrl='http://121.201.13.58/school/schoolSearchAjax/?order=times_pm&keyword=&area=0&city=0&timespm=1-30&sort=a';
+</script>
+<script id="loadMore" type="text/html">
+    {{each data as value i}}
+        <li><a href="{{value.url}}">
+            
+            {{if !!value.Logo}}
+                <img class="pic" src="{{value.Logo}}">
+            {{/if}}
+
+            <span class="sl-info">
+                <h3>{{value.E_Name}}</h3>
+                <h3>{{value.S_Name}}</h3>
+                <p class="date"><span>TIMES排名：{{value.Times_Pm}}</span> <span>生活费：{{value.Life_Fear}} </span></p>
+
+                {{if !!value.total}}
+                    <p class="date">共有 <span class="sp-num">{{value.total}}</span> 个专业符合</p>
+                {{/if}}
+            </span>
+        </a></li>
+    {{/each}}
+
+</script>
 
 
+<!-- <script id="filterCont" type="text/html">
+    {{each data as value i}}
+        <li data-value='{{value.text}}'><a href="#">
+            <span class="sl-item">{{area}}</span>
+            <span class="sl-item"></span>
+        </a></li>
+    {{/each}}
+
+</script> -->
+
+<script>
+var area = ["\u82f1\u683c\u5170","\u82cf\u683c\u5170","\u5a01\u5c14\u58eb","\u5317\u7231\u5c14\u5170"];
+var city = {"\u82cf\u683c\u5170":["Edinburgh","Aberdeen","Stirling","Glasgow","Dundee","Paisley","St Andrews","Inverness","Shropshire","Perthshire","City of Edinburgh"],"\u82f1\u683c\u5170":["Colchester","Reading","Birmingham","Kent","Leeds","Surrey","Liverpool","London","Plymouth","Oxford","Bradford","Leicester","Manchester","Middlesbrough","Sunderland","Huddersfield","Kingston","Bolton","Cambridge","Canterbury","Hertfordshire","Sheffield","Worcester","Cheltenham","Portsmouth","Coventry","Staffordshire","Bath","Preston","Bournemouth","Chester","Bristol","Westcliff on Sea","Winchester","Nottingham","Brighton","Newcastle","Dundee","Keele","Hull","Exeter","Bridlington","Norwich","Northampton","Lincoln","Derby","Southampton","Luton","York","Oxted","Lancaster","Buckingham","Buckinghamshire","Falmouth","Shropshire","Cambridgeshire","Durham","Edinburgh","Loughborough","Worcestershire","Dorset","Yorkshire","Warwick","Hertford","Farnborough","Leicestershire","Oxfordshire","Wiltshire","Somerset","Sussex","Gloucestershire","Devon","Hampshire","Cheshire","Norfolk","Sherborne","Essex","Lincolnshire","Wisbech","Herefordshire","Berkshire","Lancashire","Suffolk","Monmouthshire","Cornwall","Rutland","Derbyshire","Nottinghamshire","Northamptonshire","Wolverhampton","Southwold","Hardwick","Blackpool","Guildford","Bedfordshire","Chichester","Rugby","Blackheath","Denbighshire","Petworth","Solihull","Ipswich","Northwood","Harrogate","Middlesex","Northumberland","Glamorgan","Barnet","Warwickshire","Yeovil","Cardiff"],"\u5317\u7231\u5c14\u5170":["Belfast","Norfolk"],"\u5a01\u5c14\u58eb":["Bangor","Swansea","Aberystwyth","Cardiff","Newport","Pontypridd","Lampeter","Wrexham","Worcestershire","Monmouthshire"]};
+var rank = ["1-10","11-30","31-50","51-100","100\u4ee5\u540e"];
+</script>
 <script src="dist/uker.min.0.0.1.js"></script>
 <script src="js/app/main.js"></script>
 
-
+<script type="text/javascript">
+    refreshInit(ajaxUrl);
+</script>
 
 </body>
 </html>
