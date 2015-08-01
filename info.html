@@ -112,13 +112,29 @@
 
 </div>
 
+<script id="loadMore" type="text/html">
+    {{each data as value i}}
+        <li><a href="{{value.url}}">
+            {{if !!value.Pic4}}
+            <img class="pic" src="{{value.Pic4}}">
+            {{/if}}
+            <h3>{{value.Title}}</h3>
+            <p class="date">{{value.PublishDate}}</p>
+        </a></li>
+    {{/each}}
+</script>
 
+<script type="text/javascript">
+    var ajaxUrl='http://121.201.13.58/article/articleAjax?type=all-3-79';
+</script>
 <!-- <script src="dist/uker.min.0.0.1.js"></script> -->
 <script src="js/uker.js"></script>
 
 <script src="js/app/main.js"></script>
 
-
+<script type="text/javascript">
+    refreshInit(ajaxUrl);
+</script>
 
 </body>
 </html>

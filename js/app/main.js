@@ -1,20 +1,35 @@
 
 function refreshInit (url) {
+    var page = 2;
 	$('.ui-refresh').refresh({
         load: function (dir, type) {
             var me = this;
-            $.getJSON(url, function (data) {
-                var $list = $('.data-list'),
-                    html = (function (data) {      //数据渲染
-                        var liArr = [];
-                        $.each(data, function () {
-                            liArr.push(this.html);
-                        });
-                        return liArr.join('');
-                    })(data);
+            
+            $.ajax({
+                url: url,
+                data: {
+                    page: page
+                },
+                dataType: 'jsonp',
+                success: function (data) {
 
-                $list[dir == 'up' ? 'prepend' : 'append'](html);
-                me.afterDataLoading();    //数据加载完成后改变状态
+                    if(data.status){
+                        var $list = $('.data-list'),
+                            html = template('loadMore', data);
+                            console.log(html);
+
+                        $list[dir == 'up' ? 'prepend' : 'append'](html);
+                        me.afterDataLoading();    //数据加载完成后改变状态
+
+                        page++;
+
+                    }else{
+                        me.disable(dir);
+                    }
+
+
+                }
+                
             });
         }
     });
@@ -66,7 +81,7 @@ $(function () {
         location.href = document.referrer;
     })
 
-    refreshInit("url");
+    
 
 	var PANEL = new gmu.Panel($('#panel'),{
         contentWrap: $('.mainpage')
