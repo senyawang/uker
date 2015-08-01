@@ -141,7 +141,17 @@
     </nav>
 
 </div>
-
+<script id="loadMore" type="text/html">
+    {{each data as value i}}
+        <div class="pbox"><a href="{{value.url}}">
+            <img class="pic" src="{{value.Photo}}">
+            <strong>{{value.tagname}}</strong>
+        </a></div>
+    {{/each}}
+</script>
+<script>
+var ajaxUrl='http://121.201.13.58/photo/photoajax?IndexID=130';
+</script>
 
 <script src="dist/uker.min.0.0.1.js"></script>
 <script src="dist/waterfall.js"></script>
@@ -160,26 +170,33 @@
         
         $('#pubu').waterfall();
 
-        var tpl = $('#pubu').html();
-        var ajaxkey = true;
+        var ajaxkey = true,
+            page = 2;
         $(window).scroll(function(){
             if (getDataCheck() && ajaxkey) {
                 var pubu = $("#pubu");
-                // for(i in data){
-                //     var box = $("<div class='box'><div class='pic'><img src="+data[i].src+"></div></div>");
-                //     pubu.append(box);
-                // }
+                    
                 ajaxkey = false;
-                setTimeout(function (argument) {
-                        pubu.append(tpl);
-                        $('#pubu').waterfall();
-                        ajaxkey = true;
-
-                },1000)
-                
-                
-                
-
+                $.ajax({
+                    url: ajaxUrl,
+                    data: {
+                        page: page
+                    },
+                    dataType: 'jsonp',
+                    success: function (data) {
+                        
+                        if(data.status){
+                            var html = template('loadMore', data);
+                            pubu.append(html);
+                            $('#pubu').waterfall();
+                            ajaxkey = true;
+                            page++;
+                        }else{
+                            $('.school-photo').append('<div style="padding:20px;text-align:center;">'+data.msg+'</div>')
+                        }
+                    }
+                })
+                                
 
                 //getData（"#pubu",".box"）；//jquery的Ajax异步加载数据、需要从数据库加载的、需要调用该函数
             };
