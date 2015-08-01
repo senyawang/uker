@@ -39,7 +39,7 @@ var setMask = {
 
         var $mask = self.mask = $(wrap).find('.ui-masks');
 
-        $(wrap).css('overflow','hidden');
+        // $(wrap).css('overflow','hidden');
 
         $mask.show();
         $mask.css({'opacity':0.5});
