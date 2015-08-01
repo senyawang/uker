@@ -119,11 +119,13 @@
             position: relative;
             border-right: 1px solid $line;
         }
-        [class^="i-arrow"]:first-child,
-        [class^="i-arrow"]:last-child
-        {
-            position: static;
-            display: block;
+        [class^="i-arrow"]:first-child{
+            top: 0;
+            left: 0;
+        }
+        [class^="i-arrow"]:last-child{
+            left: 0;
+            bottom: 0;
         }
         [class^="i-filter"]
         {
