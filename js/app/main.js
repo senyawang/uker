@@ -210,9 +210,9 @@ $(function () {
     });
 
     $('#panelSearch').on('touchend', function (e) {
-        // var key = $('.s-text[type=search]').val();
+        var key = $('.s-text[type=search]').val();
         e.preventDefault();
-        window.location.href = location.protocol+'//'+location.hostname+location.pathname+'?order='+GetQueryString("order")+'&keyword='+GetQueryString("keyword")+'&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue+'&sort='+GetQueryString("sort");
+        window.location.href = location.protocol+'//'+location.hostname+location.pathname+'?order='+GetQueryString("order")+'&keyword='+key+'&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue+'&sort='+GetQueryString("sort");
     })
 
 
