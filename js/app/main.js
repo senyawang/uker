@@ -61,6 +61,11 @@ var setMask = {
 }
 $(function () {
 
+    $(document).on('touchend', '.btn-back', function (e) {
+        e.preventDefault();
+        location.href = document.referrer;
+    })
+
     refreshInit("url");
 
 	var PANEL = new gmu.Panel($('#panel'),{
@@ -116,9 +121,9 @@ $(function () {
         $firstBox.css('marginLeft', '0')
     });
 
-    $('#subPanelBox').on('touchend', 'li', function (e) {console.log(subPanelParent)
+    $('#subPanelBox').on('touchend', 'li', function (e) {
         e.preventDefault();
-        $(this).toggleClass('hover').siblings().removeClass('hover');
+        $(this).addClass('hover').siblings().removeClass('hover');
         $('.'+subPanelParent).html($(this).attr('data-value'));
     })
 
