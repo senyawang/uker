@@ -44,7 +44,7 @@
         left: 0;
         bottom: (20rem/40);
         color: $more;
-        span:last-child{
+        span:nth-child(2){
             padding-left: 10px;
         }
     }

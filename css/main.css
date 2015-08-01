@@ -54,7 +54,7 @@
   color: #888888;
 }
 /* line 47, ../sass/main.scss */
-.info-list .date span:last-child {
+.info-list .date span:nth-child(2) {
   padding-left: 10px;
 }
 
