@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/schooldetail.css">
     <style>
-        .search-list .s-mask{
+/*        .search-list .s-mask{
             opacity: 0;
             -webkit-transition: all .5s;
             transition: all .5s;
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -86,12 +86,12 @@
     <!-- 搜索列表 -->
     <section class="ui-box search-list">
         <div class="s-result">共有 <span class="fc-red">金融</span> 相关 <span class="fc-red">342</span> 个专业</div>
-        <div class="ub-bd">
+        <div class="ub-bd ui-refresh">
             <div class="ui-no-result">
                 <img src="images/no-result.png">
                 <p>啊哦~无更多内容...</p>
             </div>
-            <ul class="info-list school-list hot-sp">
+            <ul class="info-list school-list hot-sp data-list">
                 <li><a href="#">
                     <h3>Management Science and Operations</h3>
                     <h3>管理科学与运作 </h3>
@@ -125,6 +125,7 @@
                      </p>
                 </a></li>
             </ul>
+            <div class="ui-refresh-down"></div>
         </div>
         <div class="s-mask"></div>
     </section>  
@@ -166,10 +167,28 @@
 </div>
 </div>
 
+<script>
+var ajaxUrl='http://121.201.13.58/school/majorAjax/?IndexID=80&ProDire=&DegreeType=&keyword=';
+</script>
+<script id="loadMore" type="text/html">
+    {{each data as value i}}
+        <li><a href="{{value.url}}">
+            <h3>{{value.Z_E_Name}}</h3>
+            <h3>{{value.Z_Name}} </h3>
+            <p class="date">
+                <span>学位类型：{{value.DegreeType}} </span>
+                <span>专业方向：{{value.ProDire}}</span>
+             </p>
+        </a></li>
+    {{/each}}
+</script>
+
+
 <script src="dist/uker.min.0.0.1.js"></script>
 <script src="js/app/main.js"></script>
 <script>
     $(function () {
+        refreshInit(ajaxUrl);
         $('.J_dropMenu').on('tap', function (e) {
 
             e.preventDefault();
