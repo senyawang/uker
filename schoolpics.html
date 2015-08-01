@@ -46,17 +46,19 @@
             max-width: 100%;
             max-height: 100%;
             vertical-align: middle;
+            margin-bottom: 2rem;
         }
         .ui-slider{
             height: 100%;
-            height: -webkit-calc(100% - 4rem);
-            height: calc(100% - 4rem);
+            height: -webkit-calc(100% - 2rem);
+            height: calc(100% - 2rem);
         }
         .ui-slider-group{
             height: 100%;
         }
         .img-tag{
             padding: 5px;
+            text-align: left;
         }
         .img-tag a{
             display: inline-block;
@@ -64,15 +66,14 @@
             border: 1px solid #ccc;
             border-radius: 3px;
             margin: 3px;
+            color: #fff;
+            font-size: 14px;
         }
         .sc-pic{
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-        }
-        .sc-pic a{
-            color: #fff;
         }
     </style>
 </head>
@@ -87,9 +88,18 @@
     <section id="pitcures" class="pic-preview">
         <div>
             <img src="images/banner1.jpg">
+            <div class="img-tag sc-pic">
+                <a href="#">学费不贵</a>
+                <a href="#">环境不错</a>
+                <a href="#">环境好</a>
+            </div>
         </div>
         <div>
             <img src="images/images1.jpg">
+            <div class="img-tag sc-pic">
+                <a href="#">环境不错</a>
+                <a href="#">环境好</a>
+            </div>
         </div>
         <div>
             <img src="images/pic1.jpg">
@@ -98,16 +108,12 @@
             <img src="images/banner1.jpg">
         </div>
     </section>
-    <div class="img-tag sc-pic">
-        <a href="#">学费不贵</a>
-        <a href="#">环境不错</a>
-        <a href="#">环境好</a>
-    </div>
+    
 </div>
 
 
 <script src="dist/uker.min.0.0.1.js"></script>
-<script src="js/app/main.js"></script>
+<!-- <script src="js/app/main.js"></script> -->
 <script type="text/javascript">
     $(function(){
 
