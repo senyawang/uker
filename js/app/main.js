@@ -210,9 +210,44 @@ $(function () {
     });
 
     $('#panelSearch').on('touchend', function (e) {
-        var key = $('.s-text[type=search]').val();
         e.preventDefault();
-        window.location.href = location.protocol+'//'+location.hostname+location.pathname+'?order='+GetQueryString("order")+'&keyword='+key+'&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue+'&sort='+GetQueryString("sort");
+
+        var key = $('.s-text[type=search]').val(),
+            search = location.search.substring(1),
+            sarry = search.split('&'),
+            urlAry=[];
+
+        for (var i = 0; i < sarry.length; i++) {
+            var item = sarry[i].split('=');
+            switch (item[0]){
+                // case 'order':
+                //     item[i][1] = GetQueryString("order");
+                case 'keyword':
+                    item[1] = key;
+                    break;
+                case 'area':
+                    item[1] = areaValue;
+                    break;
+                case 'city':
+                    item[1] = cityValue;
+                    break;
+                case 'rank':
+                    item[1] = rankValue;
+                // case 'sort':
+                //     item[i][1] = GetQueryString("order");
+
+            }
+            urlAry.push(item.join('='));
+        };
+
+        var urlstr = urlAry.join('&');
+
+        console.log(urlstr)
+
+        window.location.href = location.protocol + '//' + location.hostname + location.pathname + '?' +urlstr;
+
+
+        // window.location.href = location.protocol+'//'+location.hostname+location.pathname+'?order='+GetQueryString("order")+'&keyword='+key+'&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue+'&sort='+GetQueryString("sort");
     })
 
 
