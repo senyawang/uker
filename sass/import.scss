@@ -46,6 +46,8 @@
     vertical-align: 0;
     // background-image: $icons;
     background-repeat: no-repeat;
+    overflow: hidden;
+    line-height: 100em;
 
     // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
         background-image: $icons-2x;

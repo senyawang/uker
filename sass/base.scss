@@ -59,6 +59,7 @@ html{
 
 }
 body{
+    position: relative;
     width: 100%;
     max-width: 640px;
     overflow-x: hidden;
@@ -365,7 +366,37 @@ input {
 @include icon-mix(i-filter-red);
 @include icon-mix(i-right);
 @include icon-mix(i-btnback);
+@include icon-mix(i-qqim);
+@include icon-mix(i-share);
+@include icon-mix(i-top);
 
+.social-menu{
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 50px;
+    text-align: center;
+    a{
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 30px;
+        margin-bottom: 10px;
+        background: rgba(0,0,0,.5);
+        border-radius: 50%;
+        &:first-child{
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            font-size: 40px;
+            background: rgba(212,44,44,.8);
+        }
+    }
+    i{
+        position: static;
+    }
+}
 
 .sort-up{
     [class^="i-arrow"]:first-child{

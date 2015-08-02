@@ -35,7 +35,7 @@ function refreshInit (url) {
 }
 
 var setMask = {
-    tpl: '<div class="ui-masks" style="position:absolute;-webkit-transition: all 0.5s; transition: all 0.5s;"></div>',
+    tpl: '<div class="ui-masks" style="-webkit-transition: all 0.5s; transition: all 0.5s;"></div>',
     init:function (maskContainer,closeCallback) {
         var self = this;
         var maskContainer = maskContainer || 'body';
@@ -90,21 +90,21 @@ $(function () {
 
     if($('#panel').length){
 
+    	var PANEL = new gmu.Panel($('#panel'),{
+            contentWrap: $('.mainpage')
+        });
+    	$('#push-right').on('touchend', function () {
 
-	var PANEL = new gmu.Panel($('#panel'),{
-        contentWrap: $('.mainpage')
-    });
-	$('#push-right').on('touchend', function () {
-
-        $('#panel').panel('toggle', 'overlay', 'right');
-        
-        setMask.open();
-    });
-    $('#panel').on('beforeclose', function (e) {
-        setMask.close();
+            $('#panel').panel('toggle', 'overlay', 'right');
             
-    })
+            setMask.open();
+        });
+        $('#panel').on('beforeclose', function (e) {
+            setMask.close();
+            
+        })
     }
+
     $("#slider").show();
     $("#slider").slider({
         loop: true,
@@ -268,8 +268,22 @@ $(function () {
 
     	$parent.find('.sf-wrap').css({'text-align': 'left'});
 
-    })
+    });
 
+
+    $('#socialShare').on('touchend', function (event) {
+        event.preventDefault();
+        setMask.open();
+        $('.ui-share').show();
+        $('body').css('overflow','hidden');
+    });
+    $(document).on('touchend', '#closeShare', function (event) {
+        event.preventDefault();
+        setMask.close();
+        $('.ui-share').hide();
+        $('body').css('overflow','auto');
+
+    })
     
 
 
