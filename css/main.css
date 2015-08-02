@@ -58,12 +58,6 @@
   padding-left: 10px;
 }
 
-/* line 52, ../sass/main.scss */
-.school-list {
-  max-height: 340px;
-  max-height: -webkit-calc(100vh - 10rem);
-  max-height: calc(100vh - 10rem);
-}
 /* line 57, ../sass/main.scss */
 .school-list li h3 {
   min-height: 0;
