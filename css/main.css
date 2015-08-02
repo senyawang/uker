@@ -58,11 +58,11 @@
   padding-left: 10px;
 }
 
-/* line 57, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .school-list li h3 {
   min-height: 0;
 }
-/* line 61, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 .school-list .pic {
   float: left;
   width: 3.25rem;
@@ -71,43 +71,43 @@
   margin-left: 0;
   margin-right: 1rem;
 }
-/* line 69, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 .school-list .date {
   position: static;
   line-height: 1.5;
 }
 
-/* line 74, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 .pm-list {
   text-align: center;
   padding-bottom: 0.25rem;
 }
-/* line 77, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 .pm-list h3 {
   font: 300 .6rem/2 simhei;
 }
-/* line 80, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
 .pm-list .pic {
   width: 80%;
 }
 
-/* line 85, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .lxbd li {
   padding: 0.25rem;
   border-right: 1px dotted #dddddd;
 }
-/* line 89, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 .lxbd .pic {
   float: left;
   width: 40%;
   margin-right: .5rem;
 }
-/* line 94, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .lxbd h3 {
   padding-top: 10px;
   font: 300 .7rem/1.5 simhei;
 }
-/* line 98, ../sass/main.scss */
+/* line 96, ../sass/main.scss */
 .lxbd p {
   font-size: .7rem;
   color: #fc7c01;

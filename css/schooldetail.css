@@ -131,13 +131,19 @@
   line-height: 2;
 }
 
-/* line 124, ../sass/schooldetail.scss */
+/* line 122, ../sass/schooldetail.scss */
+.hot-sp {
+  min-height: 340px;
+  min-height: -webkit-calc(100vh - 10rem);
+  min-height: calc(100vh - 10rem);
+}
+/* line 127, ../sass/schooldetail.scss */
 .hot-sp .date span {
   display: inline-block;
   padding-right: 15px;
 }
 
-/* line 130, ../sass/schooldetail.scss */
+/* line 133, ../sass/schooldetail.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -146,25 +152,25 @@
   text-align: center;
   font: .7rem/3 simhei;
 }
-/* line 138, ../sass/schooldetail.scss */
+/* line 141, ../sass/schooldetail.scss */
 .fixed-btn li a {
   display: block;
   color: #fff;
 }
-/* line 142, ../sass/schooldetail.scss */
+/* line 145, ../sass/schooldetail.scss */
 .fixed-btn li:first-child {
   background: #ff9409;
 }
-/* line 145, ../sass/schooldetail.scss */
+/* line 148, ../sass/schooldetail.scss */
 .fixed-btn li:last-child {
   background: #ff6009;
 }
 
-/* line 152, ../sass/schooldetail.scss */
+/* line 155, ../sass/schooldetail.scss */
 .search-form {
   padding: 0.5rem;
 }
-/* line 154, ../sass/schooldetail.scss */
+/* line 157, ../sass/schooldetail.scss */
 .search-form .s-btn {
   display: none;
   float: right;
@@ -173,7 +179,7 @@
   font: .8rem/2 simhei;
   background: none;
 }
-/* line 162, ../sass/schooldetail.scss */
+/* line 165, ../sass/schooldetail.scss */
 .search-form .sf-wrap {
   box-sizing: border-box;
   overflow: hidden;
@@ -183,11 +189,11 @@
   background: #fff;
   text-align: center;
 }
-/* line 170, ../sass/schooldetail.scss */
+/* line 173, ../sass/schooldetail.scss */
 .search-form .sf-wrap .i-zoom {
   position: static;
 }
-/* line 174, ../sass/schooldetail.scss */
+/* line 177, ../sass/schooldetail.scss */
 .search-form .s-text {
   width: 80%;
   vertical-align: middle;
@@ -196,45 +202,45 @@
   background: transparent;
 }
 
-/* line 182, ../sass/schooldetail.scss */
+/* line 185, ../sass/schooldetail.scss */
 .s-result {
   padding: 0.25rem 0.5rem 0;
 }
 
-/* line 185, ../sass/schooldetail.scss */
+/* line 188, ../sass/schooldetail.scss */
 .filter-menu {
   position: relative;
   padding: .5rem;
   text-align: center;
   background: #fff;
 }
-/* line 191, ../sass/schooldetail.scss */
+/* line 194, ../sass/schooldetail.scss */
 .filter-menu li a {
   display: block;
   position: relative;
   border-right: 1px solid #dddddd;
 }
-/* line 196, ../sass/schooldetail.scss */
+/* line 199, ../sass/schooldetail.scss */
 .filter-menu li [class^="i-arrow"]:first-child,
 .filter-menu li [class^="i-arrow"]:last-child {
   position: static;
   display: block;
   transition: all .4s;
 }
-/* line 205, ../sass/schooldetail.scss */
+/* line 208, ../sass/schooldetail.scss */
 .filter-menu li:last-child a {
   border: 0 none;
 }
-/* line 212, ../sass/schooldetail.scss */
+/* line 215, ../sass/schooldetail.scss */
 .filter-menu .current a {
   color: #fc7c01;
 }
-/* line 215, ../sass/schooldetail.scss */
+/* line 218, ../sass/schooldetail.scss */
 .filter-menu .current [class^="i-arrow"] {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 221, ../sass/schooldetail.scss */
+/* line 224, ../sass/schooldetail.scss */
 .filter-menu .i-box {
   display: block;
   position: absolute;
@@ -245,7 +251,7 @@
   transform: translate(0, -50%);
 }
 
-/* line 232, ../sass/schooldetail.scss */
+/* line 235, ../sass/schooldetail.scss */
 .drop-menu {
   display: none;
   position: absolute;
@@ -261,31 +267,31 @@
   background: #fff;
   -webkit-overflow-scrolling: touch;
 }
-/* line 246, ../sass/schooldetail.scss */
+/* line 249, ../sass/schooldetail.scss */
 .drop-menu li {
   margin: 0 0.25rem;
   padding: 0 0.5rem;
   line-height: 3;
   border-bottom: 1px solid #dddddd;
 }
-/* line 251, ../sass/schooldetail.scss */
+/* line 254, ../sass/schooldetail.scss */
 .drop-menu li a {
   border: 0 none;
   text-align: left;
 }
 
-/* line 257, ../sass/schooldetail.scss */
+/* line 260, ../sass/schooldetail.scss */
 .search-list {
   position: relative;
 }
 
-/* line 260, ../sass/schooldetail.scss */
+/* line 263, ../sass/schooldetail.scss */
 .img-tag {
   background: #fff;
   margin-bottom: 0.25rem;
   padding: 0.5rem;
 }
-/* line 264, ../sass/schooldetail.scss */
+/* line 267, ../sass/schooldetail.scss */
 .img-tag a {
   display: inline-block;
   padding: 3px 10px;
@@ -293,21 +299,21 @@
   border-radius: 3px;
   margin: 3px;
 }
-/* line 271, ../sass/schooldetail.scss */
+/* line 274, ../sass/schooldetail.scss */
 .img-tag .current {
   background: #ccc;
   color: #fff;
 }
 
-/* line 276, ../sass/schooldetail.scss */
+/* line 279, ../sass/schooldetail.scss */
 .school-photo {
   background: transparent;
 }
-/* line 279, ../sass/schooldetail.scss */
+/* line 282, ../sass/schooldetail.scss */
 .school-photo .pic {
   max-width: 100%;
 }
-/* line 282, ../sass/schooldetail.scss */
+/* line 285, ../sass/schooldetail.scss */
 .school-photo .pbox {
   display: inline-block;
   width: 49%;
@@ -315,26 +321,26 @@
   vertical-align: top;
   font-size: .6rem;
 }
-/* line 288, ../sass/schooldetail.scss */
+/* line 291, ../sass/schooldetail.scss */
 .school-photo .pbox a {
   display: block;
   background: #fff;
 }
-/* line 293, ../sass/schooldetail.scss */
+/* line 296, ../sass/schooldetail.scss */
 .school-photo .pbox strong {
   display: block;
   padding: 0.5rem;
 }
-/* line 297, ../sass/schooldetail.scss */
+/* line 300, ../sass/schooldetail.scss */
 .school-photo .pbox:nth-child(odd) {
   padding-right: 1%;
 }
-/* line 300, ../sass/schooldetail.scss */
+/* line 303, ../sass/schooldetail.scss */
 .school-photo .pbox:nth-child(even) {
   padding-left: 1%;
 }
 
-/* line 305, ../sass/schooldetail.scss */
+/* line 308, ../sass/schooldetail.scss */
 #pubu .pbox {
   position: absolute;
   width: 49%;
@@ -342,13 +348,13 @@
   transition: all 0.3s;
 }
 
-/* line 311, ../sass/schooldetail.scss */
+/* line 314, ../sass/schooldetail.scss */
 #pubu {
   margin: 0 auto;
   position: relative;
 }
 
-/* line 315, ../sass/schooldetail.scss */
+/* line 318, ../sass/schooldetail.scss */
 #pubu .pbox {
   float: left;
 }

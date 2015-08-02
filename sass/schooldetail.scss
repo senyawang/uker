@@ -120,6 +120,9 @@
     }
 }
 .hot-sp{
+    min-height: 340px;
+    min-height: #{-webkit-calc(100vh - 10rem)};
+    min-height: #{calc(100vh - 10rem)};
     .date{
         span{
             display: inline-block;
