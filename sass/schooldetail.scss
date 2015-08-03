@@ -78,6 +78,10 @@
 }
 .school-pic{
     li{
+        width: 50%;
+        a{
+            display: block;
+        }
         &:first-child{
             padding-right: 3%;
         }
@@ -86,9 +90,25 @@
         }
     }
     .pic{
-        max-width: 100%;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-bottom: 64%;
+        height: 0;
+        background: rgba(0,0,0,.07);
+        img{
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
     }
     .opts{
+        position: relative;
+
         span{
             display: inline-block;
             width: 48%;
@@ -120,9 +140,11 @@
     }
 }
 .hot-sp{
-    min-height: 340px;
-    min-height: #{-webkit-calc(100vh - 10rem)};
-    min-height: #{calc(100vh - 10rem)};
+    &.data-list{
+        min-height: 340px;
+        min-height: #{-webkit-calc(100vh - 10rem)};
+        min-height: #{calc(100vh - 10rem)};
+    }
     .date{
         span{
             display: inline-block;

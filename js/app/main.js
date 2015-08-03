@@ -110,8 +110,7 @@ $(function () {
         loop: true,
         autoPlay: true,
         dots: false,
-        arrow: false,
-        imgZoom: true
+        arrow: false
     });
 
     $('#nav').navigator();
@@ -275,13 +274,13 @@ $(function () {
         event.preventDefault();
         setMask.open();
         $('.ui-share').show();
-        $('body').css('overflow','hidden');
+        $('html').css('overflow','hidden');
     });
     $(document).on('touchend', '#closeShare', function (event) {
         event.preventDefault();
         setMask.close();
         $('.ui-share').hide();
-        $('body').css('overflow','auto');
+        $('html').css('overflow','auto');
 
     })
     

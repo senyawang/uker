@@ -112,3 +112,14 @@
   font-size: .7rem;
   color: #fc7c01;
 }
+
+/* line 104, ../sass/main.scss */
+#nav ul {
+  background: #fff;
+}
+/* line 107, ../sass/main.scss */
+#nav ul li {
+  display: inline-block;
+  width: auto !important;
+  line-height: 34px;
+}

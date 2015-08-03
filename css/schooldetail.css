@@ -86,35 +86,62 @@
   padding: 0.5rem 0;
 }
 
-/* line 81, ../sass/schooldetail.scss */
+/* line 80, ../sass/schooldetail.scss */
+.school-pic li {
+  width: 50%;
+}
+/* line 82, ../sass/schooldetail.scss */
+.school-pic li a {
+  display: block;
+}
+/* line 85, ../sass/schooldetail.scss */
 .school-pic li:first-child {
   padding-right: 3%;
 }
-/* line 84, ../sass/schooldetail.scss */
+/* line 88, ../sass/schooldetail.scss */
 .school-pic li:last-child {
   padding-left: 3%;
 }
-/* line 88, ../sass/schooldetail.scss */
-.school-pic .pic {
-  max-width: 100%;
-}
 /* line 92, ../sass/schooldetail.scss */
+.school-pic .pic {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 64%;
+  height: 0;
+  background: rgba(0, 0, 0, 0.07);
+}
+/* line 99, ../sass/schooldetail.scss */
+.school-pic .pic img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 109, ../sass/schooldetail.scss */
+.school-pic .opts {
+  position: relative;
+}
+/* line 112, ../sass/schooldetail.scss */
 .school-pic .opts span {
   display: inline-block;
   width: 48%;
   line-height: 3;
 }
-/* line 96, ../sass/schooldetail.scss */
+/* line 116, ../sass/schooldetail.scss */
 .school-pic .opts span:first-child {
   text-align: left;
 }
-/* line 100, ../sass/schooldetail.scss */
+/* line 120, ../sass/schooldetail.scss */
 .school-pic .opts span:last-child {
   text-align: right;
   color: #888888;
 }
 
-/* line 107, ../sass/schooldetail.scss */
+/* line 127, ../sass/schooldetail.scss */
 .ui-btn-more {
   display: block;
   margin: 0.25rem 0;
@@ -124,26 +151,26 @@
   line-height: 3;
 }
 
-/* line 116, ../sass/schooldetail.scss */
+/* line 136, ../sass/schooldetail.scss */
 .school-intro p {
   text-indent: 2em;
   font-size: .7rem;
   line-height: 2;
 }
 
-/* line 122, ../sass/schooldetail.scss */
-.hot-sp {
+/* line 143, ../sass/schooldetail.scss */
+.hot-sp.data-list {
   min-height: 340px;
   min-height: -webkit-calc(100vh - 10rem);
   min-height: calc(100vh - 10rem);
 }
-/* line 127, ../sass/schooldetail.scss */
+/* line 149, ../sass/schooldetail.scss */
 .hot-sp .date span {
   display: inline-block;
   padding-right: 15px;
 }
 
-/* line 133, ../sass/schooldetail.scss */
+/* line 155, ../sass/schooldetail.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -152,25 +179,25 @@
   text-align: center;
   font: .7rem/3 simhei;
 }
-/* line 141, ../sass/schooldetail.scss */
+/* line 163, ../sass/schooldetail.scss */
 .fixed-btn li a {
   display: block;
   color: #fff;
 }
-/* line 145, ../sass/schooldetail.scss */
+/* line 167, ../sass/schooldetail.scss */
 .fixed-btn li:first-child {
   background: #ff9409;
 }
-/* line 148, ../sass/schooldetail.scss */
+/* line 170, ../sass/schooldetail.scss */
 .fixed-btn li:last-child {
   background: #ff6009;
 }
 
-/* line 155, ../sass/schooldetail.scss */
+/* line 177, ../sass/schooldetail.scss */
 .search-form {
   padding: 0.5rem;
 }
-/* line 157, ../sass/schooldetail.scss */
+/* line 179, ../sass/schooldetail.scss */
 .search-form .s-btn {
   display: none;
   float: right;
@@ -179,7 +206,7 @@
   font: .8rem/2 simhei;
   background: none;
 }
-/* line 165, ../sass/schooldetail.scss */
+/* line 187, ../sass/schooldetail.scss */
 .search-form .sf-wrap {
   box-sizing: border-box;
   overflow: hidden;
@@ -189,11 +216,11 @@
   background: #fff;
   text-align: center;
 }
-/* line 173, ../sass/schooldetail.scss */
+/* line 195, ../sass/schooldetail.scss */
 .search-form .sf-wrap .i-zoom {
   position: static;
 }
-/* line 177, ../sass/schooldetail.scss */
+/* line 199, ../sass/schooldetail.scss */
 .search-form .s-text {
   width: 80%;
   vertical-align: middle;
@@ -202,45 +229,45 @@
   background: transparent;
 }
 
-/* line 185, ../sass/schooldetail.scss */
+/* line 207, ../sass/schooldetail.scss */
 .s-result {
   padding: 0.25rem 0.5rem 0;
 }
 
-/* line 188, ../sass/schooldetail.scss */
+/* line 210, ../sass/schooldetail.scss */
 .filter-menu {
   position: relative;
   padding: .5rem;
   text-align: center;
   background: #fff;
 }
-/* line 194, ../sass/schooldetail.scss */
+/* line 216, ../sass/schooldetail.scss */
 .filter-menu li a {
   display: block;
   position: relative;
   border-right: 1px solid #dddddd;
 }
-/* line 199, ../sass/schooldetail.scss */
+/* line 221, ../sass/schooldetail.scss */
 .filter-menu li [class^="i-arrow"]:first-child,
 .filter-menu li [class^="i-arrow"]:last-child {
   position: static;
   display: block;
   transition: all .4s;
 }
-/* line 208, ../sass/schooldetail.scss */
+/* line 230, ../sass/schooldetail.scss */
 .filter-menu li:last-child a {
   border: 0 none;
 }
-/* line 215, ../sass/schooldetail.scss */
+/* line 237, ../sass/schooldetail.scss */
 .filter-menu .current a {
   color: #fc7c01;
 }
-/* line 218, ../sass/schooldetail.scss */
+/* line 240, ../sass/schooldetail.scss */
 .filter-menu .current [class^="i-arrow"] {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-/* line 224, ../sass/schooldetail.scss */
+/* line 246, ../sass/schooldetail.scss */
 .filter-menu .i-box {
   display: block;
   position: absolute;
@@ -251,7 +278,7 @@
   transform: translate(0, -50%);
 }
 
-/* line 235, ../sass/schooldetail.scss */
+/* line 257, ../sass/schooldetail.scss */
 .drop-menu {
   display: none;
   position: absolute;
@@ -267,31 +294,31 @@
   background: #fff;
   -webkit-overflow-scrolling: touch;
 }
-/* line 249, ../sass/schooldetail.scss */
+/* line 271, ../sass/schooldetail.scss */
 .drop-menu li {
   margin: 0 0.25rem;
   padding: 0 0.5rem;
   line-height: 3;
   border-bottom: 1px solid #dddddd;
 }
-/* line 254, ../sass/schooldetail.scss */
+/* line 276, ../sass/schooldetail.scss */
 .drop-menu li a {
   border: 0 none;
   text-align: left;
 }
 
-/* line 260, ../sass/schooldetail.scss */
+/* line 282, ../sass/schooldetail.scss */
 .search-list {
   position: relative;
 }
 
-/* line 263, ../sass/schooldetail.scss */
+/* line 285, ../sass/schooldetail.scss */
 .img-tag {
   background: #fff;
   margin-bottom: 0.25rem;
   padding: 0.5rem;
 }
-/* line 267, ../sass/schooldetail.scss */
+/* line 289, ../sass/schooldetail.scss */
 .img-tag a {
   display: inline-block;
   padding: 3px 10px;
@@ -299,21 +326,21 @@
   border-radius: 3px;
   margin: 3px;
 }
-/* line 274, ../sass/schooldetail.scss */
+/* line 296, ../sass/schooldetail.scss */
 .img-tag .current {
   background: #ccc;
   color: #fff;
 }
 
-/* line 279, ../sass/schooldetail.scss */
+/* line 301, ../sass/schooldetail.scss */
 .school-photo {
   background: transparent;
 }
-/* line 282, ../sass/schooldetail.scss */
+/* line 304, ../sass/schooldetail.scss */
 .school-photo .pic {
   max-width: 100%;
 }
-/* line 285, ../sass/schooldetail.scss */
+/* line 307, ../sass/schooldetail.scss */
 .school-photo .pbox {
   display: inline-block;
   width: 49%;
@@ -321,26 +348,26 @@
   vertical-align: top;
   font-size: .6rem;
 }
-/* line 291, ../sass/schooldetail.scss */
+/* line 313, ../sass/schooldetail.scss */
 .school-photo .pbox a {
   display: block;
   background: #fff;
 }
-/* line 296, ../sass/schooldetail.scss */
+/* line 318, ../sass/schooldetail.scss */
 .school-photo .pbox strong {
   display: block;
   padding: 0.5rem;
 }
-/* line 300, ../sass/schooldetail.scss */
+/* line 322, ../sass/schooldetail.scss */
 .school-photo .pbox:nth-child(odd) {
   padding-right: 1%;
 }
-/* line 303, ../sass/schooldetail.scss */
+/* line 325, ../sass/schooldetail.scss */
 .school-photo .pbox:nth-child(even) {
   padding-left: 1%;
 }
 
-/* line 308, ../sass/schooldetail.scss */
+/* line 330, ../sass/schooldetail.scss */
 #pubu .pbox {
   position: absolute;
   width: 49%;
@@ -348,13 +375,13 @@
   transition: all 0.3s;
 }
 
-/* line 314, ../sass/schooldetail.scss */
+/* line 336, ../sass/schooldetail.scss */
 #pubu {
   margin: 0 auto;
   position: relative;
 }
 
-/* line 318, ../sass/schooldetail.scss */
+/* line 340, ../sass/schooldetail.scss */
 #pubu .pbox {
   float: left;
 }

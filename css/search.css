@@ -57,28 +57,29 @@
 }
 /* line 58, ../sass/search.scss */
 .search-form .s-text {
-  width: 80%;
+  width: 76%;
+  padding: 0 2%;
   vertical-align: middle;
   font: .6rem/1 simhei;
   border: 0 none;
   background: transparent;
 }
 
-/* line 67, ../sass/search.scss */
+/* line 68, ../sass/search.scss */
 .search-list .s-result {
   padding: 0.25rem 0.5rem;
   background: #dddddd;
 }
-/* line 72, ../sass/search.scss */
+/* line 73, ../sass/search.scss */
 .search-list .school-list .pic {
   margin-right: .5rem;
 }
-/* line 76, ../sass/search.scss */
+/* line 77, ../sass/search.scss */
 .search-list .sl-info {
   display: block;
   overflow: hidden;
 }
-/* line 79, ../sass/search.scss */
+/* line 80, ../sass/search.scss */
 .search-list .sl-info .sp-num {
   padding: 0 4px;
   background: #d42c2c;
@@ -86,70 +87,70 @@
   color: #fff;
 }
 
-/* line 88, ../sass/search.scss */
+/* line 89, ../sass/search.scss */
 .tabs-menu {
   margin-bottom: 0;
   text-align: center;
   padding-bottom: 0.5rem;
 }
-/* line 92, ../sass/search.scss */
+/* line 93, ../sass/search.scss */
 .tabs-menu ul {
   background: #dddddd;
   border: 1px solid #dddddd;
   border-radius: .7rem;
 }
-/* line 96, ../sass/search.scss */
+/* line 97, ../sass/search.scss */
 .tabs-menu ul li {
   border-radius: .7rem;
 }
-/* line 98, ../sass/search.scss */
+/* line 99, ../sass/search.scss */
 .tabs-menu ul li a {
   display: block;
   font: .7rem/2 simhei;
   color: #888888;
 }
-/* line 105, ../sass/search.scss */
+/* line 106, ../sass/search.scss */
 .tabs-menu .current {
   background: #fff;
 }
-/* line 107, ../sass/search.scss */
+/* line 108, ../sass/search.scss */
 .tabs-menu .current a {
   color: #333;
 }
 
-/* line 113, ../sass/search.scss */
+/* line 114, ../sass/search.scss */
 .filter-menu {
   padding: .5rem;
   text-align: center;
 }
-/* line 117, ../sass/search.scss */
+/* line 118, ../sass/search.scss */
 .filter-menu li a {
   display: block;
   position: relative;
   border-right: 1px solid #dddddd;
 }
-/* line 122, ../sass/search.scss */
+/* line 123, ../sass/search.scss */
 .filter-menu li [class^="i-arrow"]:first-child {
   top: 0;
   left: 0;
 }
-/* line 126, ../sass/search.scss */
+/* line 127, ../sass/search.scss */
 .filter-menu li [class^="i-arrow"]:last-child {
   left: 0;
   bottom: 0;
 }
-/* line 130, ../sass/search.scss */
+/* line 131, ../sass/search.scss */
 .filter-menu li [class^="i-filter"] {
   right: .5rem;
   top: 50%;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-/* line 139, ../sass/search.scss */
+/* line 140, ../sass/search.scss */
 .filter-menu li:last-child a {
   border: 0 none;
 }
-/* line 145, ../sass/search.scss */
+/* line 146, ../sass/search.scss */
 .filter-menu .i-box {
   display: block;
   position: absolute;
@@ -161,7 +162,7 @@
   transform: translate(0, -50%);
 }
 
-/* line 157, ../sass/search.scss */
+/* line 158, ../sass/search.scss */
 .slide-panel {
   width: 100%;
   height: calc(100vh - 2rem);
@@ -170,11 +171,11 @@
   overflow-x: hidden;
   background: #fff;
 }
-/* line 164, ../sass/search.scss */
+/* line 165, ../sass/search.scss */
 .slide-panel .sp-wrap {
   width: 200%;
 }
-/* line 167, ../sass/search.scss */
+/* line 168, ../sass/search.scss */
 .slide-panel .sp-box {
   float: left;
   width: 50%;
@@ -182,65 +183,65 @@
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 175, ../sass/search.scss */
+/* line 176, ../sass/search.scss */
 .slide-panel .sp-list li {
   padding: 5% 8%;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 178, ../sass/search.scss */
+/* line 179, ../sass/search.scss */
 .slide-panel .sp-list li:first-child {
   border-top: 1px solid #dddddd;
 }
-/* line 181, ../sass/search.scss */
+/* line 182, ../sass/search.scss */
 .slide-panel .sp-list li a {
   display: block;
   font-size: 0;
 }
-/* line 189, ../sass/search.scss */
+/* line 190, ../sass/search.scss */
 .slide-panel .sl-item {
   display: inline-block;
   font-size: .6rem;
   vertical-align: top;
 }
-/* line 193, ../sass/search.scss */
+/* line 194, ../sass/search.scss */
 .slide-panel .sl-item:first-child {
   width: 75%;
   text-align: left;
 }
-/* line 197, ../sass/search.scss */
+/* line 198, ../sass/search.scss */
 .slide-panel .sl-item:last-child {
   width: 25%;
   text-align: right;
 }
-/* line 206, ../sass/search.scss */
+/* line 207, ../sass/search.scss */
 .slide-panel .i-arrow-r,
 .slide-panel .i-right {
   position: static;
 }
 
-/* line 212, ../sass/search.scss */
+/* line 213, ../sass/search.scss */
 #subPanelBox .hover .sl-item {
   color: #d42c2c;
 }
-/* line 215, ../sass/search.scss */
+/* line 216, ../sass/search.scss */
 #subPanelBox .hover .sl-item:last-child:after {
   position: static;
   content: '';
 }
-/* line 221, ../sass/search.scss */
+/* line 222, ../sass/search.scss */
 #subPanelBox .sl-item:first-child {
   width: 75%;
 }
-/* line 224, ../sass/search.scss */
+/* line 225, ../sass/search.scss */
 #subPanelBox .sl-item:last-child {
   width: 25%;
 }
 
-/* line 229, ../sass/search.scss */
+/* line 230, ../sass/search.scss */
 #mainPanelBox .sl-item:first-child {
   width: 30%;
 }
-/* line 232, ../sass/search.scss */
+/* line 233, ../sass/search.scss */
 #mainPanelBox .sl-item:last-child {
   width: 70%;
 }

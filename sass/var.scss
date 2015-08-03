@@ -19,9 +19,9 @@ $sip: "icons/";
 // $icons-clean-up: true; //config for wether clear up old sprite
 // $icons-spacing: 10px;
 
-$icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
-// $icons-2x-clean-up: true; //config for wether clear up old sprite
-$icons-2x-spacing: 10px;
+$icons-2x: sprite-map("icons-2x/*.png", $layout: horizontal, $spacing: 10px);
+$icons-2x-clean-up: true; //config for wether clear up old sprite
+$icons-2x-spacing: 5px !default;
 // $icons-layout: horizontal; //vertical/horizontal/diagonal/smart
 // $icons-sprite-dimensions: true;
 // $icons-sprite-base-class: "";
