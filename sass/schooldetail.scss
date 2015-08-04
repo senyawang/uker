@@ -301,36 +301,37 @@
 }
 .school-photo{
     background: transparent;
-
+    .ub-bd{
+        padding: 0;
+    }
     .pic{
         max-width: 100%;
     }
     .pbox{
         display: inline-block;
-        width: 49%;
+        width: 50%;
         padding-bottom: 2%;
         vertical-align: top;
         font-size: .6rem;
         a{
             display: block;
             background: #fff;
-
+            margin: 0 3%;
         }
         strong{
             display: block;
             padding: $gap*2;
         }
-        &:nth-child(odd){
-            padding-right: 1%;
-        }
-        &:nth-child(even){
-            padding-left: 1%;
-        }
+        // &:nth-child(odd){
+        //     padding-right: 1%;
+        // }
+        // &:nth-child(even){
+        //     padding-left: 1%;
+        // }
     }
 }
 #pubu .pbox{
     position: absolute; 
-    width: 49%; 
     box-sizing: border-box;
     transition: all 0.3s;}
 

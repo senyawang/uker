@@ -6,7 +6,7 @@ $.extend($.fn, {
         var df = {
             item: '.pbox',
             margin: 0,
-            addfooter: false
+            addfooter: true
         };
         options = $.extend(df, options);
         return this.each(function() {

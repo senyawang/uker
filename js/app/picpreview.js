@@ -8,8 +8,18 @@ $(function(){
             var scrollTop = $(window).scrollTop();
             return lastboxHeight<documentHeight+scrollTop?true:false;
         }
-        
+
         $('#pubu').waterfall();
+        var water = setInterval(function (e) {
+             $('#pubu').waterfall();
+             $('#pubu').find('.item').remove();
+        },1000);
+
+        setTimeout(function () {
+            clearInterval(water);
+        },5000);
+        
+        
 
         var ajaxkey = true,
             page = 2;
