@@ -118,11 +118,6 @@
 <script type="text/javascript">
     $(function(){
 
-        $(document).on('touchend', '#goBack', function (e) {
-            e.preventDefault();
-            location.href = document.referrer;
-        })
-
         var total = $("#pitcures > div").length;
 
         var picSlider = new gmu.Slider($("#pitcures"),{

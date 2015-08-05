@@ -24,8 +24,8 @@
     </header>
 
     <h1 class="ranking-title">2015年TIMES英国大学综合排名</h1>
-    <div class="rank-table">
-        <ul class="rt-list">
+    <div class="rank-table ui-refresh">
+        <ul class="rt-list data-list">
             <li>
                 <span class="num">1</span>
                 <span class="num">1</span>
@@ -83,6 +83,8 @@
                 </a>
             </li>
         </ul>
+
+        <div class="ui-refresh-down"></div>
     </div>
 
 
@@ -97,7 +99,6 @@
         <li><a href="#">获取留学方案</a></li>
     </ul>
 </div>
-
 
 <div id="panel">
     <header class="header">
@@ -128,11 +129,26 @@
 
 </div>
 
+<script id="loadMore" type="text/html">
+    {{each data as value i}}
+         <li>
+            <span class="num">{{value.pm}}</span>
+            <span class="num">{{value.Times_Pm_2014}}</span>
+            <a class="school" href="{{value.url}}">
+                <h3>{{value.E_Name}}</h3>
+                <h3>{{value.S_Name}}</h3>
+            </a>
+        </li>
+    {{/each}}
+</script>
 
 <script src="dist/uker.min.0.0.1.js"></script>
 <script src="js/app/main.js"></script>
 
-
+<script>
+var ajaxUrl='http://121.201.13.58/rank/listAjax?type=timesrank';
+refreshInit(ajaxUrl);
+</script>
 
 </body>
 </html>
