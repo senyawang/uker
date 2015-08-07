@@ -109,7 +109,7 @@ $(function () {
     $("#slider").slider({
         loop: true,
         autoPlay: true,
-        dots: false,
+        dots: true,
         arrow: false
     });
 

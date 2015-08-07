@@ -123,3 +123,16 @@
   width: auto !important;
   line-height: 34px;
 }
+
+/* line 115, ../sass/main.scss */
+.ui-slider-dots {
+  left: 0;
+  text-align: center;
+}
+
+/* line 119, ../sass/main.scss */
+.ui-slider-dots > b {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}

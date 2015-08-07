@@ -183,6 +183,11 @@ input {
 .ui-slider-item{
     height: auto!important;
 }
+#panel{
+    .header{
+        background: $red;
+    }
+}
 .ui-panel{
     width: 65%!important;
     padding: 0;
@@ -374,6 +379,7 @@ input {
 @include icon-mix(i-qqim);
 @include icon-mix(i-share);
 @include icon-mix(i-top);
+@include icon-mix(sitetitle);
 
 .social-menu{
     position: fixed;
