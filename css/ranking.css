@@ -7,47 +7,58 @@
 }
 
 /* line 12, ../sass/ranking.scss */
+.rank-table .rt-tit {
+  padding: 0 0.5rem;
+  line-height: 2;
+  background: #f5f7fa;
+}
+/* line 16, ../sass/ranking.scss */
+.rank-table .rt-tit span {
+  display: inline-block;
+  width: 11%;
+  text-align: center;
+}
+/* line 22, ../sass/ranking.scss */
 .rank-table .rt-list {
   text-align: center;
   background: #fff;
 }
-/* line 16, ../sass/ranking.scss */
+/* line 26, ../sass/ranking.scss */
 .rank-table li {
   padding: 0.5rem;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 22, ../sass/ranking.scss */
+/* line 32, ../sass/ranking.scss */
 .rank-table li:nth-child(1) .num:first-child, .rank-table li:nth-child(2) .num:first-child, .rank-table li:nth-child(3) .num:first-child {
   color: #d42c2c;
 }
-/* line 27, ../sass/ranking.scss */
+/* line 36, ../sass/ranking.scss */
+.rank-table li h3:first-child {
+  margin-bottom: 3px;
+}
+/* line 40, ../sass/ranking.scss */
 .rank-table .num,
 .rank-table .school {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 31, ../sass/ranking.scss */
-.rank-table .num h3,
-.rank-table .school h3 {
-  display: inline-block;
-}
-/* line 35, ../sass/ranking.scss */
+/* line 45, ../sass/ranking.scss */
 .rank-table .num {
   width: 11%;
   font-size: .8rem;
 }
-/* line 38, ../sass/ranking.scss */
+/* line 48, ../sass/ranking.scss */
 .rank-table .num:nth-child(2) {
   padding-right: 5%;
   color: #ababab;
 }
-/* line 44, ../sass/ranking.scss */
+/* line 54, ../sass/ranking.scss */
 .rank-table .school {
   width: 70%;
   text-align: left;
 }
 
-/* line 51, ../sass/ranking.scss */
+/* line 61, ../sass/ranking.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -56,16 +67,16 @@
   text-align: center;
   font: .7rem/3 simhei;
 }
-/* line 59, ../sass/ranking.scss */
+/* line 69, ../sass/ranking.scss */
 .fixed-btn li a {
   display: block;
   color: #fff;
 }
-/* line 63, ../sass/ranking.scss */
+/* line 73, ../sass/ranking.scss */
 .fixed-btn li:first-child {
   background: #ff9409;
 }
-/* line 66, ../sass/ranking.scss */
+/* line 76, ../sass/ranking.scss */
 .fixed-btn li:last-child {
   background: #ff6009;
 }

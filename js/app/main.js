@@ -83,6 +83,8 @@ function GetQueryString(name){
 
 $(function () {
 
+    window.scrollTo(0, 1);//收起地址栏
+
     $(document).on('touchend', '#goBack', function (e) {
         e.preventDefault();
         window.history.go(-1);

@@ -9,6 +9,16 @@
     text-align: center;
 }
 .rank-table{
+    .rt-tit{
+        padding: 0 $gap * 2;
+        line-height: 2;
+        background: #f5f7fa;
+        span{
+            display: inline-block;
+            width: 11%;
+            text-align: center;
+        }
+    }
     .rt-list{
         text-align: center;
         background: $boxbg;
@@ -23,14 +33,14 @@
                 color: $red;
             }
         }
+        h3:first-child{
+            margin-bottom: 3px;
+        }
     }
     .num,
     .school{
         display: inline-block;
         vertical-align: middle;
-        h3{
-            display: inline-block;
-        }
     }
     .num{
         width: 11%;
