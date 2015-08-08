@@ -148,6 +148,10 @@ $(function () {
                             '<span class="sl-item"></span>' +
                         '</a></li>';
                 };
+                $('#subPanelBox .sp-list').html(html);
+                // $('#subPanelBox li').removeClass('hover');
+                $('[data-value="'+ areaValue +'"]').addClass('hover');
+
                 break;
             case 'J_cityValue':
 
@@ -161,6 +165,10 @@ $(function () {
                             '<span class="sl-item"></span>' +
                         '</a></li>';
                 };
+                $('#subPanelBox .sp-list').html(html);
+                // $('#subPanelBox li').removeClass('hover');
+                $('[data-value="'+ cityValue +'"]').addClass('hover');
+
                 break;
             case 'J_rankValue':
                 for (var i = 0; i < rank.length; i++) {
@@ -169,13 +177,12 @@ $(function () {
                             '<span class="sl-item"></span>' +
                         '</a></li>';
                 };
+                $('#subPanelBox .sp-list').html(html);
+                // $('#subPanelBox li').removeClass('hover');
+                $('[data-value="'+ rankValue +'"]').addClass('hover');
+
                 break;  
         }
-
-        $('#subPanelBox .sp-list').html(html);
-        $('[data-value="'+ areaValue +'"]').addClass('hover');
-        $('[data-value="'+ cityValue +'"]').addClass('hover');
-        $('[data-value="'+ rankValue +'"]').addClass('hover');
 
     });
 
