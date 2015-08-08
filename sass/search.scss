@@ -155,6 +155,17 @@
     }
 
 }
+.filter-panel{
+    .header{
+        background: #f8f8f8!important;
+        a{
+            color: $more;
+        }
+        .title{
+            font-size: .8rem;
+        }
+    }
+}
 .slide-panel{
     width: 100%;
     height: #{calc(100vh - 2rem)};

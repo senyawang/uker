@@ -134,6 +134,10 @@ $(function () {
 
         subPanelParent = $(this).attr('data-type');
 
+        $('#panelBack').html('<i class="i-back"></i>');
+
+        $('.ui-panel .title').html($(this).find('.sl-item:first-child').text());
+
         var html = '';
 
         switch (subPanelParent){
@@ -210,7 +214,11 @@ $(function () {
 
         if(marginLeft == '0px' || marginLeft == null) PANEL.close();
 
-        $firstBox.css('marginLeft', '0')
+        $firstBox.css('marginLeft', '0');
+
+        $(this).html('取消');
+
+        $('.ui-panel .title').html('筛选');
     });
 
     $('#panelSearch').on('touchend', function (e) {

@@ -162,7 +162,20 @@
   transform: translate(0, -50%);
 }
 
-/* line 158, ../sass/search.scss */
+/* line 159, ../sass/search.scss */
+.filter-panel .header {
+  background: #f8f8f8 !important;
+}
+/* line 161, ../sass/search.scss */
+.filter-panel .header a {
+  color: #888888;
+}
+/* line 164, ../sass/search.scss */
+.filter-panel .header .title {
+  font-size: .8rem;
+}
+
+/* line 169, ../sass/search.scss */
 .slide-panel {
   width: 100%;
   height: calc(100vh - 2rem);
@@ -171,11 +184,11 @@
   overflow-x: hidden;
   background: #fff;
 }
-/* line 165, ../sass/search.scss */
+/* line 176, ../sass/search.scss */
 .slide-panel .sp-wrap {
   width: 200%;
 }
-/* line 168, ../sass/search.scss */
+/* line 179, ../sass/search.scss */
 .slide-panel .sp-box {
   float: left;
   width: 50%;
@@ -183,65 +196,65 @@
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 176, ../sass/search.scss */
+/* line 187, ../sass/search.scss */
 .slide-panel .sp-list li {
   padding: 5% 8%;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 179, ../sass/search.scss */
+/* line 190, ../sass/search.scss */
 .slide-panel .sp-list li:first-child {
   border-top: 1px solid #dddddd;
 }
-/* line 182, ../sass/search.scss */
+/* line 193, ../sass/search.scss */
 .slide-panel .sp-list li a {
   display: block;
   font-size: 0;
 }
-/* line 190, ../sass/search.scss */
+/* line 201, ../sass/search.scss */
 .slide-panel .sl-item {
   display: inline-block;
   font-size: .6rem;
   vertical-align: top;
 }
-/* line 194, ../sass/search.scss */
+/* line 205, ../sass/search.scss */
 .slide-panel .sl-item:first-child {
   width: 75%;
   text-align: left;
 }
-/* line 198, ../sass/search.scss */
+/* line 209, ../sass/search.scss */
 .slide-panel .sl-item:last-child {
   width: 25%;
   text-align: right;
 }
-/* line 207, ../sass/search.scss */
+/* line 218, ../sass/search.scss */
 .slide-panel .i-arrow-r,
 .slide-panel .i-right {
   position: static;
 }
 
-/* line 213, ../sass/search.scss */
+/* line 224, ../sass/search.scss */
 #subPanelBox .hover .sl-item {
   color: #d42c2c;
 }
-/* line 216, ../sass/search.scss */
+/* line 227, ../sass/search.scss */
 #subPanelBox .hover .sl-item:last-child:after {
   position: static;
   content: '';
 }
-/* line 222, ../sass/search.scss */
+/* line 233, ../sass/search.scss */
 #subPanelBox .sl-item:first-child {
   width: 75%;
 }
-/* line 225, ../sass/search.scss */
+/* line 236, ../sass/search.scss */
 #subPanelBox .sl-item:last-child {
   width: 25%;
 }
 
-/* line 230, ../sass/search.scss */
+/* line 241, ../sass/search.scss */
 #mainPanelBox .sl-item:first-child {
   width: 30%;
 }
-/* line 233, ../sass/search.scss */
+/* line 244, ../sass/search.scss */
 #mainPanelBox .sl-item:last-child {
   width: 70%;
 }
