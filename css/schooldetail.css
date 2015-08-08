@@ -348,7 +348,7 @@
 /* line 310, ../sass/schooldetail.scss */
 .school-photo .pbox {
   display: inline-block;
-  width: 50%;
+  width: 49.8%;
   padding-bottom: 2%;
   vertical-align: top;
   font-size: .6rem;
@@ -374,7 +374,6 @@
 
 /* line 338, ../sass/schooldetail.scss */
 #pubu {
-  margin: 0 auto;
   position: relative;
 }
 

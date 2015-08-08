@@ -309,7 +309,7 @@
     }
     .pbox{
         display: inline-block;
-        width: 50%;
+        width: 49.8%;
         padding-bottom: 2%;
         vertical-align: top;
         font-size: .6rem;
@@ -336,7 +336,7 @@
     transition: all 0.3s;}
 
 #pubu {
-    margin:0 auto;
+    // margin:0 0 0 1px;
     position:relative;
 }
 #pubu .pbox {
