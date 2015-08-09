@@ -45,6 +45,15 @@ $(function(){
                         }else{
                             $('.school-photo').append('<div style="padding:20px;text-align:center;">'+data.msg+'</div>')
                         }
+
+                        var water = setInterval(function (e) {
+                             $('#pubu').waterfall();
+                             $('#pubu').find('.item').remove();
+                        },1000);
+
+                        setTimeout(function () {
+                            clearInterval(water);
+                        },10000);
                     }
                 })
                                 
