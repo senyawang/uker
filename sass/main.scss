@@ -13,18 +13,28 @@
         text-align: center;
     }
     li{
-        padding: (14rem/40) 0;
         border-right: 1px dotted $line;
+    }
+    a{
+        display: block;
+        padding: (14rem/40) 0;
+        &:hover{
+            background: rgba(0,0,0,.05);
+        }
     }
 }
 .info-list{
     li{
         position: relative;
         overflow: hidden;
-        padding: (20rem/40) 0;
+        
         border-bottom: 1px dotted $line;
         a{
             display: block;
+            padding: (20rem/40) 0;
+            &:hover{
+                background: rgba(0,0,0,.05);
+            }
         }
         h3{
             min-height: 3rem;

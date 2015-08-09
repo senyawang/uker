@@ -100,7 +100,7 @@ a {
     }
     &:hover{
         outline: none;
-        color: $red;
+        // color: $red;
     }
 }
 button, input, select, textarea, label {
@@ -310,6 +310,14 @@ input {
         top: 50%;
         -webkit-transform: translate(0, -50%);
                 transform: translate(0, -50%);
+        &:hover{
+            color: $red;
+            .i-back{
+                background-image: url(../images/icons-2x/i-arrow-l-red.png);
+                background-size: 100% 100%;
+                background-position: 0 0;
+            }
+        }
     }
     .btn-back{
         min-width: 1rem;
@@ -416,10 +424,16 @@ input {
     [class^="i-arrow"]:first-child{
         @extend .i-arrow-t-red;
     }
+    a{
+        color: $red;
+    }
 }
 .sort-down{
     [class^="i-arrow"]:last-child{
         @extend .i-arrow-b-red;
+    }
+    a{
+        color: $red;
     }
 }
 .active{

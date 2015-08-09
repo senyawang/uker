@@ -4,6 +4,7 @@
 .info-detail{
     padding: $gap;
     h1{
+        padding-top: $gap * 2;
         color: #000;
         font: 700 .8rem/1.5 simhei;
     }
@@ -14,7 +15,7 @@
         }
     }
     .info-text{
-        padding: ($gap * 2) $gap;
+        padding: 0 $gap ($gap * 2);
         p{
             margin: ($gap * 2) 0;
             text-indent: 2em;

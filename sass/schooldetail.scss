@@ -3,6 +3,8 @@
 
 
 .school-nav{
+    z-index: 9;
+    width: 100%;
     background: #fff;
     border: 1px solid #eeeeee;
     border-width: 1px 0;
@@ -66,7 +68,11 @@
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
             justify-content: space-around;
+        &:first-child{
+            border-top: 1px solid $line;
+            border-bottom: 1px dotted $line;
         }
+    }
     .fc-orange{
         display: block;
         font-size: .75rem;
@@ -224,7 +230,7 @@
         {
             position: static;
             display: block;
-            transition: all .4s;
+            // transition: all .4s;
         }
 
         &:last-child{
@@ -239,8 +245,11 @@
             color: $orange;
         }
         [class^="i-arrow"]{
-            -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
+            // -webkit-transform: rotate(180deg);
+                    // transform: rotate(180deg);
+            background: url(../images/icons-2x/i-arrow-t-red.png);
+            background-position: 0 0;
+            background-size: 100% 100%;
         }
     }
 
@@ -282,6 +291,9 @@
 }
 .search-list{
     position: relative;
+    .ui-masks{
+        position: absolute!important;
+    }
 }
 .img-tag{
     background: #fff;

@@ -67,7 +67,7 @@ var setMask = {
         // var $mask = $(maskContainer).find('.ui-masks');
         self.mask.css({'opacity':0});
         setTimeout(function () {
-            self.mask.hide();
+            self.mask.hide().remove();
             
         },500)
         if(typeof(fn) === 'function') fn();
@@ -81,6 +81,22 @@ function GetQueryString(name){
 
 }
 
+function scrollBar ($el, options) {
+    var placeholder = $( '<div class="ui-toolbar-placeholder"></div>' ).height( $el.offset().height ).
+        insertBefore( $el ).append( $el ).append( $el.clone().css({'z-index': 8, position: 'absolute',top: 0}) ),
+        top = $el.offset().top,
+        check = function() {
+            document.body.scrollTop > top ? $el.css({position:'fixed', top: 0}) : $el.css('position', 'absolute');
+        };
+
+    $(window).on( 'touchmove touchend touchcancel scroll scrollStop', check );
+    $(document).on( 'touchend touchcancel', offHandle = function() {
+        setTimeout( function() {
+            check();
+        }, 200 );
+    } );
+}
+
 $(function () {
 
     window.scrollTo(0, 1);//收起地址栏
@@ -88,7 +104,10 @@ $(function () {
     $(document).on('touchend', '#goBack', function (e) {
         e.preventDefault();
         window.history.go(-1);
-    })
+    });
+
+    scrollBar($('#J_toolbar'));
+
 
     if($('#panel').length){
 
@@ -114,7 +133,10 @@ $(function () {
         dots: true,
         arrow: false
     });
-    $('#slider img').width('auto');
+    setTimeout(function (e) {
+        $('#slider img').width('auto');
+    },0);
+    
 
     $('#nav').navigator();
 
