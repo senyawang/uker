@@ -106,7 +106,7 @@ $(function () {
         window.history.go(-1);
     });
 
-    scrollBar($('#J_toolbar'));
+    if($('#J_toolbar').length) scrollBar($('#J_toolbar'));
 
 
     if($('#panel').length){
