@@ -29,19 +29,28 @@
 .info-detail .info-text p img {
   margin-left: -2em;
 }
-
+/* line 25, ../sass/infodetail.scss */
+.info-detail .info-text p a {
+  color: blue;
+  text-decoration: underline;
+}
 /* line 29, ../sass/infodetail.scss */
+.info-detail .info-text p strong {
+  font-weight: 700;
+}
+
+/* line 36, ../sass/infodetail.scss */
 .lxgj {
   padding-bottom: .4rem;
 }
-/* line 31, ../sass/infodetail.scss */
+/* line 38, ../sass/infodetail.scss */
 .lxgj .pic {
   float: none;
   width: 2.4rem;
   margin-right: .2rem;
   vertical-align: middle;
 }
-/* line 37, ../sass/infodetail.scss */
+/* line 44, ../sass/infodetail.scss */
 .lxgj li p {
   display: inline-block;
   vertical-align: middle;
