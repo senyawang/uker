@@ -114,6 +114,7 @@ $(function () {
         dots: true,
         arrow: false
     });
+    $('#slider img').width('auto');
 
     $('#nav').navigator();
 
