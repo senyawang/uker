@@ -17,6 +17,9 @@
             display: inline-block;
             width: 11%;
             text-align: center;
+            &:last-child{
+                color: $gray;
+            }
         }
     }
     .rt-list{

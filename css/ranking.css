@@ -18,47 +18,51 @@
   width: 11%;
   text-align: center;
 }
-/* line 22, ../sass/ranking.scss */
+/* line 20, ../sass/ranking.scss */
+.rank-table .rt-tit span:last-child {
+  color: #ababab;
+}
+/* line 25, ../sass/ranking.scss */
 .rank-table .rt-list {
   text-align: center;
   background: #fff;
 }
-/* line 26, ../sass/ranking.scss */
+/* line 29, ../sass/ranking.scss */
 .rank-table li {
   padding: 0.5rem;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 32, ../sass/ranking.scss */
+/* line 35, ../sass/ranking.scss */
 .rank-table li:nth-child(1) .num:first-child, .rank-table li:nth-child(2) .num:first-child, .rank-table li:nth-child(3) .num:first-child {
   color: #d42c2c;
 }
-/* line 36, ../sass/ranking.scss */
+/* line 39, ../sass/ranking.scss */
 .rank-table li h3:first-child {
   margin-bottom: 3px;
 }
-/* line 40, ../sass/ranking.scss */
+/* line 43, ../sass/ranking.scss */
 .rank-table .num,
 .rank-table .school {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 45, ../sass/ranking.scss */
+/* line 48, ../sass/ranking.scss */
 .rank-table .num {
   width: 11%;
   font-size: .8rem;
 }
-/* line 48, ../sass/ranking.scss */
+/* line 51, ../sass/ranking.scss */
 .rank-table .num:nth-child(2) {
   padding-right: 5%;
   color: #ababab;
 }
-/* line 54, ../sass/ranking.scss */
+/* line 57, ../sass/ranking.scss */
 .rank-table .school {
   width: 70%;
   text-align: left;
 }
 
-/* line 61, ../sass/ranking.scss */
+/* line 64, ../sass/ranking.scss */
 .fixed-btn {
   position: fixed;
   width: 100%;
@@ -67,16 +71,16 @@
   text-align: center;
   font: .7rem/3 simhei;
 }
-/* line 69, ../sass/ranking.scss */
+/* line 72, ../sass/ranking.scss */
 .fixed-btn li a {
   display: block;
   color: #fff;
 }
-/* line 73, ../sass/ranking.scss */
+/* line 76, ../sass/ranking.scss */
 .fixed-btn li:first-child {
   background: #ff9409;
 }
-/* line 76, ../sass/ranking.scss */
+/* line 79, ../sass/ranking.scss */
 .fixed-btn li:last-child {
   background: #ff6009;
 }
