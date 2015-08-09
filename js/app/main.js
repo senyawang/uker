@@ -127,15 +127,21 @@ $(function () {
     }
 
     $("#slider").show();
-    $("#slider").slider({
+    var gmuslider = new gmu.Slider($("#slider"),{
         loop: true,
         autoPlay: true,
         dots: true,
         arrow: false
     });
-    setTimeout(function (e) {
+
+    var slideInter = setInterval(function () {
         $('#slider img').width('auto');
-    },0);
+    },300);
+    gmuslider.on('slide', function (index) {
+        
+        clearInterval(slideInter);
+
+    });
     
 
     $('#nav').navigator();
