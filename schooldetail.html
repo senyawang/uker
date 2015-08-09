@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>cctvmall</title>
     <meta name="author" content="www.uker.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, target-densitydpi=device-dpi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
@@ -336,8 +336,10 @@
         var chart = new iChart.LineBasic2D({
             render: 'canvasDiv',
             data: data,
-            width: $('#canvasDiv').width(),
-            height: 200,
+            // width: $('#canvasDiv').width(),
+            width: 640,
+            height: 300,
+            // fit:true,
             turn_off_touchmove:true,
             border:0,
             sub_option: {
@@ -410,6 +412,19 @@
         chart.draw();
     });
 
+    function toPercent(data){
+        var strData = parseFloat(data)*100;
+        var ret = strData.toString()+"%";
+        return ret;
+    }
+
+    var scale = window.screen.width/640,
+        percent = toPercent(scale);
+        console.log(percent)
+    $('#canvasDiv').css({
+        '-webkit-transform': 'scale('+scale+') translate(-'+percent+', -'+percent+')' ,
+        'height': 300*scale
+    });
 </script>
 
 
