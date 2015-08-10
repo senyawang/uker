@@ -244,7 +244,7 @@ $(function () {
         
     });
 
-    $('#panelBack').on('touchend', function (e) {
+    $('#panelBack').on('tap', function (e) {
         
         e.preventDefault();
 
@@ -259,13 +259,20 @@ $(function () {
         $('.ui-panel .title').html('筛选');
     });
 
-    $('#panelSearch').on('touchend', function (e) {
+    $('#panelSearch').on('tap', function (e) {
         e.preventDefault();
 
         var key = $('.s-text[type=search]').val(),
             search = location.search.substring(1),
             sarry = search.split('&'),
             urlAry=[];
+
+        var marginLeft = $firstBox.css('marginLeft');
+
+        if(marginLeft !== '0px') {
+            $('#panelBack').trigger('tap');
+            return;
+        }
 
         for (var i = 0; i < sarry.length; i++) {
             var item = sarry[i].split('=');
