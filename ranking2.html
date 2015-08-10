@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>cctvmall</title>
+    <meta name="author" content="www.uker.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="dist/gmu.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ranking.css">
+</head>
+<body>
+<div class="mainpage">
+
+    <header class="header">
+        <h1 class="title">排名中心</h1>
+        <a class="btn-back" href="#"><i class="i-back"></i>返回</a>
+        <a class="btn-menu" id="push-right" href="#"><i class="i-menu"></i></a>
+    </header>
+
+    <h1 class="ranking-title">2015年TIMES英国大学综合排名</h1>
+    <div class="rank-table ui-refresh">
+        <div class="rt-tit">
+            <span>2015</span>
+        </div>
+        <ul class="rt-list data-list">
+            <li>
+                <span class="num">1</span>
+
+                <a class="school" href="#">
+                    <h3>London School </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+            <li>
+                <span class="num">2</span>
+                <a class="school" href="#">
+                    <h3>London School of Economicsand Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+            <li>
+                <span class="num">3</span>
+                <a class="school" href="#">
+                    <h3>London School of Economicsand Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+            <li>
+                <span class="num">4</span>
+                <a class="school" href="#">
+                    <h3>London School of Economicsand Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+            <li>
+                <span class="num">4</span>
+                <a class="school" href="#">
+                    <h3>London School of Economicsand Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+            <li>
+                <span class="num">4</span>
+                <a class="school" href="#">
+                    <h3>London School of Economicsand Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+            <li>
+                <span class="num">4</span>
+                <a class="school" href="#">
+                    <h3>London School of Economicsand Political Science </h3>
+                    <h3>牛津大学 </h3>
+                </a>
+            </li>
+        </ul>
+
+        <div class="ui-refresh-down"></div>
+    </div>
+
+
+    <footer class="footer">
+        <p>中英网UKER.net  沪ICP备11021479号</p>
+    </footer>
+    
+</div>
+<div class="fixed-btn">
+    <ul class="ui-flex-box">
+        <li><a href="#">测测成功率</a></li>
+        <li><a href="#">获取留学方案</a></li>
+    </ul>
+</div>
+
+<div id="panel">
+    <header class="header">
+        <a class="btn-back" href="#"><i class="logo"></i></a>
+    </header>
+    <nav class="panel-menu">
+        <ul>
+            <li>
+                <a href="#"><i class="i-menu-home"></i>首页</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-info"></i>留学资讯</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-center"></i>学校中心</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-test"></i>测测成功率</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-case"></i>获取留学方案</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-required"></i>留学必备</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script id="loadMore" type="text/html">
+    {{each data as value i}}
+         <li>
+            <span class="num">{{value.pm}}</span>
+            <span class="num">{{value.Times_Pm_2014}}</span>
+            <a class="school" href="{{value.url}}">
+                <h3>{{value.E_Name}}</h3>
+                <h3>{{value.S_Name}}</h3>
+            </a>
+        </li>
+    {{/each}}
+</script>
+
+<script src="dist/uker.min.0.0.1.js"></script>
+<script src="js/app/main.js"></script>
+
+<script>
+var ajaxUrl='http://121.201.13.58/rank/listAjax?type=timesrank';
+refreshInit(ajaxUrl);
+</script>
+
+</body>
+</html>
