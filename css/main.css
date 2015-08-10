@@ -91,60 +91,71 @@
 
 /* line 84, ../sass/main.scss */
 .pm-list {
+  overflow: hidden;
   text-align: center;
   padding-bottom: 0.25rem;
 }
-/* line 87, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
+.pm-list li {
+  width: 25%;
+  float: left;
+}
+/* line 91, ../sass/main.scss */
+.pm-list li a {
+  display: block;
+}
+/* line 95, ../sass/main.scss */
 .pm-list h3 {
   font: 300 .6rem/2 simhei;
 }
-/* line 90, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 .pm-list .pic {
   width: 80%;
 }
 
-/* line 95, ../sass/main.scss */
+/* line 103, ../sass/main.scss */
 .lxbd li {
   padding: 0.25rem;
   border-right: 1px dotted #dddddd;
 }
-/* line 99, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 .lxbd .pic {
   float: left;
   width: 40%;
   margin-right: .5rem;
 }
-/* line 104, ../sass/main.scss */
+/* line 112, ../sass/main.scss */
 .lxbd h3 {
   padding-top: 10px;
   font: 300 .7rem/1.5 simhei;
 }
-/* line 108, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 .lxbd p {
   font-size: .7rem;
   color: #d42c2c;
 }
 
-/* line 116, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 #nav ul {
   background: #fff;
 }
-/* line 119, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 #nav ul li {
   display: inline-block;
   width: auto !important;
   line-height: 34px;
 }
 
-/* line 127, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .ui-slider-dots {
   left: 0;
-  text-align: center;
+  text-align: right;
 }
 
-/* line 131, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 .ui-slider-dots > b {
   background: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 50%;
+  box-sizing: border-box;
 }

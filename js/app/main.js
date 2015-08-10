@@ -331,6 +331,7 @@ $(function () {
         $('.ui-share').show();
         $('html').css('overflow','hidden');
     });
+    
     $(document).on('touchend', '#closeShare', function (event) {
         event.preventDefault();
         setMask.close();

@@ -83,8 +83,12 @@
     }
 }
 .school-pic{
+    overflow: hidden;
     li{
+        float: left;
         width: 50%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
         a{
             display: block;
         }

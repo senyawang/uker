@@ -82,8 +82,16 @@
     }
 }
 .pm-list{
+    overflow: hidden;
     text-align: center;
     padding-bottom: (10rem/40);
+    li{
+        width: 25%;
+        float: left;
+        a{
+            display: block;
+        }
+    }
     h3{
         font: 300 .6rem/2 simhei;
     }
@@ -126,12 +134,13 @@
 
 .ui-slider-dots{
     left: 0;
-    text-align: center;
+    text-align: right;
 }
 .ui-slider-dots > b{
     background: transparent;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 50%;
+    box-sizing: border-box;
 }
 
 

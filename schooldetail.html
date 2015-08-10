@@ -116,7 +116,7 @@
         </header>
         <div class="ub-bd">
             <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-            <div id="canvasDiv"></div>
+            <div style="-webkit-transform: scale(0.5);" id="canvasDiv"></div>
         </div>
     </section>    
 
@@ -126,7 +126,7 @@
             <h2>图片</h2>
         </header>
         <div class="ub-bd">
-            <ul class="ui-flex-box school-pic">
+            <ul class="school-pic">
                 <li><a href="#">
                     <span class="pic"><img src="images/pic1.jpg"></span>
                     <p class="opts">
@@ -418,13 +418,15 @@
         return ret;
     }
 
-    var scale = window.screen.width/640,
+    var scale = $(window).width()/640,
         percent = toPercent(1-scale);
         console.log(percent)
     $('#canvasDiv').css({
         '-webkit-transform': 'scale('+scale+') translate(-'+percent+', -'+percent+')' ,
-        'height': 300*scale
+        transform: 'scale('+scale+') translate(-'+percent+', -'+percent+')' ,
+        height: 300*scale
     });
+
 </script>
 
 

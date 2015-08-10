@@ -389,7 +389,7 @@ img {
 
 /* line 94, ../sass/base.scss */
 a {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 /* line 97, ../sass/base.scss */
