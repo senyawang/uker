@@ -419,7 +419,7 @@
     }
 
     var scale = window.screen.width/640,
-        percent = toPercent(scale);
+        percent = toPercent(1-scale);
         console.log(percent)
     $('#canvasDiv').css({
         '-webkit-transform': 'scale('+scale+') translate(-'+percent+', -'+percent+')' ,

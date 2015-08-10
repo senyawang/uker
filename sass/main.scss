@@ -26,12 +26,11 @@
 .info-list{
     li{
         position: relative;
-        overflow: hidden;
-        
         border-bottom: 1px dotted $line;
 
         a{
             display: block;
+            overflow: hidden;
             padding: (20rem/40) 0;
             &:hover{
                 background: rgba(0,0,0,.05);

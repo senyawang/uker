@@ -119,9 +119,11 @@ $(function () {
             $('#panel').panel('toggle', 'overlay', 'right');
             
             setMask.open();
+            $('html').css('overflow','hidden');
         });
         $('#panel').on('beforeclose', function (e) {
             setMask.close();
+            $('html').css('overflow','auto');
             
         })
     }
