@@ -134,21 +134,77 @@
 
 <div class="ui-share ">
     <h2>分享</h2>
-    <div class="bdsharebuttonbox">
+    <div class="bdsharebuttonbox" data-tag="share_1">
         <ul class="ui-flex-box ">
-            <li><a class="bds_tsina" data-cmd="tsina" href="#"><span class="i-weibo">微博</span></a></li>
-            <li><a class="bds_qzone" data-cmd="qzone" href="#"><span class="i-qzone">空间</span></a></li>
-            <li><a class="bds_douban" data-cmd="douban" href="#"><span class="i-weixin">豆瓣</span></a></li>
-            <li><a class="bds_copy" data-cmd="copy" href="#"><span class="i-copy">复制链接</span></a></li>
+            <li>
+                <span class="i-weibo">微博</span>
+                <a class="bds_tsina" data-cmd="tsina" href="#"></a>
+            </li>
+            <li>
+                <span class="i-qzone">空间</span>
+                <a data-cmd="qzone" href="#"></a>
+            </li>
+            <li>
+                <span class="i-weixin">豆瓣</span>
+                <a data-cmd="douban" href="#"></a>
+            </li>
+            <li>
+                <span class="i-copy">复制链接</span>
+                <a data-cmd="copy" href="#"></a>
+            </li>
         </ul>
     </div>
+    <!-- <div class="bdsharebuttonbox ui-flex-box" data-tag="share_1">
+        <a class="bds_tsina" data-cmd="tsina" href="#"><span class="i-weibo">微博</span></a>
+        <a class="bds_qzone" data-cmd="qzone" href="#"><span class="i-qzone">空间</span></a>
+        <a class="bds_douban" data-cmd="douban" href="#"><span class="i-weixin">豆瓣</span></a>
+        <a class="bds_copy" data-cmd="copy" href="#"><span class="i-copy">复制链接</span></a>
+    </div> -->
     <p><a href="#" id="closeShare" class="i-close"></a></p>
 </div>
+<div class="bdsharebuttonbox" data-tag="share_2">
+    <a class="bds_mshare" data-cmd="mshare">1234</a>
+    <a class="bds_qzone" data-cmd="qzone" href="#">1234</a>
+    <a class="bds_tsina" data-cmd="tsina">1234</a>
+    <a class="bds_baidu" data-cmd="baidu">1234</a>
+    <a class="bds_renren" data-cmd="renren"></a>
+    <a class="bds_tqq" data-cmd="tqq"></a>
+    <a class="bds_more" data-cmd="more">更多</a>
+    <a class="bds_count" data-cmd="count"></a>
+</div>
 
+<script>
+    window._bd_share_config = {
+        common : {
+            bdText : '自定义分享内容', 
+            bdDesc : '自定义分享摘要', 
+            bdUrl : '自定义分享url地址',   
+            bdPic : '自定义分享图片'
+        },
+        share : [{
+            "bdSize" : 16
+        }],
+        image : [{
+            viewType : 'list',
+            viewPos : 'top',
+            viewColor : 'black',
+            viewSize : '16',
+            viewList : ['qzone','tsina','huaban','tqq','renren']
+        }],
+        selectShare : [{
+            "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+        }]
+    }
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
 
 <script src="dist/uker.min.0.0.1.js"></script>
 <script src="js/app/main.js"></script>
 
-
+<!-- 
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);</script>
+ -->
 </body>
 </html>

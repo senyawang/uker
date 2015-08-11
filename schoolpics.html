@@ -98,7 +98,7 @@
 
     <section id="pitcures" class="pic-preview">
         <div>
-            <img src="images/banner1.jpg">
+            <img lazyload="http://school.uker.net/photo/h000/h50/img201410301721380.jpg">
             <div class="img-tag sc-pic">
                 <a href="#">学费不贵</a>
                 <a href="#">环境不错</a>
@@ -107,14 +107,35 @@
             <a href="images/banner1.jpg" class="btn-download">下载原图</a>
         </div>
         <div>
-            <img src="images/images1.jpg">
+            <img lazyload="http://school.uker.net/photo/h000/h50/img201410301718500.jpg">
             <div class="img-tag sc-pic">
                 <a href="#">环境不错</a>
                 <a href="#">环境好</a>
             </div>
         </div>
         <div>
-            <img src="images/images1.jpg">
+            <img lazyload="http://school.uker.net/photo/h000/h50/img201410301720220.jpg">
+            <div class="img-tag sc-pic">
+                <a href="#">环境不错</a>
+                <a href="#">环境好</a>
+            </div>
+        </div>
+        <div>
+            <img lazyload="http://school.uker.net/photo/h000/h50/img201410301719480.jpg">
+            <div class="img-tag sc-pic">
+                <a href="#">环境不错</a>
+                <a href="#">环境好</a>
+            </div>
+        </div>
+        <div>
+            <img lazyload="http://school.uker.net/photo/h000/h42/img201405221019460.jpg">
+            <div class="img-tag sc-pic">
+                <a href="#">环境不错</a>
+                <a href="#">环境好</a>
+            </div>
+        </div>
+        <div>
+            <img lazyload="http://school.uker.net/photo/h000/h33/img201306181602340.jpg">
             <div class="img-tag sc-pic">
                 <a href="#">环境不错</a>
                 <a href="#">环境好</a>
@@ -123,6 +144,8 @@
     </section>
     
 </div>
+
+<input type="hidden" id="currentIndex" value="1">
 
 
 <script src="dist/uker.min.0.0.1.js"></script>
@@ -138,6 +161,7 @@
             dots: false,
             arrow: false
         });
+        picSlider.slideTo($('#currentIndex').val());
         picSlider.on('slideend',function (index) {
             var i = this.getIndex()+1;
             if(total == 2) {
