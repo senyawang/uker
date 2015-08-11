@@ -257,9 +257,9 @@ input:-ms-clear {
   display: none;
 }
 
-/* line 376, ./icons-2x/*.png */
+/* line 384, ./icons-2x/*.png */
 .icons-2x-sprite {
-  background-image: url('../images/./icons-2x-s3f5c056910.png');
+  background-image: url('../images/./icons-2x-s501b9be00f.png');
   background-repeat: no-repeat;
 }
 
@@ -296,8 +296,8 @@ input:-ms-clear {
   background-repeat: no-repeat;
   overflow: hidden;
   line-height: 100em;
-  background-image: url('../images/icons-2x-s0f61954c99.png');
-  background-size: 1382px 50.5px;
+  background-image: url('../images/icons-2x-s6981cbb2ef.png');
+  background-size: 1437px 50.5px;
 }
 
 /* line 4, ../sass/base.scss */
@@ -735,7 +735,7 @@ input::-webkit-input-placeholder {
 
 /* line 59, ../sass/import.scss */
 .logo {
-  background-position: -1134px 0;
+  background-position: -1189px 0;
   height: 15.5px;
   width: 96px;
 }
@@ -890,7 +890,7 @@ input::-webkit-input-placeholder {
 /* line 59, ../sass/import.scss */
 .i-weixin {
   background-position: -1058px 0;
-  height: 50px;
+  height: 50.5px;
   width: 50px;
 }
 
@@ -910,7 +910,7 @@ input::-webkit-input-placeholder {
 
 /* line 59, ../sass/import.scss */
 .i-zoom {
-  background-position: -1113px 0;
+  background-position: -1168px 0;
   height: 11.5px;
   width: 16px;
 }
@@ -973,7 +973,7 @@ input::-webkit-input-placeholder {
 
 /* line 59, ../sass/import.scss */
 .sitetitle {
-  background-position: -1235px 0;
+  background-position: -1290px 0;
   height: 17.5px;
   width: 142px;
 }
