@@ -188,14 +188,14 @@ var ajaxUrl='http://121.201.13.58/school/majorAjax/?IndexID=80&ProDire=&DegreeTy
 </script>
 <script id="loadMore" type="text/html">
     {{each data as value i}}
-        <li><a href="{{value.url}}">
+        <li>
             <h3>{{value.Z_E_Name}}</h3>
             <h3>{{value.Z_Name}} </h3>
             <p class="date">
                 <span>学位类型：{{value.DegreeType}} </span>
                 <span>专业方向：{{value.ProDire}}</span>
              </p>
-        </a></li>
+        </li>
     {{/each}}
 </script>
 
