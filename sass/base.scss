@@ -195,19 +195,21 @@ input {
     background: #e6e6e6;
     color: $fontcolor;
 }
-.panel-menu{
-    padding-left: 2rem;
+.panel-menu ul{
     li{
         position: relative;
-        padding: 1rem 0 1rem 2rem;
+        padding: 1rem 0 1rem 4rem;
         border-bottom: 1px solid $line;
         font: (32rem / 40)/(35rem / 40) simhei;
         a{
             display: block;
         }
+        &:hover{
+            background: rgba(0,0,0,.1);
+        }
     }
     [class^="i-menu"]{
-        left: 0;
+        left: 2rem;
         top: 50%;
         margin-top: (-35px / 2);
     }
@@ -272,7 +274,8 @@ input {
         max-width: 100%;
     }
 }
-.ui-navigator{
+.ui-navigator,
+#nav{
     background: #fff;
     border-top: 0 none;
     border-bottom: 1px solid $line;
@@ -282,12 +285,16 @@ input {
     background: #fff;
     
     a{
-        color: $orange;
+        color: $orange!important;
+        font-size: .75rem!important;
     }
 }
-.ui-navigator-list li a{
+.ui-navigator-list li a,
+#nav li a{
+    display: block;
     color: $fontcolor;
-    font-size: (28rem / 40);
+    font-size: .6rem;
+    font-weight: 300;
     line-height: (70rem / 40);
 }
 .ui-scroller{
@@ -303,7 +310,7 @@ input {
     background: #f8f8f8;
     text-align: center;
     .title{
-        font: 300 .65rem/2rem simhei;
+        font: 300 16px/2rem simhei;
     }
     a{
         position: absolute;
@@ -395,6 +402,7 @@ input {
 @include icon-mix(i-qq);
 @include icon-mix(i-top);
 @include icon-mix(sitetitle);
+@include icon-mix(imicon);
 
 .social-menu{
     position: fixed;
@@ -416,7 +424,10 @@ input {
             height: 45px;
             line-height: 45px;
             font-size: 40px;
-            background: rgba(212,44,44,.8);
+            background: none;
+        }
+        &:last-child{
+            display: none;
         }
     }
     i{

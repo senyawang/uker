@@ -39,6 +39,9 @@
         h3:first-child{
             margin-bottom: 3px;
         }
+        &:hover{
+            background: rgba(0,0,0,.1);
+        }
     }
     .num,
     .school{

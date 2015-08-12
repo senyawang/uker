@@ -350,25 +350,29 @@
   border-radius: 3px;
   margin: 3px;
 }
-/* line 322, ../sass/schooldetail.scss */
+/* line 321, ../sass/schooldetail.scss */
+.img-tag a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 325, ../sass/schooldetail.scss */
 .img-tag .current {
-  background: #ccc;
-  color: #fff;
+  color: #d42c2c;
+  border-color: #d42c2c;
 }
 
-/* line 327, ../sass/schooldetail.scss */
+/* line 330, ../sass/schooldetail.scss */
 .school-photo {
   background: transparent;
 }
-/* line 329, ../sass/schooldetail.scss */
+/* line 332, ../sass/schooldetail.scss */
 .school-photo .ub-bd {
   padding: 0;
 }
-/* line 332, ../sass/schooldetail.scss */
+/* line 335, ../sass/schooldetail.scss */
 .school-photo .pic {
   max-width: 100%;
 }
-/* line 335, ../sass/schooldetail.scss */
+/* line 338, ../sass/schooldetail.scss */
 .school-photo .pbox {
   display: inline-block;
   width: 49.8%;
@@ -376,31 +380,31 @@
   vertical-align: top;
   font-size: .6rem;
 }
-/* line 341, ../sass/schooldetail.scss */
+/* line 344, ../sass/schooldetail.scss */
 .school-photo .pbox a {
   display: block;
   background: #fff;
   margin: 0 3%;
 }
-/* line 346, ../sass/schooldetail.scss */
+/* line 349, ../sass/schooldetail.scss */
 .school-photo .pbox strong {
   display: block;
   padding: 0.5rem;
 }
 
-/* line 358, ../sass/schooldetail.scss */
+/* line 361, ../sass/schooldetail.scss */
 #pubu .pbox {
   position: absolute;
   box-sizing: border-box;
   transition: all 0.3s;
 }
 
-/* line 363, ../sass/schooldetail.scss */
+/* line 366, ../sass/schooldetail.scss */
 #pubu {
   position: relative;
 }
 
-/* line 367, ../sass/schooldetail.scss */
+/* line 370, ../sass/schooldetail.scss */
 #pubu .pbox {
   float: left;
 }

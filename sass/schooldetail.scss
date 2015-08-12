@@ -318,10 +318,13 @@
         border: 1px solid $line;
         border-radius: 3px;
         margin: 3px;
+        &:hover{
+            background: rgba(0,0,0,.1);
+        }
     }
     .current{
-        background: #ccc;
-        color: #fff;
+        color: $red;
+        border-color: $red;
     }
 }
 .school-photo{

@@ -1,80 +1,85 @@
-/* line 4, ../sass/main.scss */
-.uker-nav {
-  padding: 5px 0;
+/* line 3, ../sass/main.scss */
+.home-title {
+  font-size: 0.65rem !important;
 }
-/* line 6, ../sass/main.scss */
+
+/* line 7, ../sass/main.scss */
 .uker-nav [class^='i-menu'] {
   position: static;
 }
-/* line 9, ../sass/main.scss */
+/* line 10, ../sass/main.scss */
 .uker-nav strong {
   display: block;
 }
-/* line 12, ../sass/main.scss */
+/* line 13, ../sass/main.scss */
 .uker-nav .nav-list {
   text-align: center;
 }
-/* line 15, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
 .uker-nav li {
   border-right: 1px dotted #dddddd;
 }
-/* line 18, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 .uker-nav a {
   display: block;
   padding: 0.35rem 0;
 }
-/* line 21, ../sass/main.scss */
+/* line 22, ../sass/main.scss */
 .uker-nav a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
 /* line 27, ../sass/main.scss */
+.info-list {
+  margin: 0 -0.5rem;
+}
+/* line 29, ../sass/main.scss */
 .info-list li {
   position: relative;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 31, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 .info-list li a {
   display: block;
   overflow: hidden;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
 }
-/* line 35, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 .info-list li a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-/* line 41, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 .info-list li h3 {
   min-height: 3rem;
   font: 300 .75rem/1.3 simhei;
 }
-/* line 45, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .info-list li:last-child {
   border: 0 none;
 }
-/* line 49, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 .info-list .pic {
   float: right;
   width: 33.33%;
   margin-left: 1rem;
 }
-/* line 54, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 .info-list .date {
   position: absolute;
-  left: 0;
+  left: 0.5rem;
   bottom: 0.5rem;
   color: #888888;
 }
-/* line 59, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .info-list .date span:nth-child(2) {
   padding-left: 10px;
 }
 
-/* line 67, ../sass/main.scss */
+/* line 69, ../sass/main.scss */
 .school-list li h3 {
   min-height: 0;
 }
-/* line 71, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 .school-list .pic {
   float: left;
   width: 3.25rem;
@@ -83,76 +88,79 @@
   margin-left: 0;
   margin-right: 1rem;
 }
-/* line 79, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 .school-list .date {
   position: static;
   line-height: 1.5;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 86, ../sass/main.scss */
 .pm-list {
   overflow: hidden;
   text-align: center;
   padding-bottom: 0.25rem;
 }
-/* line 88, ../sass/main.scss */
+/* line 90, ../sass/main.scss */
 .pm-list li {
   width: 25%;
   float: left;
 }
-/* line 91, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 .pm-list li a {
   display: block;
 }
-/* line 95, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 .pm-list h3 {
   font: 300 .6rem/2 simhei;
 }
-/* line 98, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 .pm-list .pic {
   width: 80%;
 }
 
-/* line 103, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 .lxbd li {
   padding: 0.25rem;
   border-right: 1px dotted #dddddd;
 }
-/* line 107, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 .lxbd .pic {
   float: left;
   width: 40%;
   margin-right: .5rem;
 }
-/* line 112, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 .lxbd h3 {
   padding-top: 10px;
   font: 300 .7rem/1.5 simhei;
 }
-/* line 116, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 .lxbd p {
   font-size: .7rem;
   color: #d42c2c;
 }
 
-/* line 124, ../sass/main.scss */
+/* line 126, ../sass/main.scss */
 #nav ul {
+  display: table;
+  table-layout: fixed;
+  white-space: nowrap;
   background: #fff;
 }
-/* line 127, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 #nav ul li {
   display: inline-block;
-  width: auto !important;
+  width: 54px !important;
   line-height: 34px;
 }
 
-/* line 135, ../sass/main.scss */
+/* line 140, ../sass/main.scss */
 .ui-slider-dots {
   left: 0;
   text-align: right;
 }
 
-/* line 139, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .ui-slider-dots > b {
   background: transparent;
   border: 1px solid #fff;

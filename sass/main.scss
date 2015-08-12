@@ -1,8 +1,9 @@
 @import "var.scss";
 
-
+.home-title{
+    font-size: .65rem!important;
+}
 .uker-nav{
-    padding: 5px 0;
     [class^='i-menu']{
         position: static;
     }
@@ -24,6 +25,7 @@
     }
 }
 .info-list{
+    margin: 0 -0.5rem;
     li{
         position: relative;
         border-bottom: 1px dotted $line;
@@ -31,7 +33,7 @@
         a{
             display: block;
             overflow: hidden;
-            padding: (20rem/40) 0;
+            padding: (20rem/40) 0.5rem;
             &:hover{
                 background: rgba(0,0,0,.05);
             }
@@ -53,7 +55,7 @@
     }
     .date{
         position: absolute;
-        left: 0;
+        left: 0.5rem;
         bottom: (20rem/40);
         color: $more;
         span:nth-child(2){
@@ -122,11 +124,14 @@
 
 
 #nav ul{
-        background: #fff;
+    display: table;
+    table-layout: fixed;
+    white-space: nowrap;
+    background: #fff;
     
     li{
         display: inline-block;
-        width: auto!important;
+        width: 54px!important;
         line-height: 34px;
 
     }
