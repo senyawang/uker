@@ -111,7 +111,11 @@ $(function () {
 
     if($('#panel').length){
 
-    	var PANEL = new gmu.Panel($('#panel'),{
+    	$('#panel').panel({
+            contentWrap: $('.mainpage')
+        });
+
+        $('#panel2').panel({
             contentWrap: $('.mainpage')
         });
     	$('#push-right').on('touchend', function () {
@@ -122,6 +126,19 @@ $(function () {
             $('html').css('overflow','hidden');
         });
         $('#panel').on('beforeclose', function (e) {
+            setMask.close();
+            $('html').css('overflow','auto');
+            
+        })
+
+        $('#filterPanel').on('touchend', function () {
+
+            $('#panel2').panel('toggle', 'overlay', 'right');
+            
+            setMask.open();
+            $('html').css('overflow','hidden');
+        });
+        $('#panel2').on('beforeclose', function (e) {
             setMask.close();
             $('html').css('overflow','auto');
             

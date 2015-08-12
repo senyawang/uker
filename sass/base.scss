@@ -189,6 +189,7 @@ input {
     }
 }
 .ui-panel{
+    position: fixed;
     width: 65%!important;
     padding: 0;
     background: #e6e6e6;
@@ -323,6 +324,9 @@ input {
         min-width: 1rem;
         height: 1rem;
         left: 10px;
+        &:hover{
+            color: $red;
+        }
         .logo{
             position: static;
             display: block;

@@ -17,12 +17,12 @@
 <body>
 <div class="mainpage">
 
-    <!-- <header class="header">
+    <header class="header">
         <h1 class="title">学校中心</h1>
         <a class="btn-back" href="#"><i class="i-back"></i>返回</a>
         <a class="btn-menu" id="push-right" href="#"><i class="i-menu"></i></a>
     </header>
- -->
+
     <div class="ui-box tabs-menu">
 
         <section class="search-form">
@@ -51,7 +51,7 @@
             <li class="sort-down"><a href="#">生活费
                 <span class="i-box"><i class="i-arrow-t"></i><i class="i-arrow-b"></i></span>
             </a></li>
-            <li class="active" id="push-right"><a href="#">筛选
+            <li class="active" id="filterPanel"><a href="#">筛选
                 <span class="i-box"><i class="i-filter"></i></span>
             </a></li>
         </ul>
@@ -101,7 +101,7 @@
     
 </div>
 
-<div id="panel" class="filter-panel">
+<div id="panel2" class="filter-panel">
     <header class="header">
         <h1 class="title">筛选</h1>
         <a class="btn-back" id="panelBack" href="#">取消</a>
@@ -157,6 +157,37 @@
     </div>
     <!-- slide-panel -->
 </div>
+
+<div id="panel">
+    <header class="header">
+        <a class="btn-back" href="#"><i class="logo"></i></a>
+    </header>
+    <nav class="panel-menu">
+        <ul>
+            <li>
+                <a href="#"><i class="i-menu-home"></i>首页</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-info"></i>留学资讯</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-center"></i>学校中心</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-test"></i>测测成功率</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-case"></i>获取留学方案</a>
+            </li>
+            <li>
+                <a href="#"><i class="i-menu-required"></i>留学必备</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+
 <script>
 var ajaxUrl='http://121.201.13.58/school/schoolSearchAjax/?order=times_pm&keyword=&area=0&city=0&timespm=1-30&sort=a';
 </script>
