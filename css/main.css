@@ -167,3 +167,14 @@
   border-radius: 50%;
   box-sizing: border-box;
 }
+
+/* line 153, ../sass/main.scss */
+.page-more {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+/* line 156, ../sass/main.scss */
+.page-more a {
+  color: #d42c2c;
+  text-decoration: underline;
+}

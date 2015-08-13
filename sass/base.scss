@@ -203,6 +203,9 @@ input {
         font: (32rem / 40)/(35rem / 40) simhei;
         a{
             display: block;
+            &:hover{
+                background: rgba(0,0,0,0);
+            }
         }
         &:hover{
             background: rgba(0,0,0,.1);
@@ -474,7 +477,7 @@ input {
     text-align: center;
     line-height: 3;
     img{
-        max-width: 90px;
+        max-width: 150px;
     }
 }
 .ui-masks{
