@@ -153,22 +153,32 @@ $(function () {
         $('#panel2').panel({
             contentWrap: $('.mainpage')
         });
+
+        // var PANEL = new gmu.Panel($('#panel2'),{
+        //     contentWrap: $('.mainpage')
+        //     // setup: true
+        // });
     	$('#push-right').on('touchend', function () {
 
             $('#panel').panel('toggle', 'overlay', 'right');
             
             setMask.open();
-            $('html').css('overflow','hidden');
+            // $('html, body').css('overflow','hidden');
+            $(window).on('touchmove', function (e) {
+                e.preventDefault();
+                // return;
+            })
         });
         $('#panel').on('beforeclose', function (e) {
             setMask.close();
-            $('html').css('overflow','auto');
+            $(window).off('touchmove');
+            // $('html, body').css('overflow','auto');
             
         })
 
         $('#filterPanel').on('touchend', function () {
 
-            $('#panel2').panel('toggle', 'overlay', 'right');
+             $('#panel2').panel('toggle', 'overlay', 'right');
             
             setMask.open();
             $('html').css('overflow','hidden');
@@ -296,13 +306,24 @@ $(function () {
         
     });
 
-    $('#panelBack').on('tap', function (e) {
+    $('#panelBack').on('touchend', function (e) {
         
         e.preventDefault();
 
         var marginLeft = $firstBox.css('marginLeft');
 
-        if(marginLeft == '0px' || marginLeft == null) PANEL.close();
+        if(marginLeft == '0px' || marginLeft == null) {console.log(111)
+
+            setTimeout(function () {
+
+                $('#filterPanel').trigger('touchend');
+                
+            },0)
+
+
+            return;
+
+        }
 
         $firstBox.css('marginLeft', '0');
 
@@ -321,47 +342,51 @@ $(function () {
 
         var marginLeft = $firstBox.css('marginLeft');
 
-        if(marginLeft !== '0px') {
-            $('#panelBack').trigger('tap');
-            return;
-        }
+        if(marginLeft !== '0px' && marginLeft != null) {
 
-        for (var i = 0; i < sarry.length; i++) {
-            var item = sarry[i].split('=');
-            switch (item[0]){
-                // case 'order':
-                //     item[i][1] = GetQueryString("order");
-                case 'keyword':
-                    item[1] = key;
-                    break;
-                case 'area':
-                    item[1] = areaValue;
-                    break;
-                case 'city':
-                    item[1] = cityValue;
-                    break;
-                case 'rank':
-                    item[1] = rankValue;
-                // case 'sort':
-                //     item[i][1] = GetQueryString("order");
+            $firstBox.css('marginLeft', '0');
 
+            $('#panelBack').html('取消');
+
+            $('.ui-panel .title').html('筛选');
+
+        }else{
+
+            for (var i = 0; i < sarry.length; i++) {
+                var item = sarry[i].split('=');
+                switch (item[0]){
+                    // case 'order':
+                    //     item[i][1] = GetQueryString("order");
+                    case 'keyword':
+                        item[1] = key;
+                        break;
+                    case 'area':
+                        item[1] = areaValue;
+                        break;
+                    case 'city':
+                        item[1] = cityValue;
+                        break;
+                    case 'rank':
+                        item[1] = rankValue;
+                    // case 'sort':
+                    //     item[i][1] = GetQueryString("order");
+
+                }
+                urlAry.push(item.join('='));
+            };
+
+            var urlstr = urlAry.join('&');
+
+            if(urlstr.indexOf('area') == -1){
+                urlstr += '&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue ;
             }
-            urlAry.push(item.join('='));
-        };
 
-        var urlstr = urlAry.join('&');
+            console.log(urlstr)
 
-        if(urlstr.indexOf('area') == -1){
-            urlstr += '&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue ;
+            window.location.href = location.protocol + '//' + location.hostname + location.pathname + '?' +urlstr;
+
         }
-
-        console.log(urlstr)
-
-        window.location.href = location.protocol + '//' + location.hostname + location.pathname + '?' +urlstr;
-
-
-        // window.location.href = location.protocol+'//'+location.hostname+location.pathname+'?order='+GetQueryString("order")+'&keyword='+key+'&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue+'&sort='+GetQueryString("sort");
-    })
+    });
 
 
 

@@ -6345,7 +6345,7 @@ $(function () {
             me.trigger( 'done.dom', $el.addClass( name ), opts );
 
             // bind Events
-            $list.highlight( 'ui-state-hover', 'li' );
+            // $list.highlight( 'ui-state-hover', 'li' );
             $list.on( opts.event + me.eventNs,
                     'li:not(.ui-state-disable)>a', function( e ) {
                 me._switchTo( $( this ).parent().index(), e );

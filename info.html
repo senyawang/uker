@@ -726,8 +726,8 @@
 <script type="text/javascript">
     var ajaxUrl='http://121.201.13.58/article/articleAjax?type=all-3-79';
 </script>
-<!-- <script src="dist/uker.min.0.0.1.js"></script> -->
-<script src="js/uker.js"></script>
+<script src="dist/uker.min.0.0.1.js"></script>
+<!-- <script src="js/uker.js"></script> -->
 <!-- <script src="gmu2.1.1/js/widget/refresh/$lite.js"></script> -->
 <!-- <script src="gmu2.1.1/js/widget/navigator/navigator.js"></script> -->
 
@@ -787,9 +787,27 @@
     }
     loadMore();
     setTimeout(function () {
-        var width = $('#nav ul li').length * $('#nav ul li').width();
-        $('.ui-navigator-list').width(width);
-    },0)
+        
+        
+        $(document).on('touchend','.ui-scroller', function (e) {
+
+            var width = $('#nav ul li').length * 64 - $(window).width();
+
+            var offsetLeft = Math.abs($('.ui-scroller').offset().left);
+// console.log(width, offsetLeft)
+            if(offsetLeft > width){
+                $(this).css({
+                    color: 'red',
+                    '-webkit-transform': 'translate(-'+ width +'px, 0)',
+                    transform: 'translate(-'+ width +'px, 0)'
+                })
+            }
+
+            // $('.ui-navigator-list').width(width);
+        })
+
+    },1000)
+
     
 </script>
 
