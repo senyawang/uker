@@ -6,11 +6,11 @@
 .info-detail h1 {
   padding-top: 0.5rem;
   color: #000;
-  font: 700 .8rem/1.5 simhei;
+  font: 700 .9rem/1.5 simhei;
 }
 /* line 11, ../sass/infodetail.scss */
 .info-detail .options {
-  color: #888888;
+  color: #aaa;
 }
 /* line 13, ../sass/infodetail.scss */
 .info-detail .options span {
@@ -32,7 +32,7 @@
 }
 /* line 26, ../sass/infodetail.scss */
 .info-detail .info-text p a {
-  color: blue;
+  color: #4788ff;
   text-decoration: underline;
 }
 /* line 30, ../sass/infodetail.scss */

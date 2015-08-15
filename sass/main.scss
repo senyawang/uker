@@ -109,7 +109,7 @@
     .pic{
         float: left;
         width: 40%;
-        margin-right: .5rem;
+        margin-right: .4rem;
     }
     h3{
         padding-top: 10px;
@@ -118,6 +118,16 @@
     p{
         font-size: .7rem;
         color: $orange;
+    }
+}
+.lxgj{
+    padding-bottom: 10px;
+    .pic,
+    p{
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: .6rem;
     }
 }
 // index 结束
@@ -136,6 +146,13 @@
 
     }
 } 
+#nav ~ .ui-box{
+    .info-list{
+        li:last-child{
+            border-bottom: 1px dotted $line;
+        }
+    }
+}
 
 .ui-slider-dots{
     left: 0;
@@ -151,11 +168,15 @@
 
 
 .page-more{
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     text-align: center;
     a{
-        color: $red;
-        text-decoration: underline;
+        display: block;
+        line-height: 3;
+        color: #666;
+        background: #f2f2f2;
+        border-radius: 5px;
+        // text-decoration: underline;
     }
 }
 

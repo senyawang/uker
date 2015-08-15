@@ -401,10 +401,11 @@
 
 /* line 366, ../sass/schooldetail.scss */
 #pubu {
+  height: 500px;
   position: relative;
 }
 
-/* line 370, ../sass/schooldetail.scss */
+/* line 371, ../sass/schooldetail.scss */
 #pubu .pbox {
   float: left;
 }

@@ -1049,7 +1049,7 @@ input::-webkit-input-placeholder {
 /* line 474, ../sass/base.scss */
 .ui-no-result {
   min-height: 400px;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   line-height: 3;
 }
@@ -1057,8 +1057,13 @@ input::-webkit-input-placeholder {
 .ui-no-result img {
   max-width: 150px;
 }
+/* line 482, ../sass/base.scss */
+.ui-no-result a {
+  text-decoration: underline;
+  color: #048fff;
+}
 
-/* line 483, ../sass/base.scss */
+/* line 487, ../sass/base.scss */
 .ui-masks {
   position: absolute;
   position: fixed;
@@ -1072,7 +1077,7 @@ input::-webkit-input-placeholder {
   transition: all .5s;
 }
 
-/* line 495, ../sass/base.scss */
+/* line 499, ../sass/base.scss */
 .ui-share {
   display: none;
   position: fixed;
@@ -1084,16 +1089,16 @@ input::-webkit-input-placeholder {
   background: #fff;
   text-align: center;
 }
-/* line 505, ../sass/base.scss */
+/* line 509, ../sass/base.scss */
 .ui-share h2 {
   margin-bottom: .8rem;
   font: 300 .8rem/2 simhei;
 }
-/* line 509, ../sass/base.scss */
+/* line 513, ../sass/base.scss */
 .ui-share li {
   position: relative;
 }
-/* line 512, ../sass/base.scss */
+/* line 516, ../sass/base.scss */
 .ui-share ul li a {
   position: absolute;
   left: 10%;
@@ -1107,13 +1112,13 @@ input::-webkit-input-placeholder {
   background: none !important;
   text-indent: 0;
 }
-/* line 526, ../sass/base.scss */
+/* line 530, ../sass/base.scss */
 .ui-share [class^="i-"] {
   position: static;
   overflow: hidden;
   line-height: 100em;
 }
-/* line 532, ../sass/base.scss */
+/* line 536, ../sass/base.scss */
 .ui-share p {
   padding-top: .8rem;
 }

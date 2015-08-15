@@ -127,7 +127,7 @@
 .lxbd .pic {
   float: left;
   width: 40%;
-  margin-right: .5rem;
+  margin-right: .4rem;
 }
 /* line 114, ../sass/main.scss */
 .lxbd h3 {
@@ -140,27 +140,45 @@
   color: #d42c2c;
 }
 
-/* line 126, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
+.lxgj {
+  padding-bottom: 10px;
+}
+/* line 125, ../sass/main.scss */
+.lxgj .pic,
+.lxgj p {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .6rem;
+}
+
+/* line 136, ../sass/main.scss */
 #nav ul {
   display: table;
   table-layout: fixed;
   white-space: nowrap;
   background: #fff;
 }
-/* line 132, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 #nav ul li {
   display: inline-block;
   width: 54px !important;
   line-height: 34px;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
+#nav ~ .ui-box .info-list li:last-child {
+  border-bottom: 1px dotted #dddddd;
+}
+
+/* line 157, ../sass/main.scss */
 .ui-slider-dots {
   left: 0;
   text-align: right;
 }
 
-/* line 144, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 .ui-slider-dots > b {
   background: transparent;
   border: 1px solid #fff;
@@ -168,13 +186,16 @@
   box-sizing: border-box;
 }
 
-/* line 153, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .page-more {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   text-align: center;
 }
-/* line 156, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 .page-more a {
-  color: #d42c2c;
-  text-decoration: underline;
+  display: block;
+  line-height: 3;
+  color: #666;
+  background: #f2f2f2;
+  border-radius: 5px;
 }

@@ -473,11 +473,15 @@ input {
 
 .ui-no-result{
     min-height: 400px;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     line-height: 3;
     img{
         max-width: 150px;
+    }
+    a{
+        text-decoration: underline;
+        color: #048fff;
     }
 }
 .ui-masks{

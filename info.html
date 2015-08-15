@@ -133,11 +133,17 @@
 <script src="dist/uker.min.0.0.1.js"></script>
 <!-- <script src="js/uker.js"></script> -->
 <!-- <script src="gmu2.1.1/js/widget/refresh/$lite.js"></script> -->
+<!-- <script src="gmu2.1.1/js/widget/navigator/navigator.js"></script> -->
 
 <script src="js/app/main.js"></script>
 
 <script type="text/javascript">
     // refreshInit(ajaxUrl);
+    setTimeout(function () {
+        var width = $('#nav ul li').length * $('#nav ul li').width();
+        $('.ui-navigator-list').width(width);
+    },0)
+    
 </script>
 
 </body>
