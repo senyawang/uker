@@ -163,7 +163,7 @@
 /* line 142, ../sass/main.scss */
 #nav ul li {
   display: inline-block;
-  width: 54px !important;
+  width: 64px !important;
   line-height: 34px;
 }
 
@@ -188,7 +188,7 @@
 
 /* line 170, ../sass/main.scss */
 .page-more {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 /* line 173, ../sass/main.scss */
