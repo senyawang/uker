@@ -134,14 +134,20 @@
 
 
 #nav ul{
+    // display: block;
     display: table;
+    width: 5000px;
     table-layout: fixed;
     white-space: nowrap;
     background: #fff;
     
     li{
-        display: inline-block;
-        width: 64px!important;
+        float: left;
+        // flex: none;
+        // box-flex: none;
+        // -webkit-box-flex: auto;
+        // display: inline-block;
+        // width: 64px!important;
         line-height: 34px;
 
     }
@@ -179,4 +185,6 @@
         // text-decoration: underline;
     }
 }
+
+
 

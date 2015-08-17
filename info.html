@@ -727,9 +727,6 @@
     var ajaxUrl='http://121.201.13.58/article/articleAjax?type=all-3-79';
 </script>
 <script src="dist/uker.min.0.0.1.js"></script>
-<!-- <script src="js/uker.js"></script> -->
-<!-- <script src="gmu2.1.1/js/widget/refresh/$lite.js"></script> -->
-<!-- <script src="gmu2.1.1/js/widget/navigator/navigator.js"></script> -->
 
 <script src="js/app/main.js"></script>
 
@@ -739,7 +736,6 @@
         var page = 1,
             totalPage = $('.data-list li').length/20;
         var data = $('.data-list').html().split('</li>');
-                // console.log(data);
 
         var $list = $('.data-list');
 
@@ -752,29 +748,28 @@
         $list.append(tpl);
 
         $('.ui-refresh').refresh({
+            seamless: true,
             load: function (dir, type) {
                 var me = this;
                 
                 var html = '';
 
-                if(page<=5){
+                if(page<5){
                     //     html = template('loadMore', data);
-
-                    // for (var i = page*20; i < (page+1)*20; i++) {
-                    //     html += data[i];                 
-                    // };
 
                     html = data.splice(0,20);
 
                     var tpl = html.join('</li>');
 
-                    console.log(html)
+                    console.log(page)
 
+                    setTimeout(function () {
+                        $list[dir == 'up' ? 'prepend' : 'append'](tpl);
+                        me.afterDataLoading();    //数据加载完成后改变状态
 
-                    $list[dir == 'up' ? 'prepend' : 'append'](tpl);
-                    me.afterDataLoading();    //数据加载完成后改变状态
-
-                    page++;
+                        page++;
+                    },100)
+                    
 
                 }else{
                     me.disable(dir);
@@ -786,28 +781,6 @@
         });
     }
     loadMore();
-    setTimeout(function () {
-        
-        
-        $(document).on('touchend','.ui-scroller', function (e) {
-
-            var width = $('#nav ul li').length * 64 - $(window).width();
-
-            var offsetLeft = Math.abs($('.ui-scroller').offset().left);
-// console.log(width, offsetLeft)
-            if(offsetLeft > width){
-                $(this).css({
-                    color: 'red',
-                    '-webkit-transform': 'translate(-'+ width +'px, 0)',
-                    transform: 'translate(-'+ width +'px, 0)'
-                })
-            }
-
-            // $('.ui-navigator-list').width(width);
-        })
-
-    },1000)
-
     
 </script>
 

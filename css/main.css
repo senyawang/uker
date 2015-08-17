@@ -156,29 +156,29 @@
 /* line 136, ../sass/main.scss */
 #nav ul {
   display: table;
+  width: 5000px;
   table-layout: fixed;
   white-space: nowrap;
   background: #fff;
 }
-/* line 142, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 #nav ul li {
-  display: inline-block;
-  width: 64px !important;
+  float: left;
   line-height: 34px;
 }
 
-/* line 151, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
 #nav ~ .ui-box .info-list li:last-child {
   border-bottom: 1px dotted #dddddd;
 }
 
-/* line 157, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 .ui-slider-dots {
   left: 0;
   text-align: right;
 }
 
-/* line 161, ../sass/main.scss */
+/* line 167, ../sass/main.scss */
 .ui-slider-dots > b {
   background: transparent;
   border: 1px solid #fff;
@@ -186,12 +186,12 @@
   box-sizing: border-box;
 }
 
-/* line 170, ../sass/main.scss */
+/* line 176, ../sass/main.scss */
 .page-more {
   padding: 1rem 0;
   text-align: center;
 }
-/* line 173, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 .page-more a {
   display: block;
   line-height: 3;

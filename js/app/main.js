@@ -208,7 +208,9 @@ $(function () {
     });
     
 
-    $('#nav').navigator();
+    $('#nav').navigator({
+        visibleCount: 5
+    });
 
 
     // 筛选面板
