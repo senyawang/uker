@@ -257,9 +257,9 @@ input:-ms-clear {
   display: none;
 }
 
-/* line 400, ./icons-2x/*.png */
+/* line 424, ./icons-2x/*.png */
 .icons-2x-sprite {
-  background-image: url('../images/./icons-2x-s0fe71727db.png');
+  background-image: url('../images/./icons-2x-s472954aae7.png');
   background-repeat: no-repeat;
 }
 
@@ -296,8 +296,8 @@ input:-ms-clear {
   background-repeat: no-repeat;
   overflow: hidden;
   line-height: 100em;
-  background-image: url('../images/icons-2x-se4b967fbb9.png');
-  background-size: 1504px 55px;
+  background-image: url('../images/icons-2x-s3aad2a35f6.png');
+  background-size: 1563px 55px;
 }
 
 /* line 4, ../sass/base.scss */
