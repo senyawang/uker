@@ -641,13 +641,13 @@ input::-webkit-input-placeholder {
 }
 
 /* line 287, ../sass/base.scss */
-.ui-navigator-list li.ui-state-hover,
-.ui-navigator-list li.ui-state-active {
+#nav li.ui-state-hover,
+#nav li.ui-state-active {
   background: #fff;
 }
 /* line 291, ../sass/base.scss */
-.ui-navigator-list li.ui-state-hover a,
-.ui-navigator-list li.ui-state-active a {
+#nav li.ui-state-hover a,
+#nav li.ui-state-active a {
   color: #d42c2c !important;
   font-size: 0.75rem !important;
 }
@@ -656,35 +656,36 @@ input::-webkit-input-placeholder {
 .ui-navigator-list li a,
 #nav li a {
   display: block;
+  padding: 0 15px;
   color: #333;
   font-size: .6rem;
   font-weight: 300;
   line-height: 1.75rem;
 }
 
-/* line 304, ../sass/base.scss */
+/* line 305, ../sass/base.scss */
 .ui-scroller {
   vertical-align: top;
 }
 
-/* line 307, ../sass/base.scss */
+/* line 308, ../sass/base.scss */
 .ui-refresh-down {
   text-align: center;
   padding: 1rem;
 }
 
-/* line 311, ../sass/base.scss */
+/* line 312, ../sass/base.scss */
 .header {
   position: relative;
   height: 2rem;
   background: #f8f8f8;
   text-align: center;
 }
-/* line 316, ../sass/base.scss */
+/* line 317, ../sass/base.scss */
 .header .title {
   font: 300 16px/2rem simhei;
 }
-/* line 319, ../sass/base.scss */
+/* line 320, ../sass/base.scss */
 .header a {
   position: absolute;
   display: inline-block;
@@ -692,27 +693,27 @@ input::-webkit-input-placeholder {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-/* line 325, ../sass/base.scss */
+/* line 326, ../sass/base.scss */
 .header a:hover {
   color: #d42c2c;
 }
-/* line 327, ../sass/base.scss */
+/* line 328, ../sass/base.scss */
 .header a:hover .i-back {
   background-image: url(../images/icons-2x/i-arrow-l-red.png);
   background-size: 100% 100%;
   background-position: 0 0;
 }
-/* line 334, ../sass/base.scss */
+/* line 335, ../sass/base.scss */
 .header .btn-back {
   min-width: 1rem;
   height: 1rem;
   left: 10px;
 }
-/* line 338, ../sass/base.scss */
+/* line 339, ../sass/base.scss */
 .header .btn-back:hover {
   color: #d42c2c;
 }
-/* line 341, ../sass/base.scss */
+/* line 342, ../sass/base.scss */
 .header .btn-back .logo {
   position: static;
   display: block;
@@ -721,11 +722,11 @@ input::-webkit-input-placeholder {
   background: url(../images/icons-2x/logo.png);
   background-size: 100% 100%;
 }
-/* line 350, ../sass/base.scss */
+/* line 351, ../sass/base.scss */
 .header .btn-menu {
   right: 10px;
 }
-/* line 353, ../sass/base.scss */
+/* line 354, ../sass/base.scss */
 .header .i-back,
 .header .i-menu {
   position: static;
@@ -734,14 +735,14 @@ input::-webkit-input-placeholder {
   vertical-align: -1px;
 }
 
-/* line 363, ../sass/base.scss */
+/* line 364, ../sass/base.scss */
 .mainpage {
   max-width: 640px;
   min-height: 100%;
   margin: 0 auto;
 }
 
-/* line 369, ../sass/base.scss */
+/* line 370, ../sass/base.scss */
 .footer {
   padding: 1rem;
   text-align: center;
@@ -1000,7 +1001,7 @@ input::-webkit-input-placeholder {
   width: 35px;
 }
 
-/* line 411, ../sass/base.scss */
+/* line 412, ../sass/base.scss */
 .social-menu {
   position: fixed;
   right: 10px;
@@ -1008,7 +1009,7 @@ input::-webkit-input-placeholder {
   width: 50px;
   text-align: center;
 }
-/* line 417, ../sass/base.scss */
+/* line 418, ../sass/base.scss */
 .social-menu a {
   display: inline-block;
   width: 36px;
@@ -1019,7 +1020,7 @@ input::-webkit-input-placeholder {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
-/* line 426, ../sass/base.scss */
+/* line 427, ../sass/base.scss */
 .social-menu a:first-child {
   width: 45px;
   height: 45px;
@@ -1027,44 +1028,44 @@ input::-webkit-input-placeholder {
   font-size: 40px;
   background: none;
 }
-/* line 433, ../sass/base.scss */
+/* line 434, ../sass/base.scss */
 .social-menu a:last-child {
   display: none;
 }
-/* line 437, ../sass/base.scss */
+/* line 438, ../sass/base.scss */
 .social-menu i {
   position: static;
   color: transparent;
 }
 
-/* line 447, ../sass/base.scss */
+/* line 448, ../sass/base.scss */
 .sort-up a {
   color: #d42c2c;
 }
 
-/* line 455, ../sass/base.scss */
+/* line 456, ../sass/base.scss */
 .sort-down a {
   color: #d42c2c;
 }
 
-/* line 475, ../sass/base.scss */
+/* line 476, ../sass/base.scss */
 .ui-no-result {
   min-height: 400px;
   padding: 1rem;
   text-align: center;
   line-height: 3;
 }
-/* line 480, ../sass/base.scss */
+/* line 481, ../sass/base.scss */
 .ui-no-result img {
   max-width: 150px;
 }
-/* line 483, ../sass/base.scss */
+/* line 484, ../sass/base.scss */
 .ui-no-result a {
   text-decoration: underline;
   color: #048fff;
 }
 
-/* line 488, ../sass/base.scss */
+/* line 489, ../sass/base.scss */
 .ui-masks {
   position: absolute;
   position: fixed;
@@ -1078,7 +1079,7 @@ input::-webkit-input-placeholder {
   transition: all .5s;
 }
 
-/* line 500, ../sass/base.scss */
+/* line 501, ../sass/base.scss */
 .ui-share {
   display: none;
   position: fixed;
@@ -1090,16 +1091,16 @@ input::-webkit-input-placeholder {
   background: #fff;
   text-align: center;
 }
-/* line 510, ../sass/base.scss */
+/* line 511, ../sass/base.scss */
 .ui-share h2 {
   margin-bottom: .8rem;
   font: 300 .8rem/2 simhei;
 }
-/* line 514, ../sass/base.scss */
+/* line 515, ../sass/base.scss */
 .ui-share li {
   position: relative;
 }
-/* line 517, ../sass/base.scss */
+/* line 518, ../sass/base.scss */
 .ui-share ul li a {
   position: absolute;
   left: 10%;
@@ -1113,13 +1114,13 @@ input::-webkit-input-placeholder {
   background: none !important;
   text-indent: 0;
 }
-/* line 531, ../sass/base.scss */
+/* line 532, ../sass/base.scss */
 .ui-share [class^="i-"] {
   position: static;
   overflow: hidden;
   line-height: 100em;
 }
-/* line 537, ../sass/base.scss */
+/* line 538, ../sass/base.scss */
 .ui-share p {
   padding-top: .8rem;
 }
