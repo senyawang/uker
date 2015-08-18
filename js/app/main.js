@@ -216,10 +216,31 @@ $(function () {
     // 筛选面板
 
     var $firstBox = $("#mainPanelBox"),
-        areaValue = '全部',
-        cityValue = '全部',
-        rankValue = '全部',
+        areaValue = $('.J_areaValue').text(),
+        cityValue = $('.J_cityValue').text(),
+        rankValue = $('.J_rankValue').text(),
         subPanelParent;
+        
+
+    var initFilter = {
+
+        init: function () {
+            var self = this;
+            
+        },
+
+        panelParent: function (argument) {
+            
+            
+
+        },
+        panelSub: function (argument) {
+            
+            
+
+        }
+
+    }
 
     $firstBox.on('touchend', 'li', function (e) {
 
@@ -234,57 +255,55 @@ $(function () {
         $('.ui-panel .title').html($(this).find('.sl-item:first-child').text());
 
         var html = '';
-
         switch (subPanelParent){
-            case 'J_areaValue':
-                for (var i = 0; i < area.length; i++) {
-                    html += '<li data-value='+ area[i] +'><a href="#">' +
-                            '<span class="sl-item">'+ area[i] +'</span>' +
-                            '<span class="sl-item"></span>' +
-                        '</a></li>';
-                };
-                $('#subPanelBox .sp-list').html(html);
-                // $('#subPanelBox li').removeClass('hover');
-                $('[data-value="'+ areaValue +'"]').addClass('hover');
+                case 'J_areaValue':
+                    for (var i = 0; i < area.length; i++) {
+                        html += '<li data-value='+ area[i] +'><a href="#">' +
+                                '<span class="sl-item">'+ area[i] +'</span>' +
+                                '<span class="sl-item"></span>' +
+                            '</a></li>';
+                    };
+                    $('#subPanelBox .sp-list').html(html);
+                    // $('#subPanelBox li').removeClass('hover');
+                    $('[data-value="'+ areaValue +'"]').addClass('hover');
 
-                break;
-            case 'J_cityValue':
+                    break;
+                case 'J_cityValue':
 
-                if(areaValue === '全部') {
-                    $('#subPanelBox .sp-list').empty().html('<li>请先选择地区！</li>');
-                    return;
-                };
-                for (var i = 0; i < city[areaValue].length; i++) {
-                    html += '<li data-value='+ city[areaValue][i] +'><a href="#">' +
-                            '<span class="sl-item">'+ city[areaValue][i] +'</span>' +
-                            '<span class="sl-item"></span>' +
-                        '</a></li>';
-                };
-                $('#subPanelBox .sp-list').html(html);
-                // $('#subPanelBox li').removeClass('hover');
-                $('[data-value="'+ cityValue +'"]').addClass('hover');
+                    if(areaValue === '全部') {
+                        $('#subPanelBox .sp-list').empty().html('<li>请先选择地区！</li>');
+                        return;
+                    };
+                    for (var i = 0; i < city[areaValue].length; i++) {
+                        html += '<li data-value='+ city[areaValue][i] +'><a href="#">' +
+                                '<span class="sl-item">'+ city[areaValue][i] +'</span>' +
+                                '<span class="sl-item"></span>' +
+                            '</a></li>';
+                    };
+                    $('#subPanelBox .sp-list').html(html);
+                    // $('#subPanelBox li').removeClass('hover');
+                    $('[data-value="'+ cityValue +'"]').addClass('hover');
 
-                break;
-            case 'J_rankValue':
-                for (var i = 0; i < rank.length; i++) {
-                    html += '<li data-value='+ rank[i] +'><a href="#">' +
-                            '<span class="sl-item">'+ rank[i] +'</span>' +
-                            '<span class="sl-item"></span>' +
-                        '</a></li>';
-                };
-                $('#subPanelBox .sp-list').html(html);
-                // $('#subPanelBox li').removeClass('hover');
-                $('[data-value="'+ rankValue +'"]').addClass('hover');
+                    break;
+                case 'J_rankValue':
+                    for (var i = 0; i < rank.length; i++) {
+                        html += '<li data-value='+ rank[i] +'><a href="#">' +
+                                '<span class="sl-item">'+ rank[i] +'</span>' +
+                                '<span class="sl-item"></span>' +
+                            '</a></li>';
+                    };
+                    $('#subPanelBox .sp-list').html(html);
+                    // $('#subPanelBox li').removeClass('hover');
+                    $('[data-value="'+ rankValue +'"]').addClass('hover');
 
-                break;  
-        }
+                    break;  
+            }
 
     });
 
     $('#subPanelBox').on('touchend', 'li', function (e) {
         e.preventDefault();
 
-        
         switch (subPanelParent){
             case 'J_areaValue':
                 if(areaValue != $(this).attr('data-value')){
@@ -301,8 +320,7 @@ $(function () {
                 rankValue = $(this).attr('data-value');
                 $('.'+subPanelParent).html(rankValue);
                 break;
-        }
-        
+        }        
         $(this).addClass('hover').siblings().removeClass('hover');
         
         
@@ -335,7 +353,7 @@ $(function () {
     });
 
     $('#panelSearch').on('tap', function (e) {
-        e.preventDefault();
+        event.preventDefault();
 
         var key = $('.s-text[type=search]').val(),
             search = location.search.substring(1),
@@ -368,7 +386,7 @@ $(function () {
                     case 'city':
                         item[1] = cityValue;
                         break;
-                    case 'rank':
+                    case 'timespm':
                         item[1] = rankValue;
                     // case 'sort':
                     //     item[i][1] = GetQueryString("order");

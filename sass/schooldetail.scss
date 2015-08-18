@@ -27,6 +27,11 @@
 .school-title{
     background: #fff;
     padding: $gap*2 $gap*2 0;
+    li{
+        display: block;
+        overflow: hidden;
+        padding: 0.5rem 0.5rem;
+    }
     .pic{
         margin-bottom: .5rem;
     }
@@ -151,6 +156,11 @@
     }
 }
 .hot-sp{
+    li{
+        display: block;
+        overflow: hidden;
+        padding: 0.5rem 0.5rem;
+    }
     &.data-list{
         min-height: 340px;
         min-height: #{-webkit-calc(100vh - 10rem)};
