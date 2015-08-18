@@ -14,13 +14,18 @@
         text-align: center;
     }
     li{
-        border-right: 1px dotted $line;
+        // border-right: 1px dotted $line;
     }
     a{
+        position: relative;
         display: block;
         padding: (14rem/40) 0;
         &:hover{
             background: rgba(0,0,0,.05);
+        }
+        .i-hot{
+            right: 12%;
+            top: .3rem;
         }
     }
 }
