@@ -124,37 +124,41 @@
 
 /* line 117, ../sass/search.scss */
 .filter-menu {
-  padding: .5rem;
+  padding: 0 .5rem;
   text-align: center;
 }
-/* line 121, ../sass/search.scss */
+/* line 120, ../sass/search.scss */
+.filter-menu li {
+  padding: .5rem 0;
+}
+/* line 122, ../sass/search.scss */
 .filter-menu li a {
   display: block;
   position: relative;
   border-right: 1px solid #dddddd;
 }
-/* line 126, ../sass/search.scss */
+/* line 127, ../sass/search.scss */
 .filter-menu li [class^="i-arrow"]:first-child {
   top: 0;
   left: 0;
 }
-/* line 130, ../sass/search.scss */
+/* line 131, ../sass/search.scss */
 .filter-menu li [class^="i-arrow"]:last-child {
   left: 0;
   bottom: 0;
 }
-/* line 134, ../sass/search.scss */
+/* line 135, ../sass/search.scss */
 .filter-menu li [class^="i-filter"] {
   right: .5rem;
   top: 50%;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-/* line 143, ../sass/search.scss */
+/* line 144, ../sass/search.scss */
 .filter-menu li:last-child a {
   border: 0 none;
 }
-/* line 149, ../sass/search.scss */
+/* line 150, ../sass/search.scss */
 .filter-menu .i-box {
   display: block;
   position: absolute;
@@ -166,20 +170,22 @@
   transform: translate(0, -50%);
 }
 
-/* line 162, ../sass/search.scss */
+/* line 163, ../sass/search.scss */
 .filter-panel .header {
   background: #f8f8f8 !important;
 }
-/* line 164, ../sass/search.scss */
+/* line 165, ../sass/search.scss */
 .filter-panel .header a {
+  margin: 0 -10px;
+  padding: 10px;
   color: #888888;
 }
-/* line 167, ../sass/search.scss */
+/* line 170, ../sass/search.scss */
 .filter-panel .header .title {
   font-size: .8rem;
 }
 
-/* line 172, ../sass/search.scss */
+/* line 175, ../sass/search.scss */
 .slide-panel {
   width: 100%;
   height: calc(100vh - 2rem);
@@ -188,11 +194,11 @@
   overflow-x: hidden;
   background: #fff;
 }
-/* line 179, ../sass/search.scss */
+/* line 182, ../sass/search.scss */
 .slide-panel .sp-wrap {
   width: 200%;
 }
-/* line 182, ../sass/search.scss */
+/* line 185, ../sass/search.scss */
 .slide-panel .sp-box {
   float: left;
   width: 50%;
@@ -200,65 +206,65 @@
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 190, ../sass/search.scss */
+/* line 193, ../sass/search.scss */
 .slide-panel .sp-list li {
   padding: 5% 8%;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 193, ../sass/search.scss */
+/* line 196, ../sass/search.scss */
 .slide-panel .sp-list li:first-child {
   border-top: 1px solid #dddddd;
 }
-/* line 196, ../sass/search.scss */
+/* line 199, ../sass/search.scss */
 .slide-panel .sp-list li a {
   display: block;
   font-size: 0;
 }
-/* line 204, ../sass/search.scss */
+/* line 207, ../sass/search.scss */
 .slide-panel .sl-item {
   display: inline-block;
   font-size: .6rem;
   vertical-align: top;
 }
-/* line 208, ../sass/search.scss */
+/* line 211, ../sass/search.scss */
 .slide-panel .sl-item:first-child {
   width: 75%;
   text-align: left;
 }
-/* line 212, ../sass/search.scss */
+/* line 215, ../sass/search.scss */
 .slide-panel .sl-item:last-child {
   width: 25%;
   text-align: right;
 }
-/* line 221, ../sass/search.scss */
+/* line 224, ../sass/search.scss */
 .slide-panel .i-arrow-r,
 .slide-panel .i-right {
   position: static;
 }
 
-/* line 227, ../sass/search.scss */
+/* line 230, ../sass/search.scss */
 #subPanelBox .hover .sl-item {
   color: #d42c2c;
 }
-/* line 230, ../sass/search.scss */
+/* line 233, ../sass/search.scss */
 #subPanelBox .hover .sl-item:last-child:after {
   position: static;
   content: '';
 }
-/* line 236, ../sass/search.scss */
+/* line 239, ../sass/search.scss */
 #subPanelBox .sl-item:first-child {
   width: 75%;
 }
-/* line 239, ../sass/search.scss */
+/* line 242, ../sass/search.scss */
 #subPanelBox .sl-item:last-child {
   width: 25%;
 }
 
-/* line 244, ../sass/search.scss */
+/* line 247, ../sass/search.scss */
 #mainPanelBox .sl-item:first-child {
   width: 30%;
 }
-/* line 247, ../sass/search.scss */
+/* line 250, ../sass/search.scss */
 #mainPanelBox .sl-item:last-child {
   width: 70%;
 }

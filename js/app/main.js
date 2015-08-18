@@ -398,8 +398,15 @@ $(function () {
             var urlstr = urlAry.join('&');
 
             if(urlstr.indexOf('area') == -1){
-                urlstr += '&area='+areaValue+'&city='+cityValue+'&timespm='+rankValue ;
+                urlstr += '&area='+areaValue ;
             }
+            if(urlstr.indexOf('city') == -1){
+                urlstr += '&city='+cityValue;
+            }
+            if(urlstr.indexOf('timespm') == -1){
+                urlstr += '&timespm='+rankValue ;
+            }
+
 
             console.log(urlstr)
 
