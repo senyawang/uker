@@ -19,7 +19,7 @@
 .uker-nav a {
   position: relative;
   display: block;
-  padding: 0.35rem 0;
+  padding: .5rem 0;
 }
 /* line 23, ../sass/main.scss */
 .uker-nav a:hover {

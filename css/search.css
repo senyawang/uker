@@ -189,82 +189,85 @@
 .slide-panel {
   width: 100%;
   height: calc(100vh - 2rem);
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
   overflow-x: hidden;
   background: #fff;
 }
-/* line 182, ../sass/search.scss */
+/* line 180, ../sass/search.scss */
 .slide-panel .sp-wrap {
   width: 200%;
+  height: 100%;
 }
-/* line 185, ../sass/search.scss */
+/* line 184, ../sass/search.scss */
 .slide-panel .sp-box {
   float: left;
   width: 50%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  overflow-x: hidden;
   vertical-align: top;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 193, ../sass/search.scss */
+/* line 196, ../sass/search.scss */
 .slide-panel .sp-list li {
   padding: 5% 8%;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 196, ../sass/search.scss */
+/* line 199, ../sass/search.scss */
 .slide-panel .sp-list li:first-child {
   border-top: 1px solid #dddddd;
 }
-/* line 199, ../sass/search.scss */
+/* line 202, ../sass/search.scss */
 .slide-panel .sp-list li a {
   display: block;
   font-size: 0;
 }
-/* line 207, ../sass/search.scss */
+/* line 210, ../sass/search.scss */
 .slide-panel .sl-item {
   display: inline-block;
   font-size: .6rem;
   vertical-align: top;
 }
-/* line 211, ../sass/search.scss */
+/* line 214, ../sass/search.scss */
 .slide-panel .sl-item:first-child {
   width: 75%;
   text-align: left;
 }
-/* line 215, ../sass/search.scss */
+/* line 218, ../sass/search.scss */
 .slide-panel .sl-item:last-child {
   width: 25%;
   text-align: right;
 }
-/* line 224, ../sass/search.scss */
+/* line 227, ../sass/search.scss */
 .slide-panel .i-arrow-r,
 .slide-panel .i-right {
   position: static;
 }
 
-/* line 230, ../sass/search.scss */
+/* line 233, ../sass/search.scss */
 #subPanelBox .hover .sl-item {
   color: #d42c2c;
 }
-/* line 233, ../sass/search.scss */
+/* line 236, ../sass/search.scss */
 #subPanelBox .hover .sl-item:last-child:after {
   position: static;
   content: '';
 }
-/* line 239, ../sass/search.scss */
+/* line 242, ../sass/search.scss */
 #subPanelBox .sl-item:first-child {
   width: 75%;
 }
-/* line 242, ../sass/search.scss */
+/* line 245, ../sass/search.scss */
 #subPanelBox .sl-item:last-child {
   width: 25%;
 }
 
-/* line 247, ../sass/search.scss */
+/* line 250, ../sass/search.scss */
 #mainPanelBox .sl-item:first-child {
   width: 30%;
 }
-/* line 250, ../sass/search.scss */
+/* line 253, ../sass/search.scss */
 #mainPanelBox .sl-item:last-child {
   width: 70%;
 }

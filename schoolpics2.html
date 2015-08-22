@@ -16,6 +16,7 @@
     <style>
         body,html{
             height: 100%;
+            overflow: hidden;
         }
         .header{
             background: #000;
@@ -108,7 +109,7 @@
 <div class="mainpage">
 
     <header class="header">
-        <h1 class="title"><span class="J_curIndex">1</span>/3</h1>
+        <h1 class="title"><span class="J_curIndex">1/3</span></h1>
         <a class="btn-back" href="#"><i class="i-btnback"></i></a>
     </header>
 
@@ -119,8 +120,8 @@
                 <div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h50/img201410271713110.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h50/img201410271713110.jpg" class="btn-download">下载图片</a></div><div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h50/img201410271712400.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h50/img201410271712400.jpg" class="btn-download">下载图片</a></div><div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h50/img201410271711490.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h50/img201410271711490.jpg" class="btn-download">下载图片</a></div><div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h50/img201410271711240.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h50/img201410271711240.jpg" class="btn-download">下载图片</a></div><div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h50/img201410271711040.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h50/img201410271711040.jpg" class="btn-download">下载图片</a></div><div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h50/img201410271709330.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h50/img201410271709330.jpg" class="btn-download">下载图片</a></div><div class="swiper-slide"><img src="http://school.uker.net/photo/h000/h48/img201407151049190.jpg" alt="牛津大学_牛津大学_University of Oxford 照片_中英网UKER.net"><div class="img-tag sc-pic"><a href="#">校园环境</a></div><a href="http://school.uker.net/photo/h000/h48/img201407151049190.jpg" class="btn-download">下载图片</a></div>
             </div>
             <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
         </div>
     </section>
     
@@ -155,11 +156,10 @@ var inithtml = '';
 
 var prephtml = '',
     apphtml = '',
-    lastIndex,
-    curImgIndex,
-    curIndex;
+    total = imgData.length;
+    curImgIndex = 0;
 
-    curImgIndex = curIndex = $('#currentIndex').val();
+    curImgIndex = $('#currentIndex').val(); //从0开始
 
 function creathtml(){
 
@@ -178,17 +178,24 @@ function creathtml(){
 
     $('.swiper-wrapper').append(inithtml);
 
-    console.log(inithtml)
-
 }
 
 
-    $('.J_curIndex').text(curIndex*1+1);
+    $('.J_curIndex').text(curImgIndex*1+1 + '/'+ total);
 
     // creathtml();
 
+    $(document).on('touchstart', function (e) {
+        if(mySwiper.animating){
+            e.preventDefault();
+            return;
+            alert(1)
+        }
+    })
 
-    var swiper = new Swiper('.swiper-container', {
+    var startX,endX, flag=true;
+
+    var mySwiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
@@ -197,44 +204,44 @@ function creathtml(){
         centeredSlides: true,
         paginationClickable: true,
         spaceBetween: 0,
+        followFinger: true,
+        threshold: 50,
+        onTouchStart: function(swiper,even){
+
+            startX = even.changedTouches[0].pageX;
+
+        },
+        onTouchEnd: function (swiper, even) {
+            endX = even.changedTouches[0].pageX;
+
+        },
         onSlideChangeStart: function(swiper){
 
+            if(startX < endX){
+                curImgIndex--;
+            }else{
+                curImgIndex++;
+            }
+            $('.J_curIndex').text(curImgIndex*1 + '/'+ total);
+            
+        },
+        onTransitionEnd: function(swiper){
+            slidingAction(swiper);
         },
         onSlideChangeEnd: function(swiper){
 
-            if(swiper.activeIndex > 2) {
-                slidingAction();
-            }
-            
+                    // alert(mySwiper.animating)  
 
-            lastIndex = swiper.activeIndex;
-
-        },
+        }
     });
 
     
-    function slidingAction () {
+    function slidingAction (mySwiper) {
 
-        if(lastIndex && lastIndex < swiper.activeIndex){
-                var i = curImgIndex + 3;
-                curImgIndex++;
-                if(i > imgData.length) return;
-                apphtml = '<div class="swiper-slide">'+
-                                '<img src="'+ imgData[i].src +'" alt="'+imgData[i].title+'">'+
-                                '<div class="img-tag sc-pic">'+
-                                    '<a href="#">校园环境</a>'+
-                                '</div>'+
-                                '<a href="'+ imgData[i].src +'" class="btn-download">下载图片</a>'+
-                            '</div>';
+        if(imgData.length <= 7) return;
 
-                swiper.removeSlide(swiper.activeIndex-3);
-                swiper.appendSlide(apphtml);
-                // curImgIndex++;
-
-
-        }else if(lastIndex && lastIndex > swiper.activeIndex){
-                var i = curImgIndex - 3;
-                curImgIndex--;
+        if(startX < endX){
+                var i = curImgIndex - 4;
                 if(i < 0) return;
                 prephtml = '<div class="swiper-slide">'+
                                 '<img src="'+ imgData[i].src +'" alt="'+imgData[i].title+'">'+
@@ -243,17 +250,26 @@ function creathtml(){
                                 '</div>'+
                                 '<a href="'+ imgData[i].src +'" class="btn-download">下载图片</a>'+
                             '</div>';
-                swiper.removeSlide(swiper.activeIndex+3);
+                console.log(imgData[i].src);
+                mySwiper.prependSlide(prephtml);
 
-                swiper.prependSlide(prephtml);
+                mySwiper.removeSlide(6);
 
-                // curImgIndex--;
+        }else{
+                var h = curImgIndex + 3;
+                if(h > imgData.length || mySwiper.activeIndex <= 3) return;
+                apphtml = '<div class="swiper-slide">'+
+                                '<img src="'+ imgData[h].src +'" alt="'+imgData[h].title+'">'+
+                                '<div class="img-tag sc-pic">'+
+                                    '<a href="#">校园环境</a>'+
+                                '</div>'+
+                                '<a href="'+ imgData[h].src +'" class="btn-download">下载图片</a>'+
+                            '</div>';
 
+                mySwiper.removeSlide(0);
+                mySwiper.appendSlide(apphtml);
 
         }
-
-        console.log(curImgIndex)
-
     }
 
 

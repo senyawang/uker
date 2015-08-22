@@ -305,7 +305,7 @@ html {
   width: 100%;
   font-size: 62.5%;
   line-height: 1.5;
-  font-family: arial, microsoft yahei, Helvetica, simhei;
+  font-family: Helvetica, simhei;
   -webkit-text-size-adjust: none;
 }
 
@@ -556,7 +556,7 @@ input::-webkit-input-placeholder {
 /* line 206, ../sass/base.scss */
 .panel-menu ul li a:hover {
   background: transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
 }
 /* line 211, ../sass/base.scss */
 .panel-menu ul li:hover {
@@ -708,7 +708,7 @@ input::-webkit-input-placeholder {
 .header .btn-back {
   min-width: 1rem;
   height: 1rem;
-  left: 10px;
+  left: 7px;
 }
 /* line 340, ../sass/base.scss */
 .header .btn-back:hover {
@@ -1031,7 +1031,7 @@ input::-webkit-input-placeholder {
 /* line 429, ../sass/base.scss */
 .social-menu a:first-child {
   width: 45px;
-  height: 45px;
+  height: 55px;
   line-height: 45px;
   font-size: 40px;
   background: none;
