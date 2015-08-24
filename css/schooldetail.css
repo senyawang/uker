@@ -115,11 +115,11 @@
   display: block;
 }
 /* line 100, ../sass/schooldetail.scss */
-.school-pic li:first-child {
+.school-pic li:nth-child(2n+1) {
   padding-right: 3%;
 }
 /* line 103, ../sass/schooldetail.scss */
-.school-pic li:last-child {
+.school-pic li:nth-child(2n) {
   padding-left: 3%;
 }
 /* line 107, ../sass/schooldetail.scss */

@@ -68,11 +68,13 @@
     }
 }
 .search-list{
+    min-height: 70vh; 
     .s-result{
         padding: $gap $gap*2;
         background: $line;
     }
     .school-list{
+
         .pic{
             margin-right: .5rem;
         }
@@ -187,10 +189,10 @@
         height: 100%;
         -webkit-overflow-scrolling: touch;
         overflow-scrolling: touch;
-        overflow-x: hidden;
+        overflow:scroll;
         vertical-align: top;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
     .sp-list{
         li{

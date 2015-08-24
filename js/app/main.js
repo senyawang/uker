@@ -1,6 +1,7 @@
 
 function refreshInit (url) {
     var page = 2;
+    
 	$('.ui-refresh').refresh({
         load: function (dir, type) {
             var me = this;
@@ -32,6 +33,7 @@ function refreshInit (url) {
             });
         }
     });
+
 }
 
 var setMask = {
