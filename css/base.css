@@ -672,7 +672,7 @@ input::-webkit-input-placeholder {
 /* line 309, ../sass/base.scss */
 .ui-refresh-down {
   text-align: center;
-  padding: 1rem;
+  line-height: 4;
 }
 
 /* line 313, ../sass/base.scss */

@@ -766,7 +766,7 @@
                     setTimeout(function () {
                         $list[dir == 'up' ? 'prepend' : 'append'](tpl);
                         me.afterDataLoading();    //数据加载完成后改变状态
-
+                        $('.ui-refresh-down').find('span').html("");
                         page++;
                     },100)
                     
@@ -781,6 +781,8 @@
         });
     }
     loadMore();
+    $('.ui-refresh-down').find('span').html("");
+    $('.ui-refresh-down').find('.ui-refresh-icon').remove();
     
 </script>
 
