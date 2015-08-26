@@ -162,6 +162,7 @@
 
 }
 .filter-panel{
+    background: #fff!important;
     .header{
         background: #f8f8f8!important;
         a{
@@ -189,7 +190,8 @@
         height: 100%;
         -webkit-overflow-scrolling: touch;
         overflow-scrolling: touch;
-        overflow:scroll;
+        overflow-y:scroll;
+        overflow-x: hidden;
         vertical-align: top;
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;

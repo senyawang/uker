@@ -20,7 +20,7 @@ function refreshInit (url) {
 
                         $list[dir == 'up' ? 'prepend' : 'append'](html);
                         me.afterDataLoading();    //数据加载完成后改变状态
-                        $('.ui-refresh-down').find('span').html("");
+                        // $('.ui-refresh-down').find('span').html("");
 
                         page++;
 
@@ -34,6 +34,8 @@ function refreshInit (url) {
             });
         }
     });
+
+    $('.ui-refresh').removeAttr('style');
 
 }
 
@@ -132,7 +134,22 @@ function pageScroll(){
     //判断当页面到达顶部，取消延时代码（否则页面滚动到顶部会无法再向下正常浏览页面）
     if(sTop<10) clearTimeout(scrolldelay);
 }
-
+function disableScroll (flag) {
+    if(flag){
+        $('html').css({
+            'height': '100%',
+            'overflow': 'hidden'
+        });
+        $('body').css({
+            'height': '100%',
+            'overflow': 'hidden'
+        });
+    }else{
+        $('html').removeAttr('style');
+        $('body').removeAttr('style');
+        
+    }
+}
 $(function () {
 
     window.scrollTo(0, 1);//收起地址栏
@@ -179,16 +196,24 @@ $(function () {
             
         })
 
-        $('#filterPanel').on('touchend', function () {
+        $('#filterPanel').on('click', function () {
 
              $('#panel2').panel('toggle', 'overlay', 'right');
             
             setMask.open();
-            $('html').css('overflow','hidden');
+            
+            disableScroll(1);
+
+            
         });
+
+        $('body').on('touchmove', function (e) {
+            
+        })
         $('#panel2').on('beforeclose', function (e) {
             setMask.close();
-            $('html').css('overflow','auto');
+            disableScroll(0);
+
             
         })
     }

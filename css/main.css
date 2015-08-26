@@ -53,7 +53,7 @@
 /* line 48, ../sass/main.scss */
 .info-list li h3 {
   min-height: 3rem;
-  font: 300 .75rem/1.3 simhei;
+  font: 300 .75rem/1.3 Helvetica,simhei;
 }
 /* line 52, ../sass/main.scss */
 .info-list li:last-child {
@@ -113,7 +113,7 @@
 }
 /* line 102, ../sass/main.scss */
 .pm-list h3 {
-  font: 300 .6rem/2 simhei;
+  font: 300 .6rem/2 Helvetica,simhei;
 }
 /* line 105, ../sass/main.scss */
 .pm-list .pic {
@@ -134,7 +134,7 @@
 /* line 119, ../sass/main.scss */
 .lxbd h3 {
   padding-top: 10px;
-  font: 300 .7rem/1.5 simhei;
+  font: 300 .7rem/1.5 Helvetica,simhei;
 }
 /* line 123, ../sass/main.scss */
 .lxbd p {
