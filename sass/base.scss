@@ -195,6 +195,11 @@ input {
     background: #e6e6e6;
     color: $fontcolor;
 }
+.panel-menu{
+    height: -webkit-calc(100vh - 2rem);
+    height: calc(100vh - 2rem);
+    overflow-y: scroll;
+}
 .panel-menu ul{
     li{
         position: relative;

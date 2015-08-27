@@ -183,16 +183,11 @@ $(function () {
             $('#panel').panel('toggle', 'overlay', 'right');
             
             setMask.open();
-            // $('html, body').css('overflow','hidden');
-            $(window).on('touchmove', function (e) {
-                e.preventDefault();
-                // return;
-            })
+            disableScroll(1);
         });
         $('#panel').on('beforeclose', function (e) {
             setMask.close();
-            $(window).off('touchmove');
-            // $('html, body').css('overflow','auto');
+            disableScroll(0);
             
         })
 
@@ -204,12 +199,13 @@ $(function () {
             
             disableScroll(1);
 
+            var hh = $('.filter-panel .header').height();
+
+            var sh = $(window).height() - hh;
+
+            $('.slide-panel .sp-box').height(sh);
             
         });
-
-        $('body').on('touchmove', function (e) {
-            
-        })
         $('#panel2').on('beforeclose', function (e) {
             setMask.close();
             disableScroll(0);
@@ -360,11 +356,13 @@ $(function () {
 
         var marginLeft = $firstBox.css('marginLeft');
 
-        if(marginLeft == '0px' || marginLeft == null) {console.log(111)
+        if(marginLeft == '0px' || marginLeft == null) {
 
             setTimeout(function () {
 
-                $('#filterPanel').trigger('touchend');
+                $('#filterPanel').trigger('click');
+
+                disableScroll(0);
                 
             },0)
 
