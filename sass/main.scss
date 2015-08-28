@@ -108,6 +108,7 @@
 }
 .lxbd{
     li{
+        overflow: hidden;
         padding: (10rem/40);
         border-right: 1px dotted $line;
     }
