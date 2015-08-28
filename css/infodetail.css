@@ -6,7 +6,7 @@
 .info-detail h1 {
   padding-top: 0.5rem;
   color: #000;
-  font: 700 .9rem/1.5 simhei;
+  font: 700 .9rem/1.5 Helvetica, simhei;
 }
 /* line 11, ../sass/infodetail.scss */
 .info-detail .options {
@@ -24,7 +24,7 @@
 .info-detail .info-text p {
   margin: 0.5rem 0;
   text-indent: 2em;
-  font: 300 .7rem/1.5 simhei;
+  font: 300 .7rem/1.5 Helvetica, simhei;
 }
 /* line 23, ../sass/infodetail.scss */
 .info-detail .info-text p img {

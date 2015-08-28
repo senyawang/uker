@@ -6,7 +6,7 @@
     h1{
         padding-top: $gap * 2;
         color: #000;
-        font: 700 .9rem/1.5 simhei;
+        font: 700 .9rem/1.5 Helvetica, simhei;
     }
     .options{
         color: #aaa;
@@ -19,7 +19,7 @@
         p{
             margin: ($gap * 2) 0;
             text-indent: 2em;
-            font: 300 .7rem/1.5 simhei;
+            font: 300 .7rem/1.5 Helvetica, simhei;
             img{
                 margin-left: -2em;
             }
