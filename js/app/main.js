@@ -135,12 +135,12 @@ function pageScroll(){
     if(sTop<10) clearTimeout(scrolldelay);
 }
 function disableScroll (flag) {
-    if(flag){
-        $('.mainpage').addClass('main-fixed');
-    }else{
-        $('.mainpage').removeClass('main-fixed');
+    // if(flag){
+    //     $('.mainpage').addClass('main-fixed');
+    // }else{
+    //     $('.mainpage').removeClass('main-fixed');
         
-    }
+    // }
 }
 $(function () {
 
