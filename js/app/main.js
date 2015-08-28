@@ -193,17 +193,32 @@ $(function () {
 
         $('#filterPanel').on('click', function () {
 
-             $('#panel2').panel('toggle', 'overlay', 'right');
+            var hh = $('.filter-panel .header').height();
+
+            var sh = $(window).height() - hh;
+
+            $('#subPanelBox').css({
+                    'height': sh,
+                    'padding-top': 0,
+                    'padding-bottom': 0
+                }).iScroll();
+
+            $('#panel2').panel({
+                    contentWrap: $('.mainpage'),
+                    scrollMode: 'fix',
+                    display: 'overlay',
+                    swipeClose: false
+                }).on('open', function () {
+                    $('.panel').iScroll('refresh');
+                }).panel('toggle');
+
+             // $('#panel2').panel('toggle', 'overlay', 'right');
             
             setMask.open();
             
             disableScroll(1);
 
-            var hh = $('.filter-panel .header').height();
-
-            var sh = $(window).height() - hh;
-
-            $('.slide-panel .sp-box').height(sh);
+            
             
         });
         $('#panel2').on('beforeclose', function (e) {
@@ -266,11 +281,18 @@ $(function () {
 
     }
 
+    var isSub = false;
+
     $firstBox.on('touchend', 'li', function (e) {
 
     	e.preventDefault();
 
-    	$firstBox.css('marginLeft', '-50%');
+    	$('.sp-wrap').css({
+            '-webkit-transform': 'translate(-50%, 0px)',
+            'transform': 'translate(-50%, 0px)'
+        });
+
+        isSub = true;
 
         subPanelParent = $(this).attr('data-type');
 
@@ -356,7 +378,7 @@ $(function () {
 
         var marginLeft = $firstBox.css('marginLeft');
 
-        if(marginLeft == '0px' || marginLeft == null) {
+        if(!isSub) {
 
             setTimeout(function () {
 
@@ -371,11 +393,16 @@ $(function () {
 
         }
 
-        $firstBox.css('marginLeft', '0');
+        $('.sp-wrap').css({
+            '-webkit-transform': 'translate(0px, 0px)',
+            'transform': 'translate(0px, 0px)'
+        });
 
         $(this).html('取消');
 
         $('.ui-panel .title').html('筛选');
+
+        isSub = false;
     });
 
     $('#panelSearch').on('tap', function (e) {
@@ -388,13 +415,18 @@ $(function () {
 
         var marginLeft = $firstBox.css('marginLeft');
 
-        if(marginLeft !== '0px' && marginLeft != null) {
+        if(isSub) {
 
-            $firstBox.css('marginLeft', '0');
+            $('.sp-wrap').css({
+                '-webkit-transform': 'translate(0px, 0px)',
+                'transform': 'translate(0px, 0px)'
+            });
 
             $('#panelBack').html('取消');
 
             $('.ui-panel .title').html('筛选');
+
+            isSub = false;
 
         }else{
 

@@ -183,6 +183,8 @@
     .sp-wrap{
         width: 200%;
         height: 100%;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
     .sp-box{
         float: left;
@@ -192,12 +194,12 @@
         overflow-scrolling: touch;
         overflow-y:scroll;
         vertical-align: top;
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
+        
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
     .sp-list{
+        padding-bottom: 3em;
         li{
             padding: 5% 8%;
             border-bottom: 1px dotted $line;

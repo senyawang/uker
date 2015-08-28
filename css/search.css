@@ -204,8 +204,10 @@
 .slide-panel .sp-wrap {
   width: 200%;
   height: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
-/* line 187, ../sass/search.scss */
+/* line 189, ../sass/search.scss */
 .slide-panel .sp-box {
   float: left;
   width: 50%;
@@ -214,70 +216,72 @@
   overflow-scrolling: touch;
   overflow-y: scroll;
   vertical-align: top;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 201, ../sass/search.scss */
+.slide-panel .sp-list {
+  padding-bottom: 3em;
+}
+/* line 203, ../sass/search.scss */
 .slide-panel .sp-list li {
   padding: 5% 8%;
   border-bottom: 1px dotted #dddddd;
 }
-/* line 204, ../sass/search.scss */
+/* line 206, ../sass/search.scss */
 .slide-panel .sp-list li:first-child {
   border-top: 1px solid #dddddd;
 }
-/* line 207, ../sass/search.scss */
+/* line 209, ../sass/search.scss */
 .slide-panel .sp-list li a {
   display: block;
   font-size: 0;
 }
-/* line 215, ../sass/search.scss */
+/* line 217, ../sass/search.scss */
 .slide-panel .sl-item {
   display: inline-block;
   font-size: .6rem;
   vertical-align: top;
 }
-/* line 219, ../sass/search.scss */
+/* line 221, ../sass/search.scss */
 .slide-panel .sl-item:first-child {
   width: 75%;
   text-align: left;
 }
-/* line 223, ../sass/search.scss */
+/* line 225, ../sass/search.scss */
 .slide-panel .sl-item:last-child {
   width: 25%;
   text-align: right;
 }
-/* line 232, ../sass/search.scss */
+/* line 234, ../sass/search.scss */
 .slide-panel .i-arrow-r,
 .slide-panel .i-right {
   position: static;
 }
 
-/* line 238, ../sass/search.scss */
+/* line 240, ../sass/search.scss */
 #subPanelBox .hover .sl-item {
   color: #d42c2c;
 }
-/* line 241, ../sass/search.scss */
+/* line 243, ../sass/search.scss */
 #subPanelBox .hover .sl-item:last-child:after {
   position: static;
   content: '';
 }
-/* line 247, ../sass/search.scss */
+/* line 249, ../sass/search.scss */
 #subPanelBox .sl-item:first-child {
   width: 75%;
 }
-/* line 250, ../sass/search.scss */
+/* line 252, ../sass/search.scss */
 #subPanelBox .sl-item:last-child {
   width: 25%;
 }
 
-/* line 255, ../sass/search.scss */
+/* line 257, ../sass/search.scss */
 #mainPanelBox .sl-item:first-child {
   width: 30%;
 }
-/* line 258, ../sass/search.scss */
+/* line 260, ../sass/search.scss */
 #mainPanelBox .sl-item:last-child {
   width: 70%;
 }
