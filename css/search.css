@@ -197,7 +197,7 @@
 .slide-panel {
   width: 100%;
   height: calc(100vh - 2rem);
-  overflow-x: hidden;
+  overflow: hidden;
   background: #fff;
 }
 /* line 183, ../sass/search.scss */

@@ -136,17 +136,9 @@ function pageScroll(){
 }
 function disableScroll (flag) {
     if(flag){
-        $('html').css({
-            'height': '100%',
-            'overflow': 'hidden'
-        });
-        $('body').css({
-            'height': '100%',
-            'overflow': 'hidden'
-        });
+        $('.mainpage').addClass('main-fixed');
     }else{
-        $('html').removeAttr('style');
-        $('body').removeAttr('style');
+        $('.mainpage').removeClass('main-fixed');
         
     }
 }
@@ -206,11 +198,11 @@ $(function () {
             $('#panel2').panel({
                     contentWrap: $('.mainpage'),
                     scrollMode: 'fix',
-                    display: 'overlay',
+                    // display: 'overlay',
                     swipeClose: false
                 }).on('open', function () {
                     $('.panel').iScroll('refresh');
-                }).panel('toggle');
+                }).panel('toggle', 'overlay');
 
              // $('#panel2').panel('toggle', 'overlay', 'right');
             

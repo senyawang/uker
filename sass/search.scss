@@ -178,7 +178,7 @@
 .slide-panel{
     width: 100%;
     height: #{calc(100vh - 2rem)};
-    overflow-x: hidden;
+    overflow: hidden;
     background: $boxbg;
     .sp-wrap{
         width: 200%;
