@@ -20,7 +20,7 @@ function refreshInit (url) {
 
                         $list[dir == 'up' ? 'prepend' : 'append'](html);
                         me.afterDataLoading();    //数据加载完成后改变状态
-                        // $('.ui-refresh-down').find('span').html("");
+                        $('.ui-refresh-down').find('span').html("");
 
                         page++;
 
