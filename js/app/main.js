@@ -183,7 +183,9 @@ $(function () {
             
         })
 
-        $('#filterPanel').on('click', function () {
+        $('#filterPanel').on('click', function (e) {
+
+            e.preventDefault();
 
             var hh = $('.filter-panel .header').height();
 
@@ -339,7 +341,7 @@ $(function () {
 
     });
 
-    $('#subPanelBox').on('touchend', 'li', function (e) {
+    $('#subPanelBox').on('click', 'li', function (e) {
         e.preventDefault();
 
         switch (subPanelParent){
@@ -364,7 +366,7 @@ $(function () {
         
     });
 
-    $('#panelBack').on('touchend', function (e) {
+    $('#panelBack').on('click', function (e) {
         
         e.preventDefault();
 
@@ -397,8 +399,8 @@ $(function () {
         isSub = false;
     });
 
-    $('#panelSearch').on('tap', function (e) {
-        event.preventDefault();
+    $('#panelSearch').on('click', function (e) {
+        e.preventDefault();
 
         var key = $('.s-text[type=search]').val(),
             search = location.search.substring(1),
