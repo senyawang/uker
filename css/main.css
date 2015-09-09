@@ -148,6 +148,14 @@
   padding-bottom: 10px;
 }
 /* line 131, ../sass/main.scss */
+.lxgj li {
+  padding: 0.25rem 0 0.25rem 0.25rem;
+}
+/* line 134, ../sass/main.scss */
+.lxgj .pic {
+  margin-right: 0.3rem;
+}
+/* line 137, ../sass/main.scss */
 .lxgj .pic,
 .lxgj p {
   float: none;
@@ -156,7 +164,7 @@
   font-size: .6rem;
 }
 
-/* line 142, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 #nav ul {
   display: table;
   width: 5000px;
@@ -164,24 +172,24 @@
   white-space: nowrap;
   background: #fff;
 }
-/* line 150, ../sass/main.scss */
+/* line 156, ../sass/main.scss */
 #nav ul li {
   float: left;
   line-height: 34px;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 169, ../sass/main.scss */
 #nav ~ .ui-box .info-list li:last-child {
   border-bottom: 1px dotted #dddddd;
 }
 
-/* line 169, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .ui-slider-dots {
   left: 0;
   text-align: right;
 }
 
-/* line 173, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 .ui-slider-dots > b {
   background: transparent;
   border: 1px solid #fff;
@@ -189,12 +197,12 @@
   box-sizing: border-box;
 }
 
-/* line 182, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 .page-more {
   padding: 1rem 0;
   text-align: center;
 }
-/* line 185, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 .page-more a {
   display: block;
   line-height: 3;
